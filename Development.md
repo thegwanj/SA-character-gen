@@ -17,6 +17,17 @@ SO THAT I can see and keep track of my character concepts
 ```
 
 ## MVP
+In order for the project to be "successful," we will need to create a Minimum Viable Product, or MVP. We can consider the MVP complete when we meet the following criteria:
+
+```md
+GIVEN a character sheet web application
+WHEN I open the web application in the browser
+THEN I am shown the option to create a character
+WHEN I go to create a character
+THEN I am directed to a form that allows me to input information about my character, including name, faction, sub-faction, and more
+WHEN I have finished submitting my input
+THEN I should see the new sheet displayed to me
+```
 
 ## Post-MVP
 
