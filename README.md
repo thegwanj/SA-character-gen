@@ -16,12 +16,15 @@ This is a web application made with the Shadow Accord LARP community in mind. Th
 Currently a WIP. Come back later!
 
 ## Links
-Currently a WIP. Come back later!
+Create tickets here: https://github.com/thegwanj/SA-character-gen/issues<br>
+GitHub repo: https://github.com/thegwanj/SA-character-gen<br>
+Deployed app: WIP
 
 ## Issues
 If you notice an issue with the functionality of the app, please feel free to create an issue report by going to https://github.com/thegwanj/SA-character-gen/issues. Please start the title of your ticket with "ISSUE: " when creating your report. Below you will see a list of current known issues, if any.
 
 ## Technologies
+Currently a WIP. Come back later!
 
 ## Contribution
 Would you like to contribute code to the project? Want to contribute, but don't know how to code? Either way, we would love to hear from you! You can go create a request ticket by going to https://github.com/thegwanj/SA-character-gen/issues and creating a new issue ticket with "REQUEST: " at the start of the title. You can also email gwanjuchung@gmail.com with your thoughts and ideas.
