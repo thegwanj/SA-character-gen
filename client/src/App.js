@@ -13,7 +13,22 @@ import Header from './components/Header';
 function App() {
 
     return (
-        ""
+        <Router>
+
+            <Header />
+            
+            <Banner />
+
+            <Routes>
+                <Route 
+                    path="/CreateCharacter"
+                    element={<CreateCharacter/>}
+                />
+            </Routes>
+
+            <Footer />
+            
+        </Router>
     );
 }
 
