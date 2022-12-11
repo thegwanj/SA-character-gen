@@ -1,5 +1,5 @@
 # Ideas for Development
-This is a document for laying out plans for this app. Plans may be subject to change at any time for any reason.
+This is a document for laying out plans for this app. Plans may be subject to change at any time for any reason. Credit will be given to those that have their idea on this sheet.
 
 ## Table of Contents
 - [Pre-Code](#pre-code)
@@ -43,5 +43,6 @@ Once we have finished our MVP and added in some additional functionality, we wou
 - User creation
     - Collaboration/editing permissions
 - Create "Demo" sheets for users to see and use example sheets (Joey S)
+- XP optimization (Kieran G)
 
 This section is most likely to keep changing as development goes on as we receive feedback from users
