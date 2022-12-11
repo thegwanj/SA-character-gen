@@ -32,15 +32,16 @@ THEN I should see the new sheet displayed to me
 ## Post-MVP
 Once we have established our MVP, we will look at adding some additional functionality. Some of that includes:
 - Public deployment so anyone can access the site at any time
-- Saving character sheets
-- Dynamically show xp costs when making the sheet
-- Allow for editing of sheets once completed
+- Saving character sheets (Nathan J, Joey S)
+- Dynamically show xp costs when making the sheet (Community Feedback)
+- Allow for editing of sheets once completed (Nathan J)
 
 ## Post-Development
 Once we have finished our MVP and added in some additional functionality, we would have made the app we have set out to make. From then on, all future development is mostly for quality of life. Some of these developments might include:
-- Links to lore
-- Power/skills "cheat sheet"
+- Links to lore (Nathan J)
+- Power/skills "cheat sheet" (Nathan J)
 - User creation
     - Collaboration/editing permissions
+- Create "Demo" sheets for users to see and use example sheets (Joey S)
 
 This section is most likely to keep changing as development goes on as we receive feedback from users
