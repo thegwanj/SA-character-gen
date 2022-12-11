@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import pages
 import CreateCharacter from './pages/CreateCharacter';
+import HomePage from './pages/HomePage';
 
 // Import components
 import Banner from './components/Banner';
@@ -24,10 +25,14 @@ function App() {
                     path="/CreateCharacter"
                     element={<CreateCharacter/>}
                 />
+                <Route
+                    path="/"
+                    element={<HomePage/>}
+                />
             </Routes>
 
             <Footer />
-            
+
         </Router>
     );
 }
