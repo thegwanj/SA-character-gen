@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Import pages
 import CreateCharacter from './pages/CreateCharacter';
 import HomePage from './pages/HomePage';
+import ViewSheet from './pages/ViewSheet';
 
 // Import components
 import Banner from './components/Banner';
@@ -28,6 +29,10 @@ function App() {
                 <Route
                     path="/"
                     element={<HomePage/>}
+                />
+                <Route
+                    path="/ViewSheet"
+                    element={<ViewSheet/>}
                 />
             </Routes>
 
