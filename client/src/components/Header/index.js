@@ -6,6 +6,7 @@ const Header = () => {
             <header>
                 <nav>
                     <Link to="/">
+                        <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
                         <h1>SA Character Sheet Maker</h1>
                     </Link>
                 </nav>
