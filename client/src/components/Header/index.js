@@ -5,10 +5,14 @@ const Header = () => {
     return (
             <header>
                 <nav>
-                    <Link to="/">
-                        <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
-                        <h1>SA Character Sheet Maker</h1>
-                    </Link>
+                    <div class="navContainer">
+                            <Link to="/">
+                                <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
+                            </Link>
+                            <Link to="/">
+                                <h2>SA Character Sheet Maker</h2>
+                            </Link>
+                    </div>
                 </nav>
             </header>
         );
