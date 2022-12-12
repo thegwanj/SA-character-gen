@@ -353,3 +353,13 @@
 END NORMALIZE CSS
 =================
 */
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:aqua;
+}
+
+.navContainer h2 {
+  margin: 0;
+}
