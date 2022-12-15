@@ -12,6 +12,9 @@ const Header = () => {
                             <Link to="/">
                                 <h2>SA Character Sheet Maker</h2>
                             </Link>
+                            <Link to="/">
+                                <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
+                            </Link>
                     </div>
                 </nav>
             </header>
