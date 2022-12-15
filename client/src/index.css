@@ -411,8 +411,16 @@ footer p {
 }
 
 .spacer {
-  margin: 30px 0px;
+  margin: 75px 0px;
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+/* Banner styling */
+.banner {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #6B7F82;
 }
