@@ -2,12 +2,12 @@
   "name": "sa-character-gen",
   "version": "1.0.0",
   "description": "A character generator for the Shadow Accord LARP community",
-  "main": "src/index.js",
+  "main": "client/src/index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "cd client && npm run start",
+    "install": "cd client && npm i",
+    "build": "cd client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,30 +16,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.5",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^3.1.0"
-  },
   "bugs": {
     "url": "https://github.com/thegwanj/SA-character-gen/issues"
   },
-  "homepage": "https://github.com/thegwanj/SA-character-gen",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "homepage": "https://github.com/thegwanj/SA-character-gen"
 }
