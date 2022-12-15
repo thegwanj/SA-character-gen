@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/thegwanj/SA-character-gen/static/css/main.b3cd0926.css",
+    "main.js": "/thegwanj/SA-character-gen/static/js/main.8b06e74f.js",
+    "static/js/496.5073391a.chunk.js": "/thegwanj/SA-character-gen/static/js/496.5073391a.chunk.js",
+    "index.html": "/thegwanj/SA-character-gen/index.html",
+    "main.b3cd0926.css.map": "/thegwanj/SA-character-gen/static/css/main.b3cd0926.css.map",
+    "main.8b06e74f.js.map": "/thegwanj/SA-character-gen/static/js/main.8b06e74f.js.map",
+    "496.5073391a.chunk.js.map": "/thegwanj/SA-character-gen/static/js/496.5073391a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3cd0926.css",
+    "static/js/main.8b06e74f.js"
+  ]
+}
