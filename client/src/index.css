@@ -353,13 +353,47 @@
 END NORMALIZE CSS
 =================
 */
+
+/* Nav Styling */
 .navContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:aqua;
+  background-color: #6B7F82;
 }
 
 .navContainer h2 {
   margin: 0px 20px 0px 20px;
+}
+
+/* Links styling */
+a:link {
+  color: #8EB8E5;
+}
+
+a:visited {
+  color:#8EB8E5;
+}
+
+a:hover {
+  color: #7C99B4;
+}
+
+a:active {
+  color:#7C99B4;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  background-color: #6B7F82;
+}
+
+footer p {
+  color: #8EB8E5;
+  margin: 0;
 }
