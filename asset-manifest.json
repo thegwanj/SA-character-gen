@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3cd0926.css",
-    "main.js": "/static/js/main.a8c22eb2.js",
-    "static/js/496.d0f9b598.chunk.js": "/static/js/496.d0f9b598.chunk.js",
-    "index.html": "/index.html",
-    "main.b3cd0926.css.map": "/static/css/main.b3cd0926.css.map",
-    "main.a8c22eb2.js.map": "/static/js/main.a8c22eb2.js.map",
-    "496.d0f9b598.chunk.js.map": "/static/js/496.d0f9b598.chunk.js.map"
+    "main.css": "/github.io/SA-character-gen/static/css/main.b3cd0926.css",
+    "main.js": "/github.io/SA-character-gen/static/js/main.971f7bde.js",
+    "static/js/496.d0f9b598.chunk.js": "/github.io/SA-character-gen/static/js/496.d0f9b598.chunk.js",
+    "index.html": "/github.io/SA-character-gen/index.html",
+    "main.b3cd0926.css.map": "/github.io/SA-character-gen/static/css/main.b3cd0926.css.map",
+    "main.971f7bde.js.map": "/github.io/SA-character-gen/static/js/main.971f7bde.js.map",
+    "496.d0f9b598.chunk.js.map": "/github.io/SA-character-gen/static/js/496.d0f9b598.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3cd0926.css",
-    "static/js/main.a8c22eb2.js"
+    "static/js/main.971f7bde.js"
   ]
 }
