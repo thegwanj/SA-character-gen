@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <footer>
-            <p>Footer test</p>
+            <p>SA Character Sheet Maker created by <a href="https://github.com/thegwanj">thegwanj on github</a></p>
         </footer>
     );
 }
