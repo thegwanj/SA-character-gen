@@ -424,3 +424,16 @@ footer p {
   justify-content: center;
   background-color: #6B7F82;
 }
+
+/* Create Character styling */
+.createCharacterMain {
+  display: flex;
+  justify-content: center;
+}
+
+.characterForm {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
