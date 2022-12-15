@@ -397,3 +397,22 @@ footer p {
   color: #8EB8E5;
   margin: 0;
 }
+
+/* Homepage styling */
+.homeButton {
+  background-color: #6B7F82;
+  text-align: center;
+  width: 80px;
+  border-radius: 20px;
+}
+
+.homeButton h3 {
+  margin: 0;
+}
+
+.spacer {
+  margin: 30px 0px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
