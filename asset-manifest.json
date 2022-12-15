@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/thegwanj/SA-character-gen/static/css/main.b3cd0926.css",
-    "main.js": "/thegwanj/SA-character-gen/static/js/main.c716b6d8.js",
-    "static/js/496.d0f9b598.chunk.js": "/thegwanj/SA-character-gen/static/js/496.d0f9b598.chunk.js",
-    "index.html": "/thegwanj/SA-character-gen/index.html",
-    "main.b3cd0926.css.map": "/thegwanj/SA-character-gen/static/css/main.b3cd0926.css.map",
-    "main.c716b6d8.js.map": "/thegwanj/SA-character-gen/static/js/main.c716b6d8.js.map",
-    "496.d0f9b598.chunk.js.map": "/thegwanj/SA-character-gen/static/js/496.d0f9b598.chunk.js.map"
+    "main.css": "/static/css/main.b3cd0926.css",
+    "main.js": "/static/js/main.a8c22eb2.js",
+    "static/js/496.d0f9b598.chunk.js": "/static/js/496.d0f9b598.chunk.js",
+    "index.html": "/index.html",
+    "main.b3cd0926.css.map": "/static/css/main.b3cd0926.css.map",
+    "main.a8c22eb2.js.map": "/static/js/main.a8c22eb2.js.map",
+    "496.d0f9b598.chunk.js.map": "/static/js/496.d0f9b598.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3cd0926.css",
-    "static/js/main.c716b6d8.js"
+    "static/js/main.a8c22eb2.js"
   ]
 }
