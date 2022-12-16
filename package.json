@@ -4,10 +4,11 @@
   "description": "A character generator for the Shadow Accord LARP community",
   "main": "client/src/index.js",
   "scripts": {
-    "start": "cd client && npm run start",
-    "install": "cd client && npm i",
-    "build": "cd client && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server --ignore client",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
