@@ -6,6 +6,7 @@ This is a document for laying out plans for this app. Plans may be subject to ch
 - [MVP](#mvp)
 - [Post-MVP](#post-mvp)
 - [Post-Development](#post-development)
+- [Changes](#changes)
 
 ## Pre-Code
 For this app, the basic concept is to be able to create a character sheet for SA. This includes names, skills, trees, and other information that a regular character sheet would have. It should also be able to show the user how much xp will be needed for the concept, if any. This will allow users to not only create their existing characters, but new ones as well. In short, we can boil it down to this user story:
@@ -46,3 +47,10 @@ Once we have finished our MVP and added in some additional functionality, we wou
 - XP optimization (Kieran G)
 
 This section is most likely to keep changing as development goes on as we receive feedback from users
+
+## Changes
+This section will be for logging more major changes made to the development plan. The above section will not be modified unless needed.
+
+```md
+Implementing saving and public deployment into the MVP as it is a needed step
+```
