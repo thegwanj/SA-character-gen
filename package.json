@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/thegwanj/SA-character-gen/issues"
   },
-  "homepage": "https://github.com/thegwanj/SA-character-gen"
+  "homepage": "https://github.com/thegwanj/SA-character-gen",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
