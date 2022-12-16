@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/github.io/SA-character-gen/static/css/main.b3cd0926.css",
-    "main.js": "/github.io/SA-character-gen/static/js/main.971f7bde.js",
-    "static/js/496.d0f9b598.chunk.js": "/github.io/SA-character-gen/static/js/496.d0f9b598.chunk.js",
+    "main.js": "/github.io/SA-character-gen/static/js/main.f8d9ef49.js",
+    "static/js/787.32aa79e6.chunk.js": "/github.io/SA-character-gen/static/js/787.32aa79e6.chunk.js",
     "index.html": "/github.io/SA-character-gen/index.html",
     "main.b3cd0926.css.map": "/github.io/SA-character-gen/static/css/main.b3cd0926.css.map",
-    "main.971f7bde.js.map": "/github.io/SA-character-gen/static/js/main.971f7bde.js.map",
-    "496.d0f9b598.chunk.js.map": "/github.io/SA-character-gen/static/js/496.d0f9b598.chunk.js.map"
+    "main.f8d9ef49.js.map": "/github.io/SA-character-gen/static/js/main.f8d9ef49.js.map",
+    "787.32aa79e6.chunk.js.map": "/github.io/SA-character-gen/static/js/787.32aa79e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3cd0926.css",
-    "static/js/main.971f7bde.js"
+    "static/js/main.f8d9ef49.js"
   ]
 }
