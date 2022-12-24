@@ -83,6 +83,13 @@ const sheetSchema = new Schema({
     required: true,
     default: 0,
   },
+
+  // Trees + lores and merits
+  powers: [powerSchema],
+  skills: [skillSchema],
+  lores: [loreSchema],
+  merits: [meritSchema],
+
   // left this in because it could be cool to know when a sheet was added
   createdAt: {
     type: Date,
