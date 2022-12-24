@@ -19,7 +19,7 @@ const resolvers = {
     },
     removeSheet: async (parent, {sheetID}) => {
       await Sheet.findOneAndDelete({
-        sheetID: sheetID,
+        _id: sheetID,
       });
     },
   },

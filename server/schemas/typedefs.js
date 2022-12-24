@@ -3,7 +3,6 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     type Sheet {
         _id: ID
-        sheetID: Int
         playerName: String
         characterName: String
         faction: String
@@ -50,7 +49,8 @@ const typeDefs = gql`
         sheet(sheetID: ID!): Sheet
     }
     type Mutation {
-        addSheet(playerName: String!, characterName: String!, faction: String!, subFaction: String!, rank: Int, deedName: String, generation: Int, sire: String, passion: String, shadow: String, health: Int, willpower: Int, energy: Int, virtue: Int, xpCost: Int, freebiesCost: Int, powers: powerSchema, skills: skillSchema, lores: loreSchema, merits: meritSchema, patron: String, notes: String): Sheet
+        addSheet(playerName: String!, characterName: String!, faction: String!, subFaction: String!, rank: Int, deedName: String, generation: Int, sire: String, passion: String, shadow: String, health: Int!, willpower: Int!, energy: Int!, virtue: Int!, xpCost: Int!, freebiesCost: Int!, patron: String, notes: String): Sheet
+        removeSheet(sheetID: Int!): Sheet
     }
 `;
 
