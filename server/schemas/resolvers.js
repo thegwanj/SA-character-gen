@@ -1,9 +1,9 @@
-const { Sheet } = require('../models');
+const { Sheet, Lore, Skill } = require('../models');
 
 const resolvers = {
   Query: {
     sheets: async () => {
-      return Sheet.find();
+      return Sheet.find().populate('skills');
     },
     sheet: async (parent, { sheetID }) => {
       return Sheet.findOne({ sheetID });
@@ -19,8 +19,23 @@ const resolvers = {
     },
     removeSheet: async (parent, {sheetID}) => {
       await Sheet.findOneAndDelete({
-        _id: sheetID,
+        sheetID,
       });
+    },
+
+    // Mutations for adding/removing powers, skills, lores, and merits
+    addSkill: async (parent, {skillName, level, sheetID}) => {
+      const skill = await Skill.create({
+        skillName,
+        level
+      });
+
+      await Sheet.findOneAndUpdate(
+        { sheetID },
+        { $addToSet: { skills: skill._id }}
+      );
+
+      return skill;
     },
   },
 };
