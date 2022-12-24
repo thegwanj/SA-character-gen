@@ -1,4 +1,4 @@
-const { Schema, Types } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
 // Schema for a skill tree, not individual power
 const skillSchema = new Schema({
@@ -16,4 +16,6 @@ const skillSchema = new Schema({
     },
 });
 
-module.exports = skillSchema;
+const Skill = model('Skill', skillSchema)
+
+module.exports = Skill;
