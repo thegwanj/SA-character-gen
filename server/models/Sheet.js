@@ -1,5 +1,8 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
+const loreSchema = require('./Lore');
+const meritSchema = require('./Merit');
+const skillSchema = require('./Skill');
 
 const sheetSchema = new Schema({
   // Top of the sheet - stuff that is always required
@@ -90,6 +93,12 @@ const sheetSchema = new Schema({
   lores: [loreSchema],
   merits: [meritSchema],
 
+  // Other stuff I missed
+  patron: {
+    type: String,
+    trim: true,
+  },
+  
   // left this in because it could be cool to know when a sheet was added
   createdAt: {
     type: Date,
