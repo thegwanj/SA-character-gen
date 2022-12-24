@@ -98,7 +98,12 @@ const sheetSchema = new Schema({
     type: String,
     trim: true,
   },
-  
+  notes: {
+    type: String,
+    trim: true,
+    maxlength: 1000,
+  },
+
   // left this in because it could be cool to know when a sheet was added
   createdAt: {
     type: Date,
