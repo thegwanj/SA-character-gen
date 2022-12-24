@@ -2,12 +2,20 @@
 This is a document for laying out plans for this app. Plans may be subject to change at any time for any reason. Credit will be given to those that have their idea on this sheet.
 
 ## Table of Contents
+- [Changelog](#changelog)
 - [Pre-Code](#pre-code)
 - [MVP](#mvp)
 - [Post-MVP](#post-mvp)
 - [Post-Development](#post-development)
-- [Changes](#changes)
 
+## Changelog
+This section will be for logging more major changes made to the development plan itself. The above section will not be modified unless needed.
+
+```md
+Implementing saving and public deployment into the MVP as it is a needed step
+Moving all but editing feature from post-MVP into the MVP
+Moved the changelog up top so it is easier to see the changes right away
+```
 ## Pre-Code
 For this app, the basic concept is to be able to create a character sheet for SA. This includes names, skills, trees, and other information that a regular character sheet would have. It should also be able to show the user how much xp will be needed for the concept, if any. This will allow users to not only create their existing characters, but new ones as well. In short, we can boil it down to this user story:
 
@@ -30,11 +38,13 @@ WHEN I have finished submitting my input
 THEN I should see the new sheet displayed to me
 ```
 
-## Post-MVP
-Once we have established our MVP, we will look at adding some additional functionality. Some of that includes:
+Addtional items that were moved into the MVP:
 - Public deployment so anyone can access the site at any time
 - Saving character sheets (Nathan J, Joey S)
 - Dynamically show xp costs when making the sheet (Community Feedback)
+
+## Post-MVP
+Once we have established our MVP, we will look at adding some additional functionality. Some of that includes:
 - Allow for editing of sheets once completed (Nathan J)
 
 ## Post-Development
@@ -48,9 +58,3 @@ Once we have finished our MVP and added in some additional functionality, we wou
 
 This section is most likely to keep changing as development goes on as we receive feedback from users
 
-## Changes
-This section will be for logging more major changes made to the development plan. The above section will not be modified unless needed.
-
-```md
-Implementing saving and public deployment into the MVP as it is a needed step
-```
