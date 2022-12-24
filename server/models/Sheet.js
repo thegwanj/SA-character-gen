@@ -6,6 +6,12 @@ const powerSchema = require('./Power');
 const skillSchema = require('./Skill');
 
 const sheetSchema = new Schema({
+  // Identifier for getting/setting in the future
+  sheetID: {
+    type: Schema.Types.ObjectId,
+    default: () => new Types.ObjectId(),
+  },
+
   // Top of the sheet - stuff that is always required
   playerName: {
     type: String,
