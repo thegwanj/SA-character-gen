@@ -3,36 +3,54 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     type Sheet {
         _id: ID
-        sheetID: Number
+        sheetID: Int
         playerName: String
         characterName: String
         faction: String
         subFaction: String
-        rank: Number
+        rank: Int
         deedName: String
-        generation: Number
+        generation: Int
         sire: String
         passion: String
         shadow: String
-        health: Number
-        willpower: Number
-        energy: Number
-        virtue: Number
-        xpCost: Number
-        freebiesCost: Number
+        health: Int
+        willpower: Int
+        energy: Int
+        virtue: Int
+        xpCost: Int
+        freebiesCost: Int
         powers: [Power]
         skills: [Skill]
-        lores: [lore]
-        merits: [merit]
+        lores: [Lore]
+        merits: [Merit]
         patron: String
         notes: String
+    }
+    type Lore {
+        loreId: Int
+        loreName: String
+    }
+    type Merit {
+        meritId: Int
+        meritName: String
+    }
+    type Power {
+        treeId: Int
+        treeName: String
+        treeLevel: Int
+    }
+    type Skill {
+        skillId: Int
+        skillName: String
+        level: Int
     }
     type Query {
         sheets: [Sheet]
         sheet(sheetID: ID!): Sheet
     }
     type Mutation {
-        addSheet(playerName: String!, characterName: String!, faction: String!, subFaction: String!, rank: Number, deedName: String, generation: Number, sire: String, passion: String, shadow: String, health: Number, willpower: Number, energy: Number, virtue: Number, xpCost: Number, freebiesCost: Number, powers: powerSchema, skills: skillSchema, lores: loreSchema, merits: meritSchema, patron: String, notes: String): Sheet
+        addSheet(playerName: String!, characterName: String!, faction: String!, subFaction: String!, rank: Int, deedName: String, generation: Int, sire: String, passion: String, shadow: String, health: Int, willpower: Int, energy: Int, virtue: Int, xpCost: Int, freebiesCost: Int, powers: powerSchema, skills: skillSchema, lores: loreSchema, merits: meritSchema, patron: String, notes: String): Sheet
     }
 `;
 
