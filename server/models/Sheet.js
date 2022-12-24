@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
-const loreSchema = require('./Lore');
 const meritSchema = require('./Merit');
 const powerSchema = require('./Power');
 const skillSchema = require('./Skill');
@@ -90,8 +89,18 @@ const sheetSchema = new Schema({
 
   // Trees + lores and merits
   powers: [powerSchema],
-  skills: [skillSchema],
-  lores: [loreSchema],
+  skills: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Skill'
+    }
+  ],
+  lores: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Lore',
+    }
+  ],
   merits: [meritSchema],
 
   // Other stuff I missed
