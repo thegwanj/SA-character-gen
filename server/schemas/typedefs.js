@@ -19,15 +19,15 @@ const typeDefs = gql`
         virtue: Int
         xpCost: Int
         freebiesCost: Int
-        powers: [Power]
-        skills: [Skill]
-        lores: [Lore]
-        merits: [Merit]
+        powers: [Power]!
+        skills: [Skill]!
+        lores: [Lore]!
+        merits: [Merit]!
         patron: String
         notes: String
     }
     type Lore {
-        loreId: Int
+        _id: ID
         loreName: String
     }
     type Merit {
@@ -40,7 +40,7 @@ const typeDefs = gql`
         treeLevel: Int
     }
     type Skill {
-        skillId: Int
+        skillId: ID
         skillName: String
         level: Int
     }
@@ -50,7 +50,8 @@ const typeDefs = gql`
     }
     type Mutation {
         addSheet(playerName: String!, characterName: String!, faction: String!, subFaction: String!, rank: Int, deedName: String, generation: Int, sire: String, passion: String, shadow: String, health: Int!, willpower: Int!, energy: Int!, virtue: Int!, xpCost: Int!, freebiesCost: Int!, patron: String, notes: String): Sheet
-        removeSheet(sheetID: Int!): Sheet
+        removeSheet(sheetID: ID!): Sheet
+        addSkill(skillName: String!, level: Int!, sheetID: ID!): Skill
     }
 `;
 
