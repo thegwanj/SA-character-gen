@@ -2,6 +2,7 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 const loreSchema = require('./Lore');
 const meritSchema = require('./Merit');
+const powerSchema = require('./Power');
 const skillSchema = require('./Skill');
 
 const sheetSchema = new Schema({
