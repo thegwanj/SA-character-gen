@@ -31,7 +31,7 @@ const typeDefs = gql`
         loreName: String
     }
     type Merit {
-        meritId: Int
+        meritId: ID
         meritName: String
     }
     type Power {
@@ -51,6 +51,8 @@ const typeDefs = gql`
     type Mutation {
         addSheet(playerName: String!, characterName: String!, faction: String!, subFaction: String!, rank: Int, deedName: String, generation: Int, sire: String, passion: String, shadow: String, health: Int!, willpower: Int!, energy: Int!, virtue: Int!, xpCost: Int!, freebiesCost: Int!, patron: String, notes: String): Sheet
         removeSheet(sheetID: ID!): Sheet
+        addLore(loreName: String!, sheetID: ID!): Lore
+        addMerit(meritName: String!, sheetID: ID!): Merit
         addSkill(skillName: String!, level: Int!, sheetID: ID!): Skill
     }
 `;

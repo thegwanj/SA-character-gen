@@ -1,4 +1,4 @@
-const { Schema, Types } = require('mongoose');
+const { Schema, Types, model } = require('mongoose');
 
 const meritSchema = new Schema({
     meritId: {
@@ -11,4 +11,6 @@ const meritSchema = new Schema({
     },
 });
 
-module.exports = meritSchema;
+const Merit = model('Merit', meritSchema)
+
+module.exports = Merit;

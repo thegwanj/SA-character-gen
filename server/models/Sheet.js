@@ -101,7 +101,12 @@ const sheetSchema = new Schema({
       ref: 'Lore',
     }
   ],
-  merits: [meritSchema],
+  merits: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Merit'
+    }
+  ],
 
   // Other stuff I missed
   patron: {
