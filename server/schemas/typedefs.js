@@ -35,7 +35,7 @@ const typeDefs = gql`
         meritName: String
     }
     type Power {
-        treeId: Int
+        treeId: ID
         treeName: String
         treeLevel: Int
     }
@@ -53,6 +53,7 @@ const typeDefs = gql`
         removeSheet(sheetID: ID!): Sheet
         addLore(loreName: String!, sheetID: ID!): Lore
         addMerit(meritName: String!, sheetID: ID!): Merit
+        addPower(treeName: String!, treeLevel: Int!, sheetID: ID!): Power
         addSkill(skillName: String!, level: Int!, sheetID: ID!): Skill
     }
 `;
