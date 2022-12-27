@@ -437,3 +437,15 @@ footer p {
   justify-content: center;
   flex-direction: column;
 }
+
+/* SheetList styling */
+.sheetList {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.sheetList h3, p{
+  margin: 10px;
+}
