@@ -389,13 +389,17 @@ a:link {
 
 /* Footer styling */
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #6B7F82;
+  height: 50px;
 }
 
 footer p {
   color: #8EB8E5;
   margin: 0;
+  height: 20px;
 }
 
 /* Homepage styling */
