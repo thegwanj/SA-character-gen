@@ -54,7 +54,7 @@ const resolvers = {
         treeLevel
       });
 
-      await Sheet.findByIdAndUpdate(
+      await Sheet.findOneAndUpdate(
         { sheetID },
         { $addToSet: { powers: power._id}}
       );
