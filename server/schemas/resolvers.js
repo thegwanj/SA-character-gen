@@ -1,9 +1,9 @@
-const { Sheet, Lore, Merit, Skill } = require('../models');
+const { Sheet, Lore, Merit, Power, Skill } = require('../models');
 
 const resolvers = {
   Query: {
     sheets: async () => {
-      return Sheet.find().populate('skills').populate('lores').populate('merits');
+      return Sheet.find().populate('skills').populate('lores').populate('merits').populate('powers');
     },
     sheet: async (parent, { sheetID }) => {
       return Sheet.findOne({ sheetID });
@@ -47,6 +47,19 @@ const resolvers = {
       );
 
       return merit;
+    },
+    addPower: async (parent, {treeName, treeLevel, sheetID}) => {
+      const power = await Power.create({
+        treeName,
+        treeLevel
+      });
+
+      await Sheet.findByIdAndUpdate(
+        { sheetID },
+        { $addToSet: { powers: power._id}}
+      );
+
+      return power;
     },
     addSkill: async (parent, {skillName, level, sheetID}) => {
       const skill = await Skill.create({
