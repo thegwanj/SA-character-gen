@@ -88,7 +88,12 @@ const sheetSchema = new Schema({
   },
 
   // Trees + lores and merits
-  powers: [powerSchema],
+  powers: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Power'
+    }
+  ],
   skills: [
     {
       type: Schema.Types.ObjectId,
