@@ -17,4 +17,6 @@ const powerSchema = new Schema({
     },
 });
 
-module.exports = powerSchema;
+const Power = model('Power', powerSchema)
+
+module.exports = Power;
