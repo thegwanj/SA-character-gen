@@ -39,7 +39,7 @@ function App() {
 
                 <Routes>
                     <Route
-                        path="/"
+                        path="/SA-character-gen"
                         element={<HomePage/>}
                     />
                     <Route 
