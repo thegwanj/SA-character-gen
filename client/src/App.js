@@ -23,37 +23,40 @@ const httpLink = createHttpLink({
   });
   
 const client = new ApolloClient({
-    link: authLink.concat(httpLink),
+    link: httpLink,
     cache: new InMemoryCache(),
   });
   
 function App() {
 
     return (
-        <Router>
+        <ApolloProvider client = {client}>
+            <Router>
 
-            <Header />
-            
-            <Banner />
+                <Header />
 
-            <Routes>
-                <Route
-                    path="/"
-                    element={<HomePage/>}
-                />
-                <Route 
-                    path="/CreateCharacter"
-                    element={<CreateCharacter/>}
-                />
-                <Route
-                    path="/ViewSheet"
-                    element={<ViewSheet/>}
-                />
-            </Routes>
+                <Banner />
 
-            <Footer />
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<HomePage/>}
+                    />
+                    <Route 
+                        path="/CreateCharacter"
+                        element={<CreateCharacter/>}
+                    />
+                    <Route
+                        path="/ViewSheet"
+                        element={<ViewSheet/>}
+                    />
+                </Routes>
 
-        </Router>
+                <Footer />
+
+            </Router>
+
+        </ApolloProvider>
     );
 }
 
