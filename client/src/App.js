@@ -55,7 +55,6 @@ function App() {
                 <Footer />
 
             </Router>
-
         </ApolloProvider>
     );
 }
