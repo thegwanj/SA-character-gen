@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github.io/SA-character-gen/static/css/main.b3cd0926.css",
-    "main.js": "/github.io/SA-character-gen/static/js/main.f8d9ef49.js",
-    "static/js/787.32aa79e6.chunk.js": "/github.io/SA-character-gen/static/js/787.32aa79e6.chunk.js",
-    "index.html": "/github.io/SA-character-gen/index.html",
-    "main.b3cd0926.css.map": "/github.io/SA-character-gen/static/css/main.b3cd0926.css.map",
-    "main.f8d9ef49.js.map": "/github.io/SA-character-gen/static/js/main.f8d9ef49.js.map",
-    "787.32aa79e6.chunk.js.map": "/github.io/SA-character-gen/static/js/787.32aa79e6.chunk.js.map"
+    "main.css": "./static/css/main.c35c52e5.css",
+    "main.js": "./static/js/main.f0479558.js",
+    "static/js/496.5073391a.chunk.js": "./static/js/496.5073391a.chunk.js",
+    "index.html": "./index.html",
+    "main.c35c52e5.css.map": "./static/css/main.c35c52e5.css.map",
+    "main.f0479558.js.map": "./static/js/main.f0479558.js.map",
+    "496.5073391a.chunk.js.map": "./static/js/496.5073391a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3cd0926.css",
-    "static/js/main.f8d9ef49.js"
+    "static/css/main.c35c52e5.css",
+    "static/js/main.f0479558.js"
   ]
 }
