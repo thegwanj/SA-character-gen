@@ -37,6 +37,8 @@ function App() {
 
                 <Banner />
 
+                <h1>Testing!</h1>
+                
                 <Routes>
                     <Route
                         path="/SA-character-gen"
