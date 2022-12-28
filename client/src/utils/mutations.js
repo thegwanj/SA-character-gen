@@ -41,21 +41,79 @@ export const ADD_SHEET = gql`
 `;
 
 export const REMOVE_SHEET = gql`
-
+    mutation removeSheet($sheetId: ID!) {
+    removeSheet(sheetID: $sheetId) {
+        _id
+        playerName
+        characterName
+        faction
+        subFaction
+        rank
+        deedName
+        generation
+        sire
+        passion
+        shadow
+        health
+        willpower
+        energy
+        virtue
+        xpCost
+        freebiesCost
+        lores {
+                loreName
+            }
+            merits {
+                meritName
+            }
+            powers {
+                treeName
+                treeLevel
+            }
+            skills {
+                skillName
+                level
+            }
+        patron
+        notes
+    }
+}
 `;
 
 export const ADD_LORE = gql`
-
+    mutation addLore($loreName: String!, $sheetId: ID!) {
+        addLore(loreName: $loreName, sheetID: $sheetId) {
+            _id
+            loreName
+        }
+    }
 `;
 
 export const ADD_MERIT = gql`
-
+    mutation addMerit($meritName: String!, $sheetId: ID!) {
+        addMerit(meritName: $meritName, sheetID: $sheetId) {
+            meritId
+            meritName
+        }
+    }
 `;
 
 export const ADD_POWER = gql`
-
+    mutation addPower($treeName: String!, $treeLevel: Int!, $sheetId: ID!) {
+        addPower(treeName: $treeName, treeLevel: $treeLevel, sheetID: $sheetId) {
+            treeId
+            treeName
+            treeLevel
+        }
+    }
 `;
 
 export const ADD_SKILL = gql`
-
+    mutation addSkill($skillName: String!, $level: Int!, $sheetId: ID!) {
+        addSkill(skillName: $skillName, level: $level, sheetID: $sheetId) {
+            skillId
+            skillName
+            level
+        }
+    }
 `;
