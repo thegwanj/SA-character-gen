@@ -1,6 +1,12 @@
 // Import dependencies
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+    ApolloClient,
+    InMemoryCache,
+    ApolloProvider,
+    createHttpLink,
+  } from '@apollo/client';  
 
 // Import pages
 import CreateCharacter from './pages/CreateCharacter';
@@ -12,6 +18,15 @@ import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
+const httpLink = createHttpLink({
+    uri: '/graphql',
+  });
+  
+const client = new ApolloClient({
+    link: authLink.concat(httpLink),
+    cache: new InMemoryCache(),
+  });
+  
 function App() {
 
     return (
@@ -22,13 +37,13 @@ function App() {
             <Banner />
 
             <Routes>
-                <Route 
-                    path="/CreateCharacter"
-                    element={<CreateCharacter/>}
-                />
                 <Route
                     path="/"
                     element={<HomePage/>}
+                />
+                <Route 
+                    path="/CreateCharacter"
+                    element={<CreateCharacter/>}
                 />
                 <Route
                     path="/ViewSheet"
