@@ -6,13 +6,13 @@ const Header = () => {
             <header>
                 <nav>
                     <div class="navContainer">
-                            <Link to="/">
+                            <Link to="/SA-character-gen">
                                 <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
                             </Link>
-                            <Link to="/">
+                            <Link to="/SA-character-gen">
                                 <h2>SA Character Sheet Maker</h2>
                             </Link>
-                            <Link to="/">
+                            <Link to="/SA-character-gen">
                                 <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
                             </Link>
                     </div>
