@@ -36,8 +36,6 @@ function App() {
                 <Header />
 
                 <Banner />
-
-                <h1>Testing!</h1>
                 
                 <Routes>
                     <Route
