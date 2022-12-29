@@ -36,10 +36,10 @@ function App() {
                 <Header />
 
                 <Banner />
-
+                
                 <Routes>
                     <Route
-                        path="/"
+                        path="/SA-character-gen"
                         element={<HomePage/>}
                     />
                     <Route 

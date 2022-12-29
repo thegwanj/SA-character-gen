@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "1.0.0",
-  "description": "",
+  "description": "A character generator for the Shadow Accord LARP community",
   "main": "index.js",
   "homepage": ".",
   "scripts": {

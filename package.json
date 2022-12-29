@@ -8,7 +8,9 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "predeploy": "cd client && npm run build",
+    "deploy": "cd client && gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/thegwanj/SA-character-gen",
   "dependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "gh-pages": "^4.0.0"
   }
 }
