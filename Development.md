@@ -55,6 +55,7 @@ Once we have finished our MVP and added in some additional functionality, we wou
     - Collaboration/editing permissions
 - Create "Demo" sheets for users to see and use example sheets (Joey S)
 - XP optimization (Kieran G)
+- Dynamic themes depending on faction (Joey S)
 
 This section is most likely to keep changing as development goes on as we receive feedback from users
 
