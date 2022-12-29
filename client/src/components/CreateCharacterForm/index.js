@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_SHEET } from '../../utils/mutations';
+
 
 const CreateCharacterForm = () => {
+    const [playerName, setPlayerName] = useState('');
+    const [friendNote, setFriendNote] = useState('');
+    const [friendName, setFriendName] = useState('');
+
+    const [addSheet, { error }] = useMutation(ADD_SHEET);
+  
     // TODO: Create functions to handle the form submission
     const handleFormSubmit = async (event) => {
         event.preventDefault();
     
         // Template
         try {
+            const { data } = await addSheet({
+                variables: {
 
+                },
+            });
         }
         catch (e){
             console.error(e);
@@ -31,6 +44,12 @@ const CreateCharacterForm = () => {
     return (
         <div class="characterForm">
             <form onSubmit={handleFormSubmit}>
+                <section class="formSection">
+                    <div class="question">
+                        <label for="playerName">Player Name:</label>
+                        <input id="playerName" value={playerName}></input>
+                    </div>
+                </section>
                 <input
                 name=""
                 placeholder=""
