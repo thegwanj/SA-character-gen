@@ -46,11 +46,12 @@ Addtional items that were moved into the MVP:
 ## Post-MVP
 Once we have established our MVP, we will look at adding some additional functionality. Some of that includes:
 - Allow for editing of sheets once completed (Nathan J)
+- Power/skills "cheat sheet" (Nathan J)
+- Links to lore (Nathan J)
+
 
 ## Post-Development
 Once we have finished our MVP and added in some additional functionality, we would have made the app we have set out to make. From then on, all future development is mostly for quality of life. Some of these developments might include:
-- Links to lore (Nathan J)
-- Power/skills "cheat sheet" (Nathan J)
 - User creation
     - Collaboration/editing permissions
 - Create "Demo" sheets for users to see and use example sheets (Joey S)
