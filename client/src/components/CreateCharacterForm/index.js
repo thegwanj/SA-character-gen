@@ -78,9 +78,25 @@ const CreateCharacterForm = () => {
         // Take values and use set to change state
         setFaction(value);
 
-        // Using the value, update the subfactionForm
+        // Using the value, update the subfactionForm and factionSpecificForm
+        switch(value){
+            case "Human":
+                console.log("Human!");
 
-        // Using the value, update the factionSpecificForm
+                break;
+            case "Sorcerer":
+                console.log("Sorcerer!");
+
+                break;
+            case "Shifter":
+                console.log("Shifter!");
+
+                break;
+            case "Vampire":
+                console.log("Vampire!");
+                
+                break;
+        }
 
         // Future implementation: Using the value, update the energy and virtue pools
     }
@@ -101,13 +117,13 @@ const CreateCharacterForm = () => {
 
                     <label for='factionForm'>Select a faction:</label>
                     <div class="question" id='factionForm'>
-                        <input id="human" name='faction' type="radio" value={faction} onChange={handleFactionChange} required></input>
+                        <input id="human" name='faction' type="radio" value="Human" onChange={handleFactionChange} required></input>
                         <label for="human">Human</label>
-                        <input id="sorcerer" name='faction' type="radio" value={faction} onChange={handleFactionChange} required></input>
+                        <input id="sorcerer" name='faction' type="radio" value="Sorcerer" onChange={handleFactionChange} required></input>
                         <label for="sorcerer">Sorcerer</label>
-                        <input id="shifter" name='faction' type="radio" value={faction} onChange={handleFactionChange} required></input>
+                        <input id="shifter" name='faction' type="radio" value="Shifter" onChange={handleFactionChange} required></input>
                         <label for="shifter">Shifter</label>
-                        <input id="vampire" name='faction' type="radio" value={faction} onChange={handleFactionChange} required></input>
+                        <input id="vampire" name='faction' type="radio" value="Vampire" onChange={handleFactionChange} required></input>
                         <label for="vampire">Vampire</label>
                     </div>
 
