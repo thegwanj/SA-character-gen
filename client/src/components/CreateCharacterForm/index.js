@@ -34,6 +34,20 @@ const CreateCharacterForm = () => {
         const { name, value } = event.target;
     
         // Take values and use set to change state
+        switch(name){
+            case "playerName":
+                setPlayerName(value);
+                break;
+            case "characterName":
+                setCharacterName(value);
+                break;
+            case "patron":
+                setPatron(value);
+                break;
+            case "notes":
+                setNotes(value);
+                break;
+        }
     };    
 
     // Separate function to handle faction changes
@@ -55,7 +69,7 @@ const CreateCharacterForm = () => {
                 <section class="formSection">
                     <div class="question">
                         <label for="playerName">Player name:</label>
-                        <input id="playerName" name='playerName' value={playerName} onChange={handleChange} required></input>
+                        <input id="playerName" name='playerName' value={playerName} onChange={handleChange} type="text" required></input>
                     </div>
 
                     <div class="question">
