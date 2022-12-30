@@ -34,7 +34,9 @@ const CreateCharacterForm = () => {
         const { name, value } = event.target;
     
         // Take values and use set to change state
-      };    
+    };    
+
+    // Separate function to handle faction changes
 
     return (
         <div class="characterForm">
@@ -44,10 +46,12 @@ const CreateCharacterForm = () => {
                         <label for="playerName">Player name:</label>
                         <input id="playerName" name='playerName' value={playerName} onChange={handleChange}></input>
                     </div>
+
                     <div class="question">
                         <label for="characterName">Character name:</label>
                         <input id="characterName" name='characterName' value={characterName} onChange={handleChange}></input>
                     </div>
+
                     <label for='factionForm'>Select a faction:</label>
                     <div class="question" id='factionForm'>
                         <input id="human" name='faction' type="radio" value={faction} onChange={handleChange}></input>
@@ -58,6 +62,11 @@ const CreateCharacterForm = () => {
                         <label for="shifter">Shifter</label>
                         <input id="vampire" name='faction' type="radio" value={faction} onChange={handleChange}></input>
                         <label for="vampire">Vampire</label>
+                    </div>
+
+                    <label for='subfactionForm'>Select a subfaction:</label>
+                    <div class="question" id='subfactionForm'>
+
                     </div>
                 </section>
                 <input
