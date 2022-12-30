@@ -59,6 +59,9 @@ const CreateCharacterForm = () => {
             case "characterName":
                 setCharacterName(value);
                 break;
+            case "subFaction":
+                setSubFaction(value);
+                break;
             case "patron":
                 setPatron(value);
                 break;
@@ -73,6 +76,7 @@ const CreateCharacterForm = () => {
         const { name, value } = event.target;
 
         // Take values and use set to change state
+        setFaction(value);
 
         // Using the value, update the subfactionForm
 
