@@ -13,11 +13,9 @@ const CreateCharacterForm = () => {
 
     const [addSheet, { error }] = useMutation(ADD_SHEET);
   
-    // TODO: Create functions to handle the form submission
     const handleFormSubmit = async (event) => {
         event.preventDefault();
     
-        // Template
         try {
             const { data } = await addSheet({
                 variables: {
@@ -47,7 +45,6 @@ const CreateCharacterForm = () => {
         }
     };
 
-    // Template
     const handleChange = (event) => {
         const { name, value } = event.target;
     
@@ -77,6 +74,24 @@ const CreateCharacterForm = () => {
 
         // Take values and use set to change state
         setFaction(value);
+        setSubFaction('');
+
+        // Clear the current subfaction section/selections
+        try {
+            // Select the subfaction section element
+
+
+            // Delete the selected element
+
+
+            // Select the faction specifics section/selections
+
+
+            // Delete the selected element
+        }
+        catch {
+            console.error("No elements to clear");
+        };
 
         // Using the value, update the subfactionForm and factionSpecificForm
         switch(value){
@@ -94,7 +109,7 @@ const CreateCharacterForm = () => {
                 break;
             case "Vampire":
                 console.log("Vampire!");
-                
+
                 break;
         }
 
