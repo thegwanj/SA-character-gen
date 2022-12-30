@@ -115,7 +115,7 @@ const CreateCharacterForm = () => {
 
             // Delete the selected element
             while(subFactionForm.firstChild){
-                subFactionForm.removeChild(firstChild);
+                subFactionForm.removeChild(subFactionForm.firstChild);
             };
 
             // Select the faction specifics section/selections
@@ -123,7 +123,7 @@ const CreateCharacterForm = () => {
 
             // Delete the selected element
             while(factionSpecificForm.firstChild){
-                factionSpecificForm.removeChild(firstChild);
+                factionSpecificForm.removeChild(factionSpecificForm.firstChild);
             };
         }
         catch {
@@ -142,6 +142,7 @@ const CreateCharacterForm = () => {
                 
                 `;
                 break;
+
             case "Sorcerer":
                 console.log("Sorcerer!");
 
@@ -149,6 +150,7 @@ const CreateCharacterForm = () => {
                 
                 `;
                 break;
+
             case "Shifter":
                 console.log("Shifter!");
 
@@ -156,6 +158,7 @@ const CreateCharacterForm = () => {
                 
                 `;
                 break;
+
             case "Vampire":
                 console.log("Vampire!");
 
@@ -169,13 +172,15 @@ const CreateCharacterForm = () => {
         let subFactionForm = document.getElementById("subFactionForm");
         subFactionForm.appendChild(newContent);
 
+        console.log(newContent);
+
         // Rewrite element for the faction specifics section like with subfactions (text inputs)
         switch(value){
             case "Human":
                 console.log("Human!");
 
                 newContent.innerHTML=`
-                
+                <p>Test</p>
                 `;
                 break;
             case "Sorcerer":
@@ -204,6 +209,8 @@ const CreateCharacterForm = () => {
         // Append to faction specifics section
         let factionSpecificForm = document.getElementById("factionSpecificForm");
         factionSpecificForm.appendChild(newContent);
+
+        console.log(newContent);
 
         // Future implementation: Using the value, update the energy and virtue pools
     }
