@@ -89,7 +89,7 @@ const CreateCharacterForm = () => {
                 setPassion(value);
                 break;
             case "shadow":
-                setPassion(value);
+                setShadow(value);
                 break;
         }
     };    
