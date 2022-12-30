@@ -10,6 +10,12 @@ const CreateCharacterForm = () => {
     const [subFaction, setSubFaction] = useState('');
     const [patron, setPatron] = useState('');
     const [notes, setNotes] = useState('');
+    const [rank, setRank] = useState('');
+    const [deedName, setDeedName] = useState('');
+    const [generation, setGeneration] = useState('');
+    const [sire, setSire] = useState('');
+    const [passion, setPassion] = useState('');
+    const [shadow, setShadow] = useState('');
 
     const [addSheet, { error }] = useMutation(ADD_SHEET);
   
@@ -79,39 +85,99 @@ const CreateCharacterForm = () => {
         // Clear the current subfaction section/selections
         try {
             // Select the subfaction section element
-
+            let subFactionForm = document.getElementById("subFactionForm");
 
             // Delete the selected element
-
+            while(subFactionForm.firstChild){
+                subFactionForm.removeChild(firstChild);
+            };
 
             // Select the faction specifics section/selections
-
+            let factionSpecificForm = document.getElementById("factionSpecificForm");
 
             // Delete the selected element
+            while(factionSpecificForm.firstChild){
+                factionSpecificForm.removeChild(firstChild);
+            };
         }
         catch {
             console.error("No elements to clear");
         };
 
-        // Using the value, update the subfactionForm and factionSpecificForm
+        // Create a new dom element that we will use to append to the forms
+        let newContent = document.createElement("div");
+
+        // Add to element depending on what faction is selected (dropdown menu)
         switch(value){
             case "Human":
                 console.log("Human!");
 
+                newContent.innerHTML=`
+                
+                `;
                 break;
             case "Sorcerer":
                 console.log("Sorcerer!");
 
+                newContent.innerHTML=`
+                
+                `;
                 break;
             case "Shifter":
                 console.log("Shifter!");
 
+                newContent.innerHTML=`
+                
+                `;
                 break;
             case "Vampire":
                 console.log("Vampire!");
 
+                newContent.innerHTML=`
+                
+                `;
                 break;
         }
+
+        // Append to subfaction section element
+        let subFactionForm = document.getElementById("subFactionForm");
+        subFactionForm.appendChild(newContent);
+
+        // Rewrite element for the faction specifics section like with subfactions (text inputs)
+        switch(value){
+            case "Human":
+                console.log("Human!");
+
+                newContent.innerHTML=`
+                
+                `;
+                break;
+            case "Sorcerer":
+                console.log("Sorcerer!");
+
+                newContent.innerHTML=`
+                
+                `;
+                break;
+            case "Shifter":
+                console.log("Shifter!");
+
+                newContent.innerHTML=`
+                
+                `;
+                break;
+            case "Vampire":
+                console.log("Vampire!");
+
+                newContent.innerHTML=`
+                
+                `;
+                break;
+        }
+
+        // Append to faction specifics section
+        let factionSpecificForm = document.getElementById("factionSpecificForm");
+        factionSpecificForm.appendChild(newContent);
 
         // Future implementation: Using the value, update the energy and virtue pools
     }
@@ -142,8 +208,8 @@ const CreateCharacterForm = () => {
                         <label for="vampire">Vampire</label>
                     </div>
 
-                    <label for='subfactionForm'>Select a subfaction:</label>
-                    <div class="question" id='subfactionForm'>
+                    <label for='subFactionForm'>Select a subfaction:</label>
+                    <div class="question" id='subFactionForm'>
 
                     </div>
 
