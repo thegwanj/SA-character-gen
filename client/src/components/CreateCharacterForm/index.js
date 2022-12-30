@@ -37,6 +37,15 @@ const CreateCharacterForm = () => {
     };    
 
     // Separate function to handle faction changes
+    const handleFactionChange = (event) => {
+        const { name, value } = event.target;
+
+        // Take values and use set to change state
+
+        // Using the value, update the subfactionForm
+
+        // Using the value, update the factionSpecificForm
+    }
 
     return (
         <div class="characterForm">
@@ -54,13 +63,13 @@ const CreateCharacterForm = () => {
 
                     <label for='factionForm'>Select a faction:</label>
                     <div class="question" id='factionForm'>
-                        <input id="human" name='faction' type="radio" value={faction} onChange={handleChange}></input>
+                        <input id="human" name='faction' type="radio" value={faction} onChange={handleFactionChange}></input>
                         <label for="human">Human</label>
-                        <input id="sorcerer" name='faction' type="radio" value={faction} onChange={handleChange}></input>
+                        <input id="sorcerer" name='faction' type="radio" value={faction} onChange={handleFactionChange}></input>
                         <label for="sorcerer">Sorcerer</label>
-                        <input id="shifter" name='faction' type="radio" value={faction} onChange={handleChange}></input>
+                        <input id="shifter" name='faction' type="radio" value={faction} onChange={handleFactionChange}></input>
                         <label for="shifter">Shifter</label>
-                        <input id="vampire" name='faction' type="radio" value={faction} onChange={handleChange}></input>
+                        <input id="vampire" name='faction' type="radio" value={faction} onChange={handleFactionChange}></input>
                         <label for="vampire">Vampire</label>
                     </div>
 
@@ -68,23 +77,18 @@ const CreateCharacterForm = () => {
                     <div class="question" id='subfactionForm'>
 
                     </div>
+
+                    <div class="question" id='factionSpecificForm'>
+
+                    </div>
+
+                    <div class="question">
+                        <label for="health">Health:</label>
+                        <p id='health'>10 (default)</p>
+                        <label for="willpower">Willpower:</label>
+                        <p id='willpower'>1 (default)</p>
+                    </div>
                 </section>
-                <input
-                name=""
-                placeholder=""
-                value={friendName}
-                className=""
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
-                ></input>
-                <textarea
-                name="="
-                placeholder=""
-                value={friendNote}
-                className=""
-                style={{ lineHeight: '1.5', resize: 'vertical' }}
-                onChange={handleChange}
-              ></textarea>
 
                 <button type="submit">Create Character</button>
             </form>
