@@ -7,7 +7,7 @@ const CreateCharacterForm = () => {
     const [playerName, setPlayerName] = useState('');
     const [characterName, setCharacterName] = useState('');
     const [faction, setfaction] = useState('');
-    const [friendNote, setFriendNote] = useState('');
+    const [patron, setPatron] = useState('');
     const [friendName, setFriendName] = useState('');
 
     const [addSheet, { error }] = useMutation(ADD_SHEET);
@@ -93,6 +93,19 @@ const CreateCharacterForm = () => {
                         <p id='energy'>10 (WIP)</p>
                         <label for="virtue">Virtue:</label>
                         <p id='virtue'>6 (WIP)</p>
+                    </div>
+
+
+
+
+
+                    <div class="question">
+                        <label for="patron">Patron (if any):</label>
+                        <input id='patron' name='patron' value={patron} onChange={handleChange}></input>
+                    </div>
+                    <div class="question">
+                        <label for="notes">Notes:</label>
+                        <textarea id='notes' name='notes' value={notes} onChange={handleChange}></textarea>
                     </div>
                 </section>
 
