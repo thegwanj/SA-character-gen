@@ -6,7 +6,8 @@ import { ADD_SHEET } from '../../utils/mutations';
 const CreateCharacterForm = () => {
     const [playerName, setPlayerName] = useState('');
     const [characterName, setCharacterName] = useState('');
-    const [faction, setfaction] = useState('');
+    const [faction, setFaction] = useState('');
+    const [subFaction, setSubFaction] = useState('');
     const [patron, setPatron] = useState('');
     const [notes, setNotes] = useState('');
 
@@ -20,7 +21,24 @@ const CreateCharacterForm = () => {
         try {
             const { data } = await addSheet({
                 variables: {
-
+                    playerName,
+                    characterName,
+                    faction,
+                    subFaction,
+                    rank,
+                    deedName,
+                    generation,
+                    sire,
+                    passion,
+                    shadow,
+                    health,
+                    willpower,
+                    energy,
+                    virtue,
+                    xpCost,
+                    freebiesCost,
+                    patron,
+                    notes
                 },
             });
         }
