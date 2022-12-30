@@ -45,6 +45,8 @@ const CreateCharacterForm = () => {
         // Using the value, update the subfactionForm
 
         // Using the value, update the factionSpecificForm
+
+        // Future implementation: Using the value, update the energy and virtue pools
     }
 
     return (
@@ -87,6 +89,10 @@ const CreateCharacterForm = () => {
                         <p id='health'>10 (default)</p>
                         <label for="willpower">Willpower:</label>
                         <p id='willpower'>1 (default)</p>
+                        <label for="energy">Energy:</label>
+                        <p id='energy'>10 (WIP)</p>
+                        <label for="virtue">Virtue:</label>
+                        <p id='virtue'>6 (WIP)</p>
                     </div>
                 </section>
 
