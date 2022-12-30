@@ -71,6 +71,26 @@ const CreateCharacterForm = () => {
             case "notes":
                 setNotes(value);
                 break;
+            
+            // Faction specific states
+            case "rank":
+                setRank(value);
+                break;
+            case "deedName":
+                setDeedName(value);
+                break;
+            case "generation":
+                setGeneration(value);
+                break;
+            case "sire":
+                setSire(value);
+                break;
+            case "passion":
+                setPassion(value);
+                break;
+            case "shadow":
+                setPassion(value);
+                break;
         }
     };    
 
@@ -81,6 +101,12 @@ const CreateCharacterForm = () => {
         // Take values and use set to change state
         setFaction(value);
         setSubFaction('');
+        setRank('');
+        setDeedName('');
+        setGeneration('');
+        setSire('');
+        setPassion('');
+        setPassion('');
 
         // Clear the current subfaction section/selections
         try {
