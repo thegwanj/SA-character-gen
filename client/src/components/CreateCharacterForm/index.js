@@ -81,9 +81,11 @@ const CreateCharacterForm = () => {
                 break;
             case "generation":
                 setGeneration(value);
+                console.log(value);
                 break;
             case "sire":
                 setSire(value);
+                console.log(value);
                 break;
             case "passion":
                 setPassion(value);
@@ -174,34 +176,39 @@ const CreateCharacterForm = () => {
 
         console.log(newContent);
 
+        // TODO: Add Wraith
         // Rewrite element for the faction specifics section like with subfactions (text inputs)
         switch(value){
             case "Human":
                 console.log("Human!");
 
-                newContent.innerHTML=`
-                <p>Test</p>
-                `;
+                newContent.innerHTML=``;
                 break;
             case "Sorcerer":
                 console.log("Sorcerer!");
 
-                newContent.innerHTML=`
-                
-                `;
+                newContent.innerHTML=``;
                 break;
             case "Shifter":
                 console.log("Shifter!");
 
+                // Might have to make rank a dropdown instead of text
                 newContent.innerHTML=`
-                
+                <label for="rank">Rank:</label>
+                <input id='rank' name='rank' onChange={handleChange} required></input>
+                <label for="deedName">Deed name (if applicable):</label>
+                <input id='deedName' name='deedName' onChange={handleChange}></input>
                 `;
                 break;
             case "Vampire":
                 console.log("Vampire!");
 
+                // Might have to make generation a dropdown instead of text
                 newContent.innerHTML=`
-                
+                <label for="generation">Generation:</label>
+                <input id='generation' name='generation' onChange={handleChange} required></input>
+                <label for="sire">Sire:</label>
+                <input id='sire' name='sire' onChange={handleChange} required></input>
                 `;
                 break;
         }
