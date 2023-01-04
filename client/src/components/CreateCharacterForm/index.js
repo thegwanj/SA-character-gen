@@ -49,6 +49,8 @@ const CreateCharacterForm = () => {
         catch (e){
             console.error(e);
         }
+
+        window.location.href = "/ViewSheet";
     };
 
     const handleChange = (event) => {
