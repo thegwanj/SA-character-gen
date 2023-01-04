@@ -133,14 +133,14 @@ const CreateCharacterForm = () => {
         };
 
         // Create a new dom element that we will use to append to the forms
-        let newContent = document.createElement("div");
+        let subFactionContent = document.createElement("div");
 
         // Add to element depending on what faction is selected (dropdown menu)
         switch(value){
             case "Human":
                 console.log("Human!");
 
-                newContent.innerHTML=`
+                subFactionContent.innerHTML=`
                 
                 `;
                 break;
@@ -148,7 +148,7 @@ const CreateCharacterForm = () => {
             case "Sorcerer":
                 console.log("Sorcerer!");
 
-                newContent.innerHTML=`
+                subFactionContent.innerHTML=`
                 
                 `;
                 break;
@@ -156,7 +156,15 @@ const CreateCharacterForm = () => {
             case "Shifter":
                 console.log("Shifter!");
 
-                newContent.innerHTML=`
+                subFactionContent.innerHTML=`
+                
+                `;
+                break;
+
+            case "Wraith":
+                console.log("Wraith!");
+
+                subFactionContent.innerHTML=`
                 
                 `;
                 break;
@@ -164,7 +172,7 @@ const CreateCharacterForm = () => {
             case "Vampire":
                 console.log("Vampire!");
 
-                newContent.innerHTML=`
+                subFactionContent.innerHTML=`
                 
                 `;
                 break;
@@ -172,11 +180,10 @@ const CreateCharacterForm = () => {
 
         // Append to subfaction section element
         let subFactionForm = document.getElementById("subFactionForm");
-        subFactionForm.appendChild(newContent);
+        subFactionForm.appendChild(subFactionContent);
 
-        console.log(newContent);
-
-        // TODO: Add Wraith
+        // Create a new dom element that we will use to append to the forms
+        let newContent = document.createElement("div");
         // Rewrite element for the faction specifics section like with subfactions (text inputs)
         switch(value){
             case "Human":
