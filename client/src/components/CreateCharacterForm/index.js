@@ -200,6 +200,16 @@ const CreateCharacterForm = () => {
                 <input id='deedName' name='deedName' onChange={handleChange}></input>
                 `;
                 break;
+            case "Wraith":
+                console.log("Wraith!");
+
+                newContent.innerHTML=`
+                <label for="passion">Passion:</label>
+                <input id='passion' name='passion' onChange={handleChange} required></input>
+                <label for="shadow">Shadow:</label>
+                <input id='shadow' name='shadow' onChange={handleChange} required></input>
+                `;
+                break;
             case "Vampire":
                 console.log("Vampire!");
 
@@ -244,6 +254,8 @@ const CreateCharacterForm = () => {
                         <label for="sorcerer">Sorcerer</label>
                         <input id="shifter" name='faction' type="radio" value="Shifter" onChange={handleFactionChange} required></input>
                         <label for="shifter">Shifter</label>
+                        <input id="wraith" name='faction' type="radio" value="Wraith" onChange={handleFactionChange} required></input>
+                        <label for="wraith">Wraith</label>
                         <input id="vampire" name='faction' type="radio" value="Vampire" onChange={handleFactionChange} required></input>
                         <label for="vampire">Vampire</label>
                     </div>
