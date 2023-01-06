@@ -143,15 +143,6 @@ const CreateCharacterForm = () => {
                 console.log("Human!");
 
                 subFactionContent.innerHTML=`
-                
-                `;
-                break;
-
-            case "Sorcerer":
-                console.log("Sorcerer!");
-
-                subFactionContent.innerHTML=`
-                
                 `;
                 break;
 
@@ -193,11 +184,7 @@ const CreateCharacterForm = () => {
 
                 newContent.innerHTML=``;
                 break;
-            case "Sorcerer":
-                console.log("Sorcerer!");
 
-                newContent.innerHTML=``;
-                break;
             case "Shifter":
                 console.log("Shifter!");
 
@@ -209,6 +196,7 @@ const CreateCharacterForm = () => {
                 <input id='deedName' name='deedName' onChange={handleChange}></input>
                 `;
                 break;
+
             case "Wraith":
                 console.log("Wraith!");
 
@@ -219,6 +207,7 @@ const CreateCharacterForm = () => {
                 <input id='shadow' name='shadow' onChange={handleChange} required></input>
                 `;
                 break;
+
             case "Vampire":
                 console.log("Vampire!");
 
@@ -259,8 +248,6 @@ const CreateCharacterForm = () => {
                     <div class="question" id='factionForm'>
                         <input id="human" name='faction' type="radio" value="Human" onChange={handleFactionChange} required></input>
                         <label for="human">Human</label>
-                        <input id="sorcerer" name='faction' type="radio" value="Sorcerer" onChange={handleFactionChange} required></input>
-                        <label for="sorcerer">Sorcerer</label>
                         <input id="shifter" name='faction' type="radio" value="Shifter" onChange={handleFactionChange} required></input>
                         <label for="shifter">Shifter</label>
                         <input id="wraith" name='faction' type="radio" value="Wraith" onChange={handleFactionChange} required></input>
