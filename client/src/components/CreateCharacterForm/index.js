@@ -161,7 +161,44 @@ const CreateCharacterForm = () => {
                 console.log("Shifter!");
 
                 subFactionContent.innerHTML=`
-                
+                <label for="subFactionSelection">Select Breed, Auspice, and Tribe:</label>
+                <div id='subFactionSelection' name='subFactionSelection' onChange={handleChange} required>
+                    <label for="breed">Breed</label>
+                    <select id='breed'>
+                        <option value="Homid">Homid</option>
+                        <option value="Lupus">Lupus</option>
+                        <option value="Natus">Natus (is shown as "Metis" in current rulebook)</option>
+                    </select>
+                    <label for="auspice">Auspice</label>
+                    <select id='auspice'>
+                        <option value="Ahroun">Ahroun</option>
+                        <option value="Galliard">Galliard</option>
+                        <option value="Philodox">Philodox</option>
+                        <option value="Ragabash">Ragabash</option>
+                        <option value="Theurge">Theurge</option>
+                    </select>
+                    <label for="tribe">Tribe</label>
+                    <select id='tribe'>
+                        <option value="Black Furies">Black Furies</option>
+                        <option value="Black Spiral Dancer">Black Spiral Dancers</option>
+                        <option value="Bone Gnawers">Bone Gnawers</option>
+                        <option value="Child of Gaia">Child of Gaia</option>
+                        <option value="Fenrir">Fenrir</option>
+                        <option value="Fiana">Fiana</option>
+                        <option value="Red Talons">Red Talons</option>
+                        <option value="Shadow Lords">Shadow Lords</option>
+                        <option value="Silent Striders">Silent Striders</option>
+                        <option value="Silver Fangs">Silver Fangs</option>
+                        <option value="Warders of Man">Warders of Man</option>
+                        <option value="Bagheera">Bagheera</option>
+                        <option value="Bubasti">Bubasti</option>
+                        <option value="Ceilican">Ceilican</option>
+                        <option value="Swara">Swara</option>
+                        <option value="Ananasi">Ananasi</option>
+                        <option value="Corax">Corax</option>
+                        <option value="Ratkin">Ratkin</option>
+                    </select>
+                </div>
                 `;
                 break;
 
