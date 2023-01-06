@@ -214,7 +214,26 @@ const CreateCharacterForm = () => {
                 console.log("Vampire!");
 
                 subFactionContent.innerHTML=`
-                
+                <label for="subFactionSelection">Select a subfaction:</label>
+                <select id='subFactionSelection' name='subFactionSelection' onChange={handleChange} required>
+                    <option value="Assamite">Assamite</option>
+                    <option value="Baali">Baali</option>
+                    <option value="Brujah">Brujah</option>
+                    <option value="Caitiff">Caitiff</option>
+                    <option value="Cappadocian">Cappadocian</option>
+                    <option value="Gangrel">Gangrel</option>
+                    <option value="Giovanni">Giovanni</option>
+                    <option value="Lamia">Lamia</option>
+                    <option value="Lasombra">Lasombra</option>
+                    <option value="Malkavian">Malkavian</option>
+                    <option value="Nosferatu">Nosferatu</option>
+                    <option value="Ravnos">Ravnos</option>
+                    <option value="Salubri">Salubri</option>
+                    <option value="Toreador">Toreador</option>
+                    <option value="Tremere">Tremere</option>
+                    <option value="Tzimisce">Tzimisce</option>
+                    <option value="Ventrue">Ventrue</option>
+                </select>
                 `;
                 break;
         }
