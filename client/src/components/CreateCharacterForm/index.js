@@ -66,6 +66,7 @@ const CreateCharacterForm = () => {
                 break;
             case "subFaction":
                 setSubFaction(value);
+                console.log(value);
                 break;
             case "patron":
                 setPatron(value);
@@ -98,6 +99,8 @@ const CreateCharacterForm = () => {
         }
     };    
 
+    // TODO: Instead of onChange in the innerHTML, try adding event listener instead
+    //       Will most likely need to change names/id to be not unique
     // Separate function to handle faction changes
     const handleFactionChange = (event) => {
         const { name, value } = event.target;
@@ -143,6 +146,14 @@ const CreateCharacterForm = () => {
                 console.log("Human!");
 
                 subFactionContent.innerHTML=`
+                <label for="subFactionSelection">Select a subfaction:</label>
+                <select id='subFactionSelection' name='subFactionSelection' onChange={handleChange} required>
+                    <option value="Ghoul">Ghoul</option>
+                    <option value="Gifted Kin">Gifted Kin</option>
+                    <option value="Sorcerer">Sorcerer</option>
+                    <option value="Faithful">Faithful</option>
+                    <option value="Claimed">Claimed</option>
+                </select>
                 `;
                 break;
 
@@ -214,7 +225,7 @@ const CreateCharacterForm = () => {
                 // Might have to make generation a dropdown instead of text
                 newContent.innerHTML=`
                 <label for="generation">Generation:</label>
-                <input id='generation' name='generation' onChange={handleChange} required></input>
+                <input id='generation' name='generation' value="" required></input>
                 <label for="sire">Sire:</label>
                 <input id='sire' name='sire' onChange={handleChange} required></input>
                 `;
@@ -256,7 +267,6 @@ const CreateCharacterForm = () => {
                         <label for="vampire">Vampire</label>
                     </div>
 
-                    <label for='subFactionForm'>Select a subfaction:</label>
                     <div class="question" id='subFactionForm'>
 
                     </div>
