@@ -140,20 +140,23 @@ const CreateCharacterForm = () => {
         // Create a new dom element that we will use to append to the forms
         let subFactionContent = document.createElement("div");
 
-        // Add to element depending on what faction is selected (dropdown menu)
+        // Add to element depending on what faction is selected (dropdown menu?)
         switch(value){
             case "Human":
                 console.log("Human!");
 
+                // TODO: Make Claimed a checkbox option instead. Then, figure out how this will show up in our Sheet
                 subFactionContent.innerHTML=`
                 <label for="subFactionSelection">Select a subfaction:</label>
                 <select id='subFactionSelection' name='subFactionSelection' onChange={handleChange} required>
+                    <option value="Commoner">Commoner</option>
                     <option value="Ghoul">Ghoul</option>
                     <option value="Gifted Kin">Gifted Kin</option>
                     <option value="Sorcerer">Sorcerer</option>
                     <option value="Faithful">Faithful</option>
-                    <option value="Claimed">Claimed</option>
                 </select>
+                <label for="isClaimed">Is this character also a Claimed?</label>
+                <input id='isClaimed' name='isClaimed' type="checkbox"></input>
                 `;
                 break;
 
@@ -167,7 +170,7 @@ const CreateCharacterForm = () => {
                     <select id='breed'>
                         <option value="Homid">Homid</option>
                         <option value="Lupus">Lupus</option>
-                        <option value="Natus">Natus (is shown as "Metis" in current rulebook)</option>
+                        <option value="Natus">Natus</option>
                     </select>
                     <label for="auspice">Auspice</label>
                     <select id='auspice'>
@@ -199,14 +202,6 @@ const CreateCharacterForm = () => {
                         <option value="Ratkin">Ratkin</option>
                     </select>
                 </div>
-                `;
-                break;
-
-            case "Wraith":
-                console.log("Wraith!");
-
-                subFactionContent.innerHTML=`
-                
                 `;
                 break;
 
@@ -258,7 +253,14 @@ const CreateCharacterForm = () => {
                 // Might have to make rank a dropdown instead of text
                 newContent.innerHTML=`
                 <label for="rank">Rank:</label>
-                <input id='rank' name='rank' onChange={handleChange} required></input>
+                <select id='rank' name='rank' required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
                 <label for="deedName">Deed name (if applicable):</label>
                 <input id='deedName' name='deedName' onChange={handleChange}></input>
                 `;
@@ -268,7 +270,7 @@ const CreateCharacterForm = () => {
                 console.log("Wraith!");
 
                 newContent.innerHTML=`
-                <label for="passion">Passion:</label>
+                <label for="passion">Passion(s):</label>
                 <input id='passion' name='passion' onChange={handleChange} required></input>
                 <label for="shadow">Shadow:</label>
                 <input id='shadow' name='shadow' onChange={handleChange} required></input>
