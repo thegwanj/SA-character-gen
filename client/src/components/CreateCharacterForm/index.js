@@ -65,8 +65,8 @@ const CreateCharacterForm = () => {
                 setCharacterName(value);
                 break;
             case "subFaction":
-                setSubFaction(value);
                 console.log(value);
+                setSubFaction(value);
                 break;
             case "patron":
                 setPatron(value);
@@ -147,8 +147,8 @@ const CreateCharacterForm = () => {
 
                 // TODO: Make Claimed a checkbox option instead. Then, figure out how this will show up in our Sheet
                 subFactionContent.innerHTML=`
-                <label for="subFactionSelection">Select a subfaction:</label>
-                <select id='subFactionSelection' name='subFactionSelection' onChange={handleChange} required>
+                <label for="subFaction">Select a subfaction:</label>
+                <select id='subFaction' name='subFaction' required>
                     <option value="Commoner">Commoner</option>
                     <option value="Ghoul">Ghoul</option>
                     <option value="Gifted Kin">Gifted Kin</option>
@@ -164,8 +164,8 @@ const CreateCharacterForm = () => {
                 console.log("Shifter!");
 
                 subFactionContent.innerHTML=`
-                <label for="subFactionSelection">Select Breed, Auspice, and Tribe:</label>
-                <div id='subFactionSelection' name='subFactionSelection' onChange={handleChange} required>
+                <label for="subFaction">Select Breed, Auspice, and Tribe:</label>
+                <div id='subFaction' name='subFaction' required>
                     <label for="breed">Breed</label>
                     <select id='breed'>
                         <option value="Homid">Homid</option>
@@ -209,8 +209,8 @@ const CreateCharacterForm = () => {
                 console.log("Vampire!");
 
                 subFactionContent.innerHTML=`
-                <label for="subFactionSelection">Select a subfaction:</label>
-                <select id='subFactionSelection' name='subFactionSelection' onChange={handleChange} required>
+                <label for="subFaction">Select a subfaction:</label>
+                <select id='subFaction' name='subFaction' required>
                     <option value="Assamite">Assamite</option>
                     <option value="Baali">Baali</option>
                     <option value="Brujah">Brujah</option>
@@ -296,7 +296,22 @@ const CreateCharacterForm = () => {
 
         console.log(newContent);
 
+        // After rendering, assign eventlisteners to new elements
+        assignEventListeners();
+
         // Future implementation: Using the value, update the energy and virtue pools
+    }
+
+    // Function for getting all possible generated inputs and assigning eventlisteners to them
+    const assignEventListeners = () => {
+        console.log("Adding evenlisteners!");
+        try{
+            let input1 = document.getElementById("subFaction");
+            input1.addEventListener("change", handleChange);      
+        }
+        catch (err) {
+            console.err(err);
+        }
     }
 
     return (
