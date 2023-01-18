@@ -45,6 +45,7 @@ const CreateCharacterForm = () => {
                     notes
                 },
             });
+            console.log("creating sheet!");
         }
         catch (e){
             console.error(e);
@@ -263,7 +264,7 @@ const CreateCharacterForm = () => {
                     <option value="5">5</option>
                 </select>
                 <label for="deedName">Deed name (if applicable):</label>
-                <input id='deedName' name='deedName' onChange={handleChange}></input>
+                <input id='deedName' name='deedName'></input>
                 `;
                 break;
 
@@ -272,9 +273,9 @@ const CreateCharacterForm = () => {
 
                 newContent.innerHTML=`
                 <label for="passion">Passion(s):</label>
-                <input id='passion' name='passion' onChange={handleChange} required></input>
+                <input id='passion' name='passion' required></input>
                 <label for="shadow">Shadow:</label>
-                <input id='shadow' name='shadow' onChange={handleChange} required></input>
+                <input id='shadow' name='shadow' required></input>
                 `;
                 break;
 
@@ -308,10 +309,20 @@ const CreateCharacterForm = () => {
         console.log("Adding eventlisteners!");
         try{
             let input1 = document.getElementById("subFaction");
-            input1.addEventListener("change", handleChange);      
+            input1.addEventListener("change", handleChange);   
+            let breedInput = document.getElementById("breed");
+            breedInput.addEventListener("change", handleChange);
+            let auspiceInput = document.getElementById("auspice");
+            auspiceInput.addEventListener("change", handleChange);
+            let tribeInput = document.getElementById("tribe");
+            tribeInput.addEventListener("change", handleChange);  
+            let rankInput = document.getElementById("rank");
+            rankInput.addEventListener("change", handleChange); 
+            let deedNameInput = document.getElementById("deedName");
+            deedNameInput.addEventListener("change", handleChange);
         }
         catch (err) {
-            console.err(err);
+            console.error(err);
         }
     }
 
