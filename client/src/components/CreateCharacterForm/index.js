@@ -163,6 +163,7 @@ const CreateCharacterForm = () => {
             case "Shifter":
                 console.log("Shifter!");
 
+                // TODO: Update our Sheet model to accept breed, auspice, and tribe
                 subFactionContent.innerHTML=`
                 <label for="subFaction">Select Breed, Auspice, and Tribe:</label>
                 <div id='subFaction' name='subFaction' required>
@@ -304,7 +305,7 @@ const CreateCharacterForm = () => {
 
     // Function for getting all possible generated inputs and assigning eventlisteners to them
     const assignEventListeners = () => {
-        console.log("Adding evenlisteners!");
+        console.log("Adding eventlisteners!");
         try{
             let input1 = document.getElementById("subFaction");
             input1.addEventListener("change", handleChange);      
