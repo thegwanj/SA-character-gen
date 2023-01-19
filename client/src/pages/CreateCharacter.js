@@ -7,9 +7,6 @@ const CreateCharacter = () => {
     return (
         <main class="createCharacterMain">
             <CreateCharacterForm />
-            <Link to="/ViewSheet">
-                    <h3>Testing route to ViewSheet</h3>
-            </Link>
         </main>
     );
 };
