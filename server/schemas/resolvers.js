@@ -11,6 +11,7 @@ const resolvers = {
   },
 
   Mutation: {
+    // TODO: Add in Breed, Auspice, and Tribe
     // Mutations for creating and deleting sheets
     addSheet: async (parent, {playerName, characterName, faction, subFaction, rank, deedName, generation, sire, passion, shadow, health, willpower, energy, virtue, xpCost, freebiesCost, powers, skills, lores, merits, patron, notes}) => {
       const sheet = await Sheet.create({playerName, characterName, faction, subFaction, rank, deedName, generation, sire, passion, shadow, health, willpower, energy, virtue, xpCost, freebiesCost, powers, skills, lores, merits, patron, notes});

@@ -1,5 +1,6 @@
 const { gql } = require('apollo-server-express');
 
+// TODO: Add in Breed, Auspice, and Tribe
 const typeDefs = gql`
     type Sheet {
         _id: ID

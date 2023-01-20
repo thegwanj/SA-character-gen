@@ -4,6 +4,7 @@ const meritSchema = require('./Merit');
 const powerSchema = require('./Power');
 const skillSchema = require('./Skill');
 
+// TODO: Add in Breed, Auspice, and Tribe
 const sheetSchema = new Schema({
   // Top of the sheet - stuff that is always required
   playerName: {
