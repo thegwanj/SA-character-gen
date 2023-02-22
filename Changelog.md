@@ -4,7 +4,7 @@
 - [Beta](#Beta)
 
 ## Prototype
-### 2/22/23
+### 2/22/23 Patch 0.0.1
 - Created the changelog file to track changes
 - Removed all files and folders and replacing it with a basic file layout
 - Archiving the Development.md file and making a new Roadmap.md
