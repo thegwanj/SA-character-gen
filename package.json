@@ -1,0 +1,22 @@
+{
+  "name": "sa-character-gen",
+  "version": "1.0.0",
+  "description": "A character generator for the Shadow Accord LARP community",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thegwanj/SA-character-gen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thegwanj/SA-character-gen/issues"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
