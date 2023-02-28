@@ -23,6 +23,11 @@ app.get('/createSheet', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/createSheet.html'))
 );
 
+// GET Route for viewSheet.html
+app.get('/viewSheet', (req, res) =>
+  res.sendFile(path.join(__dirname, 'public/viewSheet.html'))
+);
+
 app.get('/api/sheets', (req, res) => {
   console.info(`${req.method} request received for feedback`);
 
