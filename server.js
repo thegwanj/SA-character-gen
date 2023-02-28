@@ -2,7 +2,7 @@ const express = require('express');
 const path  = require('path');
 const fs = require('fs');
 const uuid = require('./helpers/uuid');
-const notes = require('./db/db.json');
+const sheets = require('./db/db.json');
 
 const PORT = process.env.PORT || 3001;
 
@@ -18,18 +18,18 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-// GET Route for notes page
+// GET Route for createSheet page
 app.get('/createSheet', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/createSheet.html'))
 );
 
-app.get('/api/notes', (req, res) => {
+app.get('/api/sheets', (req, res) => {
   console.info(`${req.method} request received for feedback`);
 
-  return res.json(notes);
+  return res.json(sheets);
 });
 
-app.post('/api/notes', (req, res) => {
+app.post('/api/sheets', (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to submit feedback`);
 
@@ -39,18 +39,18 @@ app.post('/api/notes', (req, res) => {
   // If all the required properties are present
   if (title && text) {
     // Variable for the object we will save
-    const newNote = {
+    const newSheet = {
       title,
       text,
-      note_id: uuid(),
+      sheet_id: uuid(),
     };
 
-    // push the new note to the array
-    notes.push(newNote);
-    let newNotes = JSON.stringify(notes);
+    // push the new sheet to the array
+    sheets.push(newSheet);
+    let newSheets = JSON.stringify(sheets);
 
     // write file to the db folder
-    fs.writeFile(`./db/db.json`, newNotes, err => {
+    fs.writeFile(`./db/db.json`, newSheets, err => {
         err ? console.error(err) : console.log('Success!')
     });
 
