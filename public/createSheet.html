@@ -34,7 +34,53 @@
     </header>
 
     <body>
+        <div class="characterForm">
+            <form onsubmit="myFunction()">
+                <section class="formSection">
+                    <div class="question">
+                        <label for="playerName">Player name:</label>
+                        <input id="playerName" name='playerName' type="text" required></input>
+                    </div>
 
+                    <div class="question">
+                        <label for="characterName">Character name:</label>
+                        <input id="characterName" name='characterName' required></input>
+                    </div>
+
+                    <div class="question" id='factionForm'>
+                        <label for='faction'>Faction:</label>
+                        <input id="faction" name="faction" required>
+                    </div>
+
+                    <div class="question" id='subFactionForm'>
+                        <label for="subFaction">Subfaction:</label>
+                        <input id="subFaction" name="subFaction" required>
+                    </div>
+
+                    <div class="question">
+                        <label for="health">Health:</label>
+                        <p id='health'>10 (default)</p>
+                        <label for="willpower">Willpower:</label>
+                        <p id='willpower'>1 (default)</p>
+                        <label for="energy">Energy:</label>
+                        <p id='energy'>10 (WIP)</p>
+                        <label for="virtue">Virtue:</label>
+                        <p id='virtue'>6 (WIP)</p>
+                    </div>
+
+                    <div class="question">
+                        <label for="patron">Patron (if any):</label>
+                        <input id='patron' name='patron'></input>
+                    </div>
+                    <div class="question">
+                        <label for="notes">Notes:</label>
+                        <textarea id='notes' name='notes' value={notes}></textarea>
+                    </div>
+                </section>
+
+                <button type="submit">Create Character</button>
+            </form>
+        </div>
 
         <script src="./assets/scripts/script.js"></script>
     </body>
