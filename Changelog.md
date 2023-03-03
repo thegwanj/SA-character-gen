@@ -4,6 +4,12 @@
 - [Beta](#Beta)
 
 ## Prototype
+### 3/3/23 Patch 0.0.2
+- Updated variable names
+- Added in a route and a new page to view the sheet once completed
+- Added in sheet save handling
+- Old templates/boilerplate archived or replaced with current code
+- Fixed a bug that blocked routes and functions from running
 ### 2/22/23 Patch 0.0.1
 - Created the changelog file to track changes
 - Removed all files and folders and replacing it with a basic file layout
