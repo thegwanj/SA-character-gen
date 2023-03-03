@@ -5,6 +5,8 @@ let subfaction;
 let patron;
 let note;
 
+let submitBtn;
+
 // Variables for future versions
 let xpCost;
 let freebies;
@@ -17,10 +19,24 @@ if(window.location.pathname === '/createSheet'){
     subfaction = document.getElementById('subfaction');
     patron = document.getElementById('patron');
     note = document.getElementById('notes');
+
+    // Assign variable to button
+    submitBtn = document.getElementById('submitBtn');
 }
 
+// Function that handles the saving to db
+const saveSheet = (sheet) =>
+    fetch('/api/sheet', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(sheet),
+    });
+
 // Create a function that takes in the form information and saves it to db. Then, change page to the viewSheet.html
-const createSheet = () => {
+const createSheet = (e) => {
+    e.preventDefault();
     const newSheet = {
         player: playerName.value,
         character: characterName.value,
@@ -32,12 +48,7 @@ const createSheet = () => {
     saveSheet(newSheet);
 }
 
-// Function that handles the saving to db
-const saveSheet = (note) =>
-  fetch('/api/sheet', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(note),
-  });
+// Adding event listeners
+if(window.location.pathname === '/createSheet'){
+    submitBtn.addEventListener('click', createSheet);
+}
