@@ -54,8 +54,9 @@ app.post('/api/sheet', (req, res) => {
       sheet_id: uuid(),
     };
 
-    // push the new sheet to the array
-    sheets.push(newSheet);
+    console.log(newSheet);
+
+    //TODO: Get the contents of newSheet into the JSON
     let newSheets = JSON.stringify(sheets);
 
     // write file to the db folder
@@ -65,7 +66,7 @@ app.post('/api/sheet', (req, res) => {
 
     const response = {
       status: 'success',
-      body: newNote,
+      body: newSheet,
     };
 
     res.json(response);
