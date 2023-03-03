@@ -34,19 +34,23 @@ app.get('/api/sheets', (req, res) => {
   return res.json(sheets);
 });
 
-app.post('/api/sheets', (req, res) => {
+app.post('/api/sheet', (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to submit feedback`);
 
   // Destructuring assignment for the items in req.body
-  const { title, text } = req.body;
+  const { player, character, faction, subfaction, patron, note } = req.body;
 
   // If all the required properties are present
-  if (title && text) {
+  if (player && character && faction && subfaction && patron && note) {
     // Variable for the object we will save
     const newSheet = {
-      title,
-      text,
+      player,
+      character,
+      faction,
+      subfaction,
+      patron,
+      note,
       sheet_id: uuid(),
     };
 
