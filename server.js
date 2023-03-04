@@ -25,10 +25,10 @@ app.get('/createSheet', (req, res) =>
 
 // GET Route for viewSheet.html
 app.get('/viewSheet', (req, res) =>
-  res.sendFile(path.join(__dirname, 'public/viewSheet.html'))
+  res.sendFile(path.join(__dirname, '/public/viewSheet.html'))
 );
 
-app.get('/api/sheets', (req, res) => {
+app.get('/api/sheet', (req, res) => {
   console.info(`${req.method} request received for feedback`);
 
   return res.json(sheets);
@@ -42,7 +42,7 @@ app.post('/api/sheet', (req, res) => {
   const { player, character, faction, subfaction, patron, note } = req.body;
 
   // If all the required properties are present
-  if (player && character && faction && subfaction && patron && note) {
+  if (player && character && faction && subfaction) {
     // Variable for the object we will save
     const newSheet = {
       player,
@@ -56,11 +56,10 @@ app.post('/api/sheet', (req, res) => {
 
     console.log(newSheet);
 
-    //TODO: Get the contents of newSheet into the JSON
-    let newSheets = JSON.stringify(sheets);
+    let newContent = JSON.stringify(newSheet);
 
     // write file to the db folder
-    fs.writeFile(`./db/db.json`, newSheets, err => {
+    fs.writeFile(`./db/db.json`, newContent, err => {
         err ? console.error(err) : console.log('Success!')
     });
 
