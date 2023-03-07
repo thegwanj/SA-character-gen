@@ -4,6 +4,13 @@
 - [Beta](#Beta)
 
 ## Prototype
+### 3/6/23 Patch 0.0.3
+- Added script to handle getting the data from the database
+- Started on script to handle rendering information to page
+- Added button to home page to go view current saved sheet
+- Added button to view sheet page to go create new sheet
+- Added button to view sheet page to go back to home page
+- Updated viewsheet page script to run automatically
 ### 3/3/23 Patch 0.0.2 - 0.0.21
 - Updated variable names
 - Added in a route and a new page to view the sheet once completed
