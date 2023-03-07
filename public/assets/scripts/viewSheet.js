@@ -36,8 +36,42 @@ const getSheet = () => {
     });
 }
 
-const renderSheet = () => {
-
+const renderSheet = async (sheet) => {
+    // let jsonNotes = await notes.json();
+    // if (window.location.pathname === '/notes') {
+    //   noteList.forEach((el) => (el.innerHTML = ''));
+    // }
+  
+    // let noteListItems = [];
+  
+    // // Returns HTML element with or without a delete button
+    // const createLi = (text, delBtn = true) => {
+    //   const liEl = document.createElement('li');
+    //   liEl.classList.add('list-group-item');
+  
+    //   const spanEl = document.createElement('span');
+    //   spanEl.classList.add('list-item-title');
+    //   spanEl.innerText = text;
+    //   spanEl.addEventListener('click', handleNoteView);
+  
+    //   liEl.append(spanEl);
+  
+    //   if (delBtn) {
+    //     const delBtnEl = document.createElement('i');
+    //     delBtnEl.classList.add(
+    //       'fas',
+    //       'fa-trash-alt',
+    //       'float-right',
+    //       'text-danger',
+    //       'delete-note'
+    //     );
+    //     delBtnEl.addEventListener('click', handleNoteDelete);
+  
+    //     liEl.append(delBtnEl);
+    //   }
+  
+    //   return liEl;
+    // };
 }
 
 // Function that gets sheet from db and renders it to the page
