@@ -6,6 +6,10 @@ let subfaction;
 let patron;
 let note;
 
+// Variable for buttons
+let homeBtn;
+let backBtn;
+
 // Variables for future versions
 let xpCost;
 let freebies;
@@ -18,4 +22,25 @@ if(window.location.pathname === '/viewSheet'){
     subfaction = document.getElementById('subfaction');
     patron = document.getElementById('patron');
     note = document.getElementById('notes');
+
+    homeBtn = document.getElementById('homeBtn');
 }
+
+// Function that gets info from db
+const getSheet = () => {
+    fetch('/api/sheet', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+}
+
+const renderSheet = () => {
+
+}
+
+// Function that gets sheet from db and renders it to the page
+const getAndRenderSheet = () => getSheet().then(renderSheet);
+
+getAndRenderSheet();
