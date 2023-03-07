@@ -24,16 +24,6 @@ if(window.location.pathname === '/createSheet'){
     submitBtn = document.getElementById('submitBtn');
 }
 
-// Function that gets info from db
-const getSheet = () => {
-    fetch('/api/sheet', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    });
-}
-
 // Function that handles the saving to db
 const saveSheet = (sheet) => {
     fetch('/api/sheet', {
@@ -58,9 +48,6 @@ const createSheet = (e) => {
     };
     saveSheet(newSheet);
 }
-
-// Function that gets sheet from db and renders it to the page
-const getAndRenderSheet = () => getSheet();
 
 // Adding event listeners
 if(window.location.pathname === '/createSheet'){
