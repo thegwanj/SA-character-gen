@@ -4,6 +4,12 @@
 - [Beta](#Beta)
 
 ## Prototype
+### 3/8/23 Patch 0.0.4
+- Fixed bug that prevented going to the viewing page after sheet was made
+- Fixed bug that prevented retrieving data from the db file
+- Fixed typos
+- Added html to help with populating data to page
+- Added script to handle populating data to the page
 ### 3/6/23 Patch 0.0.3
 - Added script to handle getting the data from the database
 - Started on script to handle rendering information to page
