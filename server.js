@@ -2,7 +2,7 @@ const express = require('express');
 const path  = require('path');
 const fs = require('fs');
 const uuid = require('./helpers/uuid');
-const sheet = require('./db/db.json');
+//const sheet = require('./db/db.json');
 
 const PORT = process.env.PORT || 3001;
 
@@ -31,7 +31,9 @@ app.get('/viewSheet', (req, res) =>
 app.get('/api/sheet', (req, res) => {
   console.info(`${req.method} request received for feedback`);
 
-  return res.json(sheet);
+  let sheet = JSON.parse(localStorage.getItem("characterSheet"));
+  // TODO: Instead of returning a JSON file, get item from localstorage and return that
+  return sheet;
 });
 
 app.post('/api/sheet', (req, res) => {
@@ -58,10 +60,13 @@ app.post('/api/sheet', (req, res) => {
 
     let newContent = JSON.stringify(newSheet);
 
+    // TODO: Instead of making a file, save to localstorage
+    localStorage.setItem("characterSheet", JSON.stringify(newContent));
+
     // write file to the db folder
-    fs.writeFile(`./db/db.json`, newContent, err => {
-        err ? console.error(err) : console.log('Success!')
-    });
+    // fs.writeFile(`./db/db.json`, newContent, err => {
+    //     err ? console.error(err) : console.log('Success!')
+    // });
 
     const response = {
       status: 'success',
