@@ -2,7 +2,7 @@ const express = require('express');
 const path  = require('path');
 const fs = require('fs');
 const uuid = require('./helpers/uuid');
-const sheets = require('./db/db.json');
+const sheet = require('./db/db.json');
 
 const PORT = process.env.PORT || 3001;
 
@@ -31,7 +31,7 @@ app.get('/viewSheet', (req, res) =>
 app.get('/api/sheet', (req, res) => {
   console.info(`${req.method} request received for feedback`);
 
-  return res.json(sheets);
+  return res.json(sheet);
 });
 
 app.post('/api/sheet', (req, res) => {
