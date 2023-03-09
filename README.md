@@ -10,7 +10,7 @@ A character generator for the Shadow Accord LARP community
 - [Contribution](#contribution)
 
 ## Description
-This is a web application made with the Shadow Accord LARP community in mind. This app will allow users to create a character sheet without having to do the tedious math it usually takes when doing it on paper. Future development will also take out the stress of needing to spend mass amounts of time searching for most of the wikis and guides they might need while making the character. For more information on what we plan to develop in this app, please go to our [development](./Development.md) file.
+This is a web application made with the Shadow Accord LARP community in mind. This app will allow users to create a character sheet without having to do the tedious math it usually takes when doing it on paper. Future development will also take out the stress of needing to spend mass amounts of time searching for most of the wikis and guides they might need while making the character. For more information on what we plan to develop in this app, please go to our [development](./Development.md) file (has since been archived), or to our [roadmap](./Roadmap.md) document.
 
 ## Usage
 Currently a WIP. Come back later!

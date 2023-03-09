@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="description"
+          content="Web app for making SA character sheets"
+        />
+        <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+        <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest">
+        <title>Character Sheet Maker</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <header>
+        <nav>
+            <div class="navContainer">
+                    <a href="/">
+                        <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
+                    </a>
+                    <a href="/">
+                        <h2>SA Character Sheet Maker</h2>
+                    </a>
+                    <a href="/">
+                        <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
+                    </a>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <div class="characterForm">
+            <form>
+                <section class="formSection">
+                    <div class="question">
+                        <label for="playerName">Player name:</label>
+                        <input id="playerName" name='playerName' type="text" required></input>
+                    </div>
+
+                    <div class="question">
+                        <label for="characterName">Character name:</label>
+                        <input id="characterName" name='characterName' required></input>
+                    </div>
+
+                    <div class="question" id='factionForm'>
+                        <label for='faction'>Faction:</label>
+                        <input id="faction" name="faction" required>
+                    </div>
+
+                    <div class="question" id='subFactionForm'>
+                        <label for="subfaction">Subfaction:</label>
+                        <input id="subfaction" name="subfaction" required>
+                    </div>
+
+                    <div class="question">
+                        <label for="health">Health:</label>
+                        <p id='health'>10 (default)</p>
+                        <label for="willpower">Willpower:</label>
+                        <p id='willpower'>1 (default)</p>
+                        <label for="energy">Energy:</label>
+                        <p id='energy'>10 (WIP)</p>
+                        <label for="virtue">Virtue:</label>
+                        <p id='virtue'>6 (WIP)</p>
+                    </div>
+
+                    <div class="question">
+                        <label for="patron">Patron (if any):</label>
+                        <input id='patron' name='patron'></input>
+                    </div>
+                    <div class="question">
+                        <label for="notes">Notes:</label>
+                        <textarea id='notes' name='notes' value={notes}></textarea>
+                    </div>
+                </section>
+
+                <button id='submitBtn' type="submit">Create Character</button>
+            </form>
+            <a href="/viewSheet">Link to /viewsheet</a>
+        </div>
+
+        <script src="./assets/scripts/createSheet.js"></script>
+    </body>
+
+    <footer>
+        <p>SA Character Sheet Maker created by <a href="https://github.com/thegwanj">thegwanj on github</a></p>
+    </footer>
+</html>

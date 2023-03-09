@@ -1,3 +1,6 @@
+## *This document has been archived and will no longer be updated*
+<br>
+
 # Ideas for Development
 This is a document for laying out plans for this app. Plans may be subject to change at any time for any reason. Credit will be given to those that have their idea on this sheet.
 
