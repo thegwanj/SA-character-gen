@@ -24,8 +24,12 @@ if(window.location.pathname === '/createSheet'){
     submitBtn = document.getElementById('submitBtn');
 }
 
+// Function that handles going to viewSheet page
+const viewSheet = () =>
+    window.location.href = "/viewSheet";
+
 // Function that handles the saving to db
-const saveSheet = (sheet) => {
+const saveSheet = (sheet) =>
     fetch('/api/sheet', {
         method: 'POST',
         headers: {
@@ -33,11 +37,10 @@ const saveSheet = (sheet) => {
         },
         body: JSON.stringify(sheet),
     });
-}
 
 // Function that creates a sheet and sends it off to get saved in the db
 const createSheet = (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     const newSheet = {
         player: playerName.value,
         character: characterName.value,
@@ -46,7 +49,7 @@ const createSheet = (e) => {
         patron: patron.value,
         note: note.value
     };
-    saveSheet(newSheet);
+    saveSheet(newSheet).then(viewSheet);
 }
 
 // Adding event listeners
