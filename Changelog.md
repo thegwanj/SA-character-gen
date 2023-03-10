@@ -1,7 +1,13 @@
 # Table of Contents
-- [Prototype](#Prototype)
-- [Alpha](#Alpha)
 - [Beta](#Beta)
+- [Alpha](#Alpha)
+- [Prototype](#Prototype)
+
+## Beta
+\- None -
+
+## Alpha
+\- None -
 
 ## Prototype
 ### 3/8/23 Patch 0.0.4 - 0.0.41
@@ -34,9 +40,3 @@
 - Archiving the Development.md file and making a new Roadmap.md
 - Brought over reusable code/data from previous versions of the app
 - Updated the README to include the new roadmap file
-
-## Alpha
-\- None -
-
-## Beta
-\- None -
