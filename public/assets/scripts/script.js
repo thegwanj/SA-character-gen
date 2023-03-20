@@ -5,6 +5,9 @@ let subfaction;
 let patron;
 let note;
 
+// Using faction.value, set a factionName
+let factionName = "";
+
 // Variable for buttons
 let submitBtn;
 
@@ -70,7 +73,6 @@ const renderSheet = (sheet) => {
 const viewSheet = () =>
     window.location.href = "/viewSheet";
 
-// TODO: Instead of JSON saving, try using localstorage and see if it makes a difference
 // Function that handles the saving to db
 const saveSheet = (sheet) =>
     fetch('/api/sheet', {
@@ -102,7 +104,7 @@ const createSheet = (e) => {
 
     localStorage.setItem("player", playerName.value);
     localStorage.setItem("character", characterName.value);
-    localStorage.setItem("faction", faction.value);
+    localStorage.setItem("faction", factionName);
     localStorage.setItem("subfaction", subfaction.value);
     localStorage.setItem("patron", patron.value);
     localStorage.setItem("note", note.value);
@@ -111,9 +113,29 @@ const createSheet = (e) => {
     viewSheet();
 }
 
+const checkFaction = () => {
+    switch(faction.value){
+        case "1":
+            factionName = "Human";
+            break;
+        case "2":
+            factionName = "Shifter";
+            break;
+        case "3":
+            factionName = "Vampire";
+            break;
+        case "4":
+            factionName = "Wraith";
+            break;
+    }
+    
+    console.log("Ping!");
+}
+
 // Adding event listeners
 if(window.location.pathname === '/createSheet'){
     submitBtn.addEventListener('click', createSheet);
+    faction.addEventListener('change', checkFaction);
 }
 
 // Function that gets sheet from db and renders it to the page
