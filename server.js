@@ -28,12 +28,11 @@ app.get('/viewSheet', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/viewSheet.html'))
 );
 
+// Shelving this for now
 app.get('/api/sheet', (req, res) => {
   console.info(`${req.method} request received for feedback`);
 
-  let sheet = JSON.parse(localStorage.getItem("characterSheet"));
-  // TODO: Instead of returning a JSON file, get item from localstorage and return that
-  return sheet;
+  return res.json(sheet);
 });
 
 app.post('/api/sheet', (req, res) => {
