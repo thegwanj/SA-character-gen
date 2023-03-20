@@ -59,9 +59,6 @@ app.post('/api/sheet', (req, res) => {
 
     let newContent = JSON.stringify(newSheet);
 
-    // TODO: Instead of making a file, save to localstorage
-    localStorage.setItem("characterSheet", JSON.stringify(newContent));
-
     // write file to the db folder
     // fs.writeFile(`./db/db.json`, newContent, err => {
     //     err ? console.error(err) : console.log('Success!')
