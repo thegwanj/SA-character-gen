@@ -5,8 +5,9 @@ let subfaction;
 let patron;
 let note;
 
-// Using faction.value, set a factionName
+// Variables for faction/subfaction names
 let factionName = "";
+let subfactionName = "";
 
 // Variable for buttons
 let submitBtn;
@@ -14,6 +15,12 @@ let submitBtn;
 // Variables for future versions
 let xpCost;
 let freebies;
+
+// Array variables for subfaction
+let humanSubfaction = ["Commoner", "Ghoul", "Gifted Kinfolk", "Kinfolk", "Sorcerer"];
+let shifterSubfaction = ["Homid", "Lupus", "Natus", "Ahroun", "Galliard", "Philodox", "Ragabash", "Theurge", "Black Furies", "Black Spiral Dancer", "Bone Gnawer", "Child of Gaia", "Fenrir", "Fianna", "Red Talon", "Shadow Lord", "Silent Strider", "Silver Fang", "Warder of Man", "Bagheera", "Bubasti", "Ceilican", "Swara", "Ananasi", "Corax", "Ratkin"];
+let vampireSubfaction = ["Assamite", "Baali", "Brujah", "Caitiff", "Cappadocian", "Gangrel", "Giovanni", "Lamia", "Lasombra", "Malkavian", "Nosferatu", "Ravnos", "Salubri", "Toreador", "Tremere", "Tzimisce", "Ventrue"];
+let wraithSubfaction = ["N/A"];
 
 // Assign variables to form elements if we are at the form
 if(window.location.pathname === '/createSheet'){
@@ -129,13 +136,72 @@ const checkFaction = () => {
             break;
     }
     
+    updateSubfaction(faction.value);
     console.log("Ping!");
+}
+
+const updateSubfaction = (value) => {
+    // Remove all options
+    subfaction.innerHTML="";
+    let newOption;
+
+    switch(faction.value){
+        // Human
+        case "1":
+            humanSubfaction.forEach((el, i) => {
+                newOption = document.createElement("option");
+                newOption.text = el;
+                newOption.value = i+1;
+
+                subfaction.add(newOption);
+            });
+            break;
+        // Shifter
+        case "2":
+            shifterSubfaction.forEach((el, i) => {
+                newOption = document.createElement("option");
+                newOption.text = el;
+                newOption.value = i+1;
+
+                subfaction.add(newOption);
+            });
+            break;
+        // Vampire
+        case "3":
+            vampireSubfaction.forEach((el, i) => {
+                newOption = document.createElement("option");
+                newOption.text = el;
+                newOption.value = i+1;
+
+                subfaction.add(newOption);
+            });
+            break;
+        // Wraith
+        case "4":
+            wraithSubfaction.forEach((el, i) => {
+                newOption = document.createElement("option");
+                newOption.text = el;
+                newOption.value = i+1;
+
+                subfaction.add(newOption);
+            });
+            break;
+    }
+}
+
+const checkSubfaction = () => {
+    // IF subfaction.value is a certain value
+
+    // THEN assign subfactionName the text value
+
+    // ELSE if wraith, always assign "N/A" for now
 }
 
 // Adding event listeners
 if(window.location.pathname === '/createSheet'){
     submitBtn.addEventListener('click', createSheet);
     faction.addEventListener('change', checkFaction);
+    subfaction.addEventListener('change', checkSubfaction);
 }
 
 // Function that gets sheet from db and renders it to the page
