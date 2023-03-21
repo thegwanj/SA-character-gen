@@ -93,14 +93,14 @@ const saveSheet = (sheet) =>
 // Function that creates a sheet and sends it off to get saved in the db
 const createSheet = (e) => {
     e.preventDefault();
-    // const newSheet = {
-    //     player: playerName.value,
-    //     character: characterName.value,
-    //     faction: faction.value,
-    //     subfaction: subfaction.value,
-    //     patron: patron.value,
-    //     note: note.value
-    // };
+     const newSheet = {
+         player: playerName.value,
+         character: characterName.value,
+         faction: factionName,
+         subfaction: subfactionName,
+         patron: patron.value,
+         note: note.value
+    };
 
     // console.log(newSheet);
 
@@ -109,12 +109,12 @@ const createSheet = (e) => {
     // // TODO: Instead of making a file, save to localstorage
     // localStorage.setItem("characterSheet", JSON.stringify(newContent));
 
-    localStorage.setItem("player", playerName.value);
-    localStorage.setItem("character", characterName.value);
-    localStorage.setItem("faction", factionName);
-    localStorage.setItem("subfaction", subfaction.value);
-    localStorage.setItem("patron", patron.value);
-    localStorage.setItem("note", note.value);
+    localStorage.setItem("player", newSheet.player);
+    localStorage.setItem("character", newSheet.character);
+    localStorage.setItem("faction", newSheet.faction);
+    localStorage.setItem("subfaction", newSheet.subfaction);
+    localStorage.setItem("patron", newSheet.patron);
+    localStorage.setItem("note", newSheet.note);
 
     //saveSheet(newSheet).then(viewSheet);
     viewSheet();
@@ -136,11 +136,10 @@ const checkFaction = () => {
             break;
     }
     
-    updateSubfaction(faction.value);
-    console.log("Ping!");
+    updateSubfaction();
 }
 
-const updateSubfaction = (value) => {
+const updateSubfaction = () => {
     // Remove all options
     subfaction.innerHTML="";
     let newOption;
