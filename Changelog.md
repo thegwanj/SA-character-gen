@@ -7,7 +7,7 @@
 \- None -
 
 ## Alpha
-### 3/21/23 Patch 0.5.1a
+### 3/21/23 Hotfix 0.5.1a
 - Fixed footer sometimes overlapping with the main part of the page
 - Improved dynamic variables
 - Small optimization fixes
