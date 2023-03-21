@@ -7,6 +7,10 @@
 \- None -
 
 ## Alpha
+### 3/21/23 Patch 0.5.1a
+- Fixed footer sometimes overlapping with the main part of the page
+- Improved dynamic variables
+- Small optimization fixes
 ### 3/20/23 Patch 0.5.0a
 - Replaced the faction textbox with a dropdown menu
 - Replaced the subfaction textbox with a dropdown menu. The menu will change based on the faction selected
