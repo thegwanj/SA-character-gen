@@ -390,7 +390,7 @@ a:link {
 /* Footer styling */
 footer {
   background-color: #6B7F82;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 50px;
@@ -455,4 +455,15 @@ footer p {
 
 .sheetList h3, p{
   margin: 10px;
+}
+
+/* Body Styling */
+body {
+  padding-bottom: 50px;
+}
+
+/* HTML Styling */
+html {
+  position: relative;
+  min-height: 100%;
 }
