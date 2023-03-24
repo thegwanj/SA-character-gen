@@ -7,6 +7,11 @@
 \- None -
 
 ## Alpha Version
+### 3/24/23 Patch 0.7.0a
+- Added dynamic subfaction menu with updating labels
+- Split up the sheet making process on the back end so it can make specific faction sheets
+- Sheets now save their faction-specific subfactions (Still working on Wraith shadows, legions, and guilds)
+- Created a separate sheet viewing process for each faction
 ### 3/21/23 Patch 0.6.0a
 - Removed redundant code
 - Removed several variables and renamed values of menu options
