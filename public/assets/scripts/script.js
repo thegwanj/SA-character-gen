@@ -22,6 +22,7 @@ let subfactionLabel;
 
 // Variables for faction specific viewing tables
 let shifterSubfaction;
+let subfactionBasic;
 
 // Variables for future versions
 let xpCost;
@@ -69,6 +70,7 @@ if(window.location.pathname === '/viewSheet'){
     note = document.getElementById('notes');
 
     shifterSubfaction = document.getElementById('shifterSubfaction');
+    subfactionBasic = document.getElementById('subfactionBasic');
     breed = document.getElementById('breed');
     auspice = document.getElementById('auspice');
     tribe = document.getElementById('tribe');
@@ -77,12 +79,6 @@ if(window.location.pathname === '/viewSheet'){
 // Function that gets info from db
 const getSheet = () => {
     //let sheet = JSON.parse(localStorage.getItem("characterSheet"));
-    // characterName.innerHTML = localStorage.getItem("character");
-    // playerName.innerHTML = localStorage.getItem("player");
-    // faction.innerHTML = localStorage.getItem("faction");
-    // subfaction.innerHTML = localStorage.getItem("subfaction");
-    // patron.innerHTML = localStorage.getItem("patron");
-    // note.innerHTML = localStorage.getItem("note");
 
     // Sheet object that will get passed into the renderSheet function
     let sheet = {};
@@ -126,6 +122,7 @@ const renderSheet = (sheet) => {
     // Render based off of faction
     if(sheet.faction == "Shifter"){
         shifterSubfaction.hidden = false;
+        subfactionBasic.hidden = true;
 
         characterName.innerHTML = sheet.character;
         playerName.innerHTML = sheet.player;
