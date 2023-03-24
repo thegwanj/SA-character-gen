@@ -7,7 +7,12 @@
 \- None -
 
 ## Alpha Version
-#### 3/21/23 Hotfix 0.5.1a
+### 3/21/23 Patch 0.6.0a
+- Removed redundant code
+- Removed several variables and renamed values of menu options
+- Removed an old link used for testing
+- Added handling to make sure required fields are filled out
+#### Hotfix 0.5.1a
 - Fixed footer sometimes overlapping with the main part of the page
 - Improved dynamic variables
 - Small optimization fixes
