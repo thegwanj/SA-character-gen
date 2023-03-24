@@ -5,10 +5,6 @@ let subfaction;
 let patron;
 let note;
 
-// Variables for faction/subfaction names
-let factionName = "";
-let subfactionName = "";
-
 // Variable for buttons
 let submitBtn;
 
@@ -93,15 +89,22 @@ const saveSheet = (sheet) =>
 // Function that creates a sheet and sends it off to get saved in the db
 const createSheet = (e) => {
     e.preventDefault();
-     const newSheet = {
-         player: playerName.value,
-         character: characterName.value,
-         faction: factionName,
-         subfaction: subfactionName,
-         patron: patron.value,
-         note: note.value
-    };
+    let newSheet = {};
 
+    // Check to make sure all required fields are filled
+    if(playerName.value && characterName.value){
+        newSheet = {
+            player: playerName.value,
+            character: characterName.value,
+            faction: faction.value,
+            subfaction: subfaction.value,
+            patron: patron.value,
+            note: note.value,   
+        }
+    } else {
+        alert("Test");
+        return;
+    }
     // console.log(newSheet);
 
     // let newContent = JSON.stringify(newSheet);
@@ -120,24 +123,7 @@ const createSheet = (e) => {
     viewSheet();
 }
 
-const checkFaction = () => {
-    switch(faction.value){
-        case "1":
-            factionName = "Human";
-            break;
-        case "2":
-            factionName = "Shifter";
-            break;
-        case "3":
-            factionName = "Vampire";
-            break;
-        case "4":
-            factionName = "Wraith";
-            break;
-    }
-    
-    updateSubfaction();
-}
+// Taking out the checkFaction function as it is redundant
 
 const updateSubfaction = () => {
     // Remove all options
@@ -145,42 +131,38 @@ const updateSubfaction = () => {
     let newOption;
 
     switch(faction.value){
-        // Human
-        case "1":
-            humanSubfaction.forEach((el, i) => {
+        case "Human":
+            humanSubfaction.forEach((el) => {
                 newOption = document.createElement("option");
                 newOption.text = el;
-                newOption.value = i+1;
+                newOption.value = el;
 
                 subfaction.add(newOption);
             });
             break;
-        // Shifter
-        case "2":
-            shifterSubfaction.forEach((el, i) => {
+        case "Shifter":
+            shifterSubfaction.forEach((el) => {
                 newOption = document.createElement("option");
                 newOption.text = el;
-                newOption.value = i+1;
+                newOption.value = el;
 
                 subfaction.add(newOption);
             });
             break;
-        // Vampire
-        case "3":
-            vampireSubfaction.forEach((el, i) => {
+        case "Vampire":
+            vampireSubfaction.forEach((el) => {
                 newOption = document.createElement("option");
                 newOption.text = el;
-                newOption.value = i+1;
+                newOption.value = el;
 
                 subfaction.add(newOption);
             });
             break;
-        // Wraith
-        case "4":
-            wraithSubfaction.forEach((el, i) => {
+        case "Wraith":
+            wraithSubfaction.forEach((el) => {
                 newOption = document.createElement("option");
                 newOption.text = el;
-                newOption.value = i+1;
+                newOption.value = el;
 
                 subfaction.add(newOption);
             });
@@ -188,19 +170,10 @@ const updateSubfaction = () => {
     }
 }
 
-const checkSubfaction = () => {
-    // IF subfaction.value is a certain value
-
-    // THEN assign subfactionName the text value
-
-    // ELSE if wraith, always assign "N/A" for now
-}
-
 // Adding event listeners
 if(window.location.pathname === '/createSheet'){
     submitBtn.addEventListener('click', createSheet);
-    faction.addEventListener('change', checkFaction);
-    subfaction.addEventListener('change', checkSubfaction);
+    faction.addEventListener('change', updateSubfaction);
 }
 
 // Function that gets sheet from db and renders it to the page
