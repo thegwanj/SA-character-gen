@@ -37,17 +37,14 @@
         <div class="characterForm">
             <form>
                 <section class="formSection">
-                    <div class="question">
+                    <div class="question" name="name">
                         <label for="playerName">Player name:</label>
                         <input id="playerName" name='playerName' type="text" required></input>
-                    </div>
-
-                    <div class="question">
                         <label for="characterName">Character name:</label>
                         <input id="characterName" name='characterName' required></input>
                     </div>
 
-                    <div class="question" id='factionForm'>
+                    <div class="question" name='factionForm'>
                         <label for='faction'>Faction:</label>
                         <select id="faction" name="faction" required>
                             <option value="Human">Human</option>
@@ -55,9 +52,7 @@
                             <option value="Vampire">Vampire</option>
                             <option value="Wraith">Wraith</option>
                         </select>
-                    </div>
 
-                    <div class="question" id='subFactionForm'>
                         <label id="subfactionLabel" for="subfaction">Subfaction:</label>
                         <select id="subfaction" name="subfaction" required>
                             <option value="Commoner">Commoner</option>
