@@ -12,6 +12,10 @@
 - Split up the sheet making process on the back end so it can make specific faction sheets
 - Sheets now save their faction-specific subfactions (Still working on Wraith shadows, legions, and guilds)
 - Created a separate sheet viewing process for each faction
+- Made some small visual adjustments to the create sheet form
+- Splitting up the script so each page does not need to load code it doesn't need
+- Fixed a bug that prevented the sheet from saving if the user's faction was Vampire
+- Fixed a bug that prevented resetting/clearing selections and inputs when refreshing the page
 ### 3/21/23 Patch 0.6.0a
 - Removed redundant code
 - Removed several variables and renamed values of menu options
