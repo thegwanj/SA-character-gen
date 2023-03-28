@@ -52,29 +52,52 @@ const getSheet = () => {
     // Sheet object that will get passed into the renderSheet function
     let sheet = {};
 
-    // Create the sheet based off of faction
-    if(localStorage.getItem("faction") == "Shifter"){
-        sheet = {
-            player: localStorage.getItem("player"),
-            character: localStorage.getItem("character"),
-            faction: localStorage.getItem("faction"),
-            breed: localStorage.getItem("breed"),
-            auspice: localStorage.getItem("auspice"),
-            tribe: localStorage.getItem("tribe"),
-            patron: localStorage.getItem("patron"),
-            note: localStorage.getItem("note")
-        }
-    } else {
-        sheet = {
-            player: localStorage.getItem("player"),
-            character: localStorage.getItem("character"),
-            faction: localStorage.getItem("faction"),
-            subfaction: localStorage.getItem("subfaction"),
-            patron: localStorage.getItem("patron"),
-            note: localStorage.getItem("note")
-        }
+    switch (localStorage.getItem("faction")){
+        case "Human":
+            sheet = {
+                player: localStorage.getItem("player"),
+                character: localStorage.getItem("character"),
+                faction: localStorage.getItem("faction"),
+                subfaction: localStorage.getItem("subfaction"),
+                patron: localStorage.getItem("patron"),
+                note: localStorage.getItem("note")
+            }    
+            break;
+        case "Vampire":
+            sheet = {
+                player: localStorage.getItem("player"),
+                character: localStorage.getItem("character"),
+                faction: localStorage.getItem("faction"),
+                subfaction: localStorage.getItem("subfaction"),
+                patron: localStorage.getItem("patron"),
+                note: localStorage.getItem("note")
+            }    
+            break;
+        case "Shifter":
+            sheet = {
+                player: localStorage.getItem("player"),
+                character: localStorage.getItem("character"),
+                faction: localStorage.getItem("faction"),
+                breed: localStorage.getItem("breed"),
+                auspice: localStorage.getItem("auspice"),
+                tribe: localStorage.getItem("tribe"),
+                patron: localStorage.getItem("patron"),
+                note: localStorage.getItem("note")
+            }    
+            break;
+        case "Wraith":
+            sheet = {
+                player: localStorage.getItem("player"),
+                character: localStorage.getItem("character"),
+                faction: localStorage.getItem("faction"),
+                shadow: localStorage.getItem("shadow"),
+                legion: localStorage.getItem("legion"),
+                guild: localStorage.getItem("guild"),
+                patron: localStorage.getItem("patron"),
+                note: localStorage.getItem("note")
+            }    
+            break;
     }
-
     renderSheet(sheet);
 }
     // fetch('/api/sheet', {
@@ -88,26 +111,49 @@ const getSheet = () => {
 const renderSheet = (sheet) => {
     console.log("Logging sheet", sheet);
 
-    // Render based off of faction
-    if(sheet.faction == "Shifter"){
-        shifterSubfaction.hidden = false;
-        subfactionBasic.hidden = true;
-
-        characterName.innerHTML = sheet.character;
-        playerName.innerHTML = sheet.player;
-        faction.innerHTML = sheet.faction;
-        breed.innerHTML = sheet.breed;
-        auspice.innerHTML = sheet.auspice;
-        tribe.innerHTML = sheet.tribe;
-        patron.innerHTML = sheet.patron;
-        note.innerHTML = sheet.note;
-    } else {
-        characterName.innerHTML = sheet.character;
-        playerName.innerHTML = sheet.player;
-        faction.innerHTML = sheet.faction;
-        subfaction.innerHTML = sheet.subfaction;
-        patron.innerHTML = sheet.patron;
-        note.innerHTML = sheet.note;    
+    switch (sheet.faction){
+        case "Human":
+            characterName.innerHTML = sheet.character;
+            playerName.innerHTML = sheet.player;
+            faction.innerHTML = sheet.faction;
+            subfaction.innerHTML = sheet.subfaction;
+            patron.innerHTML = sheet.patron;
+            note.innerHTML = sheet.note;    
+            break;
+        case "Vampire":
+            characterName.innerHTML = sheet.character;
+            playerName.innerHTML = sheet.player;
+            faction.innerHTML = sheet.faction;
+            subfaction.innerHTML = sheet.subfaction;
+            patron.innerHTML = sheet.patron;
+            note.innerHTML = sheet.note;    
+            break;
+        case "Shifter":
+            shifterSubfaction.hidden = false;
+            subfactionBasic.hidden = true;
+    
+            characterName.innerHTML = sheet.character;
+            playerName.innerHTML = sheet.player;
+            faction.innerHTML = sheet.faction;
+            breed.innerHTML = sheet.breed;
+            auspice.innerHTML = sheet.auspice;
+            tribe.innerHTML = sheet.tribe;
+            patron.innerHTML = sheet.patron;
+            note.innerHTML = sheet.note;
+            break;
+        case "Wraith":
+            wraithSubfaction.hidden = false;
+            subfactionBasic.hidden = true;
+    
+            characterName.innerHTML = sheet.character;
+            playerName.innerHTML = sheet.player;
+            faction.innerHTML = sheet.faction;
+            shadow.innerHTML = sheet.shadow;
+            legion.innerHTML = sheet.legion;
+            guild.innerHTML = sheet.guild;
+            patron.innerHTML = sheet.patron;
+            note.innerHTML = sheet.note;
+            break;
     }
 }
 
