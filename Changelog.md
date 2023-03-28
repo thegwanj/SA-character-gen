@@ -7,6 +7,12 @@
 \- None -
 
 ## Alpha Version
+### 3/28/23 Patch 0.7.9a
+- Fixed the sheet setting and getting the wrong variables for certain factions
+- Added Spectre and Enfant as "legion" options
+- Removed testing blocks
+- Modified how sheet gets information to make the process more streamlined on the backend
+- Finished implementing wraith subfaction information to the page
 ### 3/27/23 Patch 0.7.5a
 - Added in subfaction options for Wraith
 - Implemented the handling to save wraith subfaction information
