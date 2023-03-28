@@ -9,7 +9,11 @@ We currently have four phases of development: Prototype, Alpha, Beta, and Releas
 - Create a script(s) to handle user input and bring in some basic interactivity
 
 ## Alpha
-- TBD
+- Start to dynamically show options as the user goes through the process
+- Start to dynamically handle rendering the sheet based off of the faction chosen
+- Add in basic input functionality for most stats and items
+- Basic styling for better reading and accessibility
+- Basic cleanup of code for better optimization
 
 ## Beta
 - TBD
