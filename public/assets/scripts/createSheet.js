@@ -4,9 +4,6 @@ let faction;
 let subfaction;
 let patron;
 let note;
-let breed;
-let auspice;
-let tribe;
 
 // Variable for buttons
 let submitBtn;
@@ -20,6 +17,13 @@ let auspiceLabel;
 let tribeLabel;
 let subfactionLabel;
 
+let shadowSelection;
+let legionSelection;
+let guildSelection;
+let shadowLabel;
+let legionLabel;
+let guildLabel;
+
 // Variables for faction specific viewing tables
 let shifterSubfaction;
 let subfactionBasic;
@@ -30,11 +34,7 @@ let freebies;
 
 // Array variables for subfaction
 let humanSubfaction = ["Commoner", "Ghoul", "Gifted Kinfolk", "Kinfolk", "Sorcerer"];
-let shifterBreed = ["Homid", "Lupus", "Natus"];
-let shifterAuspice = ["Ahroun", "Galliard", "Philodox", "Ragabash", "Theurge"];
-let shifterTribe = ["Black Furies", "Black Spiral Dancer", "Bone Gnawer", "Child of Gaia", "Fenrir", "Fianna", "Red Talon", "Shadow Lord", "Silent Strider", "Silver Fang", "Warder of Man", "Bagheera", "Bubasti", "Ceilican", "Swara", "Ananasi", "Corax", "Ratkin"];
 let vampireSubfaction = ["Assamite", "Baali", "Brujah", "Caitiff", "Cappadocian", "Gangrel", "Giovanni", "Lamia", "Lasombra", "Malkavian", "Nosferatu", "Ravnos", "Salubri", "Toreador", "Tremere", "Tzimisce", "Ventrue"];
-let wraithSubfaction = ["N/A"];
 
 // Assign variables to form elements if we are at the form
 if(window.location.pathname === '/createSheet'){
@@ -45,9 +45,6 @@ if(window.location.pathname === '/createSheet'){
     patron = document.getElementById('patron');
     note = document.getElementById('notes');
 
-    breed = document.getElementById('shifterBreed');
-    auspice = document.getElementById('shifterAuspice');
-    tribe = document.getElementById('shifterTribe');
     breedSelection = document.getElementById('shifterBreed');
     auspiceSelection = document.getElementById('shifterAuspice');
     tribeSelection = document.getElementById('shifterTribe');
@@ -55,6 +52,13 @@ if(window.location.pathname === '/createSheet'){
     auspiceLabel = document.getElementById('auspiceLabel');
     tribeLabel = document.getElementById('tribeLabel');
     subfactionLabel = document.getElementById('subfactionLabel');
+
+    shadowSelection = document.getElementById('wraithShadow');
+    legionSelection = document.getElementById('wraithLegion');
+    guildSelection = document.getElementById('wraithGuild');
+    shadowLabel = document.getElementById('shadowLabel');
+    legionLabel = document.getElementById('legionLabel');
+    guildLabel = document.getElementById('guildLabel');
 
     // Assign variable to button
     submitBtn = document.getElementById('submitBtn');
@@ -116,9 +120,9 @@ const createSheet = (e) => {
                     player: playerName.value,
                     character: characterName.value,
                     faction: faction.value,
-                    breed: breed.value,
-                    auspice: auspice.value,
-                    tribe: tribe.value,
+                    breed: breedSelection.value,
+                    auspice: auspiceSelection.value,
+                    tribe: tribeSelection.value,
                     patron: patron.value,
                     note: note.value,   
                 }        
@@ -136,16 +140,18 @@ const createSheet = (e) => {
                     player: playerName.value,
                     character: characterName.value,
                     faction: faction.value,
-                    //shadow,
-                    //legion,
-                    //guild,
+                    shadow: shadowSelection.value,
+                    legion: legionSelection.value,
+                    guild: guildSelection.value,
                     patron: patron.value,
                     note: note.value,   
                 }        
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
                 localStorage.setItem("faction", newSheet.faction);
-                localStorage.setItem("subfaction", newSheet.subfaction);
+                localStorage.setItem("shadow", newSheet.shadow);
+                localStorage.setItem("legion", newSheet.legion);
+                localStorage.setItem("guild", newSheet.guild);
                 localStorage.setItem("patron", newSheet.patron);
                 localStorage.setItem("note", newSheet.note);            
                 break;
@@ -179,6 +185,13 @@ const updateSubfactionSelection = () => {
     breedLabel.hidden = true;
     auspiceLabel.hidden = true;
     tribeLabel.hidden = true;
+
+    shadowSelection.hidden = true;
+    legionSelection.hidden = true;
+    guildSelection.hidden = true;
+    shadowLabel.hidden = true;
+    legionLabel.hidden = true;
+    guildLabel.hidden = true;
 
     let newOption;
 
@@ -214,13 +227,15 @@ const updateSubfactionSelection = () => {
             });
             break;
         case "Wraith":
-            wraithSubfaction.forEach((el) => {
-                newOption = document.createElement("option");
-                newOption.text = el;
-                newOption.value = el;
+            shadowSelection.hidden = false;
+            legionSelection.hidden = false;
+            guildSelection.hidden = false;
+            shadowLabel.hidden = false;
+            legionLabel.hidden = false;
+            guildLabel.hidden = false;
 
-                subfaction.add(newOption);
-            });
+            subfaction.hidden = true;
+            subfactionLabel.hidden = true;
             break;
     }
 }
