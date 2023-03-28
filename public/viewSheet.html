@@ -15,6 +15,7 @@
         <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest">
         <title>Character Sheet Maker</title>
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/sheetStyle.css">
     </head>
 
     <header>
@@ -34,45 +35,68 @@
     </header>
 
     <body>
-        <div id="title">
-            <h2 id="characterName"></h2><h2> by </h2><h2 id="playerName"></h2>
+        <div class="characterSheet">
+            <div id="title">
+                <h2 id="characterName"></h2><h2> by </h2><h2 id="playerName"></h2>
+            </div>
+    
+            <section class="factionBoard">
+                <div class="labelPair">
+                    <h4>Faction:</h4>
+                    <p id="faction"></p>    
+                </div>
+        
+                <div id="subfactionBasic">
+                    <div class="labelPair">
+                        <h4>Subfaction:</h4>
+                        <p id="subfaction"></p>        
+                    </div>
+                </div>
+        
+                <div class="subfactionInfo" id="shifterSubfaction" hidden>
+                    <div class="labelPair">
+                        <h4>Breed:</h4>
+                        <p id="breed"></p>    
+                    </div>
+                    <div class="labelPair">
+                        <h4>Auspice:</h4>
+                        <p id="auspice"></p>    
+                    </div>
+                    <div class="labelPair">
+                        <h4>Tribe:</h4>
+                        <p id="tribe"></p>    
+                    </div>
+                </div>
+        
+                <div class="subfactionInfo" id="wraithSubfaction" hidden>
+                    <div>
+                        <h4>Shadow:</h4>
+                        <p id="shadow"></p>    
+                    </div>
+                    <div>
+                        <h4>Legion:</h4>
+                        <p id="legion"></p>    
+                    </div>
+                    <div>
+                        <h4>Guild:</h4>
+                        <p id="guild"></p>    
+                    </div>
+                </div>    
+            </section>
+    
+            <div>
+                <h4>Health: 10 (default)</h4>
+                <h4>Willpower: 1 (default)</h4>
+                <h4>Energy: 10 (WIP)</h4>
+                <h4>Virtue: 6 (WIP)</h4>    
+            </div>
+    
+            <h4>Patron:</h4>
+            <p id="patron"></p>
+    
+            <h4>Notes:</h4>
+            <p id="notes"></p>    
         </div>
-        <h4>Faction:</h4>
-        <p id="faction"></p>
-
-        <div id="subfactionBasic">
-            <h4>Subfaction:</h4>
-            <p id="subfaction"></p>    
-        </div>
-
-        <div id="shifterSubfaction" hidden>
-            <h4>Breed:</h4>
-            <p id="breed"></p>
-            <h4>Auspice:</h4>
-            <p id="auspice"></p>
-            <h4>Tribe:</h4>
-            <p id="tribe"></p>
-        </div>
-
-        <div id="wraithSubfaction" hidden>
-            <h4>Shadow:</h4>
-            <p id="shadow"></p>
-            <h4>Legion:</h4>
-            <p id="legion"></p>
-            <h4>Guild:</h4>
-            <p id="guild"></p>
-        </div>
-
-        <h4>Health: 10 (default)</h4>
-        <h4>Willpower: 1 (default)</h4>
-        <h4>Energy: 10 (WIP)</h4>
-        <h4>Virtue: 6 (WIP)</h4>
-
-        <h4>Patron:</h4>
-        <p id="patron"></p>
-
-        <h4>Notes:</h4>
-        <p id="notes"></p>
 
         <a id='backBtn' href="/createSheet">Create a New Character</a>
         <a id='homeBtn' href="/">Home</a>
