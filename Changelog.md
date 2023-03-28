@@ -7,7 +7,9 @@
 \- None -
 
 ## Alpha Version
-### 3/28/23 Patch 0.7.9a
+### 3/28/23 Patch 0.8.0a
+- Added in some styling for all pages to make it look nicer and easier to read
+### Patch 0.7.9a
 - Fixed the sheet setting and getting the wrong variables for certain factions
 - Added Spectre and Enfant as "legion" options
 - Removed testing blocks
