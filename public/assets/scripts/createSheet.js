@@ -17,6 +17,7 @@ let auspiceLabel;
 let tribeLabel;
 let subfactionLabel;
 
+// Shadow is more similar to sire or deed name than subfaction. Will need to move this to some other place
 let shadowSelection;
 let legionSelection;
 let guildSelection;
