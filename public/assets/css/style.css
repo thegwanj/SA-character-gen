@@ -415,7 +415,9 @@ footer .version {
   background-color: #6B7F82;
   text-align: center;
   width: 80px;
+  height: 65px;
   border-radius: 20px;
+  margin: 4px;
 }
 
 .homeButton h3 {
@@ -444,10 +446,26 @@ footer .version {
 }
 
 .characterForm {
+  margin: auto;
   width: 80%;
   display: flex;
   justify-content: center;
+}
+
+.characterForm form {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+}
+
+.question label {
+  margin: 0 5px 0 5px;
 }
 
 /* SheetList styling */
