@@ -7,18 +7,12 @@ let note;
 let breed;
 let auspice;
 let tribe;
+let shadow;
+let legion;
+let guild;
 
 // Variable for buttons
 let homeBtn;
-
-// Variables for faction specific dropdowns
-let breedSelection;
-let auspiceSelection;
-let tribeSelection;
-let breedLabel;
-let auspiceLabel;
-let tribeLabel;
-let subfactionLabel;
 
 // Variables for faction specific viewing tables
 let shifterSubfaction;
@@ -42,6 +36,11 @@ if(window.location.pathname === '/viewSheet'){
     breed = document.getElementById('breed');
     auspice = document.getElementById('auspice');
     tribe = document.getElementById('tribe');
+
+    wraithSubfaction = document.getElementById('wraithSubfaction');
+    shadow = document.getElementById('shadow');
+    legion = document.getElementById('legion');
+    guild = document.getElementById('guild');
 
     homeBtn = document.getElementById('homeBtn');
 }
