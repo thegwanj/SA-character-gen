@@ -7,6 +7,10 @@
 \- None -
 
 ## Alpha Version
+### 3/27/23 Patch 0.7.5a
+- Added in subfaction options for Wraith
+- Implemented the handling to save wraith subfaction information
+- Started to implement rendering wraith subfaction information on the back end
 ### 3/24/23 Patch 0.7.0a
 - Added dynamic subfaction menu with updating labels
 - Split up the sheet making process on the back end so it can make specific faction sheets
