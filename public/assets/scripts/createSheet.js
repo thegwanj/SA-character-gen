@@ -168,7 +168,7 @@ const createSheet = (e) => {
     // let newContent = JSON.stringify(newSheet);
 
     //saveSheet(newSheet).then(viewSheet);
-    //viewSheet();
+    viewSheet();
 }
 
 const updateSubfactionSelection = () => {
