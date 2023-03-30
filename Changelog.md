@@ -7,6 +7,15 @@
 \- None -
 
 ## Alpha Version
+### 3/29/23 Patch 0.9.0a
+- Added in claimed options for humans
+- Added in rank and deed name fields for shifters
+- Added in passion field for wraith
+- Moved shadow selection options to be with passion
+- Added in generation and sire fields for vampires
+- Added in handling for setting and getting the new inputs
+- Added in handling for rendering the new faction information additions
+- Modified some styling classes to work with the new render method
 ### 3/28/23 Patch 0.8.0a
 - Added in some styling for all pages to make it look nicer and easier to read
 ### Patch 0.7.9a
