@@ -53,6 +53,7 @@
                             <option value="Wraith">Wraith</option>
                         </select>
 
+                        <!-- Human Subfactions -->
                         <label id="subfactionLabel" for="subfaction">Subfaction:</label>
                         <select id="subfaction" name="subfaction" required>
                             <option value="Commoner">Commoner</option>
@@ -62,6 +63,7 @@
                             <option value="Sorcerer">Sorcerer</option>
                         </select>
 
+                        <!-- Shifter Subfactions -->
                         <label id="breedLabel" for="shifterBreed" hidden>Breed:</label>
                         <select id="shifterBreed" name="shifterBreed" hidden>
                             <option value="Homid">Homid</option>
@@ -97,27 +99,7 @@
                             <option value="Ratkin">Ratkin</option>
                         </select>
 
-                        <!-- Not actually part of the subfaction. Needs to go to its own separate thing -->
-                        <label id="shadowLabel" for="wraithShadow" hidden>Shadow:</label>
-                        <select id="wraithShadow" name="wraithShadow" hidden>
-                            <option value="Abuser">Abuser</option>
-                            <option value="Betrayer">Betrayer</option>
-                            <option value="Delusional">Delusional</option>
-                            <option value="Director">Director</option>
-                            <option value="Exhibitor">Exhibitor</option>
-                            <option value="Impulsive">Impulsive</option>
-                            <option value="Inquisitor">Inquisitor</option>
-                            <option value="Martyr">Martyr</option>
-                            <option value="Monster">Monster</option>
-                            <option value="Paranoid">Paranoid</option>
-                            <option value="Parent">Parent</option>
-                            <option value="Pessimist">Pessimist</option>
-                            <option value="Rationalist">Rationalist</option>
-                            <option value="Teacher">Teacher</option>
-                            <option value="Thinker">Thinker</option>
-                        </select>
-
-                        <!-- Need to add Enfant, Spectre, and Renegade -->
+                        <!-- Wraith Subfactions -->
                         <label id="legionLabel" for="wraithLegion" hidden>Legion:</label>
                         <select id="wraithLegion" name="wraithLegion" hidden>
                             <option value="Enfant">Enfant</option>
@@ -151,6 +133,58 @@
                         </select>
                     </div>
 
+                    <!-- Faction General Info -->
+                    <div class="question">
+                        <!-- Human Stuff. Will be shown by default because human faction is also selected by default -->
+                        <div class="formItem" id="claimedForm">
+                            <label for="claimedCheck">Claimed</label>
+                            <input type="checkbox" name="claimedCheck" id="claimedCheck">
+                            <label for="claimedSelection" id="claimedLabel" hidden>Type:</label>
+                            <select id="claimedSelection" name="claimedSelection" hidden>
+                                <option value="Drone">Drone</option>
+                                <option value="Fomori">Fomori</option>
+                                <option value="Gorgon">Gorgon</option>
+                            </select>
+                        </div>
+                        <!-- Shifter Stuff -->
+                        <div class="formItem" id="shifterForm" hidden>
+                            <label for="shifterRank">Rank:</label>
+                            <input type="text" name="shifterRank" id="shifterRank">
+                            <label for="shifterDeed">Deed Name:</label>
+                            <input type="text" name="shifterDeed" id="shifterDeed">
+                        </div>
+                        <!-- Vampire Stuff -->
+                        <div class="formItem" id="vampireForm" hidden>
+                            <label for="vampireGen">Generation:</label>
+                            <input type="text" name="vampireGen" id="vampireGen">
+                            <label for="vampireSire">Sire:</label>
+                            <input type="text" name="vampireSire" id="vampireSire">
+                        </div>
+                        <!-- Wraith Stuff -->
+                        <div class="formItem" id="wraithForm" hidden>
+                            <label for="wraithShadow">Shadow:</label>
+                            <select id="wraithShadow" name="wraithShadow">
+                                <option value="Abuser">Abuser</option>
+                                <option value="Betrayer">Betrayer</option>
+                                <option value="Delusional">Delusional</option>
+                                <option value="Director">Director</option>
+                                <option value="Exhibitor">Exhibitor</option>
+                                <option value="Impulsive">Impulsive</option>
+                                <option value="Inquisitor">Inquisitor</option>
+                                <option value="Martyr">Martyr</option>
+                                <option value="Monster">Monster</option>
+                                <option value="Paranoid">Paranoid</option>
+                                <option value="Parent">Parent</option>
+                                <option value="Pessimist">Pessimist</option>
+                                <option value="Rationalist">Rationalist</option>
+                                <option value="Teacher">Teacher</option>
+                                <option value="Thinker">Thinker</option>
+                            </select>
+                            <label for="wraithPassion">Passion:</label>
+                            <input type="text" name="wraithPassion" id="wraithPassion">
+                        </div>
+                    </div>
+
                     <div class="question">
                         <label for="health">Health:</label>
                         <p id='health'>10 (default)</p>
@@ -181,6 +215,6 @@
 
     <footer>
         <p>SA Character Sheet Maker created by <a href="https://github.com/thegwanj">thegwanj on github</a></p>
-        <p class="version">Version Alpha 0.8.0a</p>
+        <p class="version">Version Alpha 0.9.0a</p>
     </footer>
 </html>
