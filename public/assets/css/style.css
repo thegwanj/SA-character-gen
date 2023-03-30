@@ -468,6 +468,11 @@ footer .version {
   margin: 0 5px 0 5px;
 }
 
+.formItem {
+  display: flex;
+  justify-content: center;
+}
+
 /* SheetList styling */
 .sheetList {
   display: flex;
@@ -489,4 +494,9 @@ body {
 html {
   position: relative;
   min-height: 100%;
+}
+
+/* Misc Styling */
+[hidden] {
+  display: none;
 }
