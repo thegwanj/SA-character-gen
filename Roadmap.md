@@ -16,7 +16,13 @@ We currently have four phases of development: Prototype, Alpha, Beta, and Releas
 - Basic cleanup of code for better optimization
 
 ## Beta
-- TBD
+- Add in basic merits, skills, powers, and lores
+- Basic XP tracking
+- Health, Will, Energy, and Virtue updates
+- Add in favicon and other icons
+- Background color to help color contrast
+- Dynamically fill out starting powers and lores based off faction
+- Code review to optimize/consolidate code
 
 ## Release
 - TBD
