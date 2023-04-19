@@ -4,6 +4,8 @@
 - [Prototype](#Prototype)
 
 ## Beta Version
+### 4/18/23 Version 1.1.0b
+- Implemented saving and displaying of powers, skills, merits, and lores
 ### 4/10/23 Version 1.0.0b
 - Added in basic inputs of powers, skills, merits, and lores
 - Renaming some previous versions to match a more standard naming convention
