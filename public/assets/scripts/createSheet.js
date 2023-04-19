@@ -13,6 +13,11 @@ let deedName;
 let generation;
 let sire;
 
+let power;
+let skill;
+let merit;
+let lore;
+
 // Variable for buttons
 let submitBtn;
 
@@ -89,6 +94,11 @@ if(window.location.pathname === '/createSheet'){
     claimedSelection = document.getElementById('claimedSelection');
     claimedLabel = document.getElementById('claimedLabel');
 
+    power = document.getElementById('powers');
+    skill = document.getElementById('skills');
+    merit = document.getElementById('merits');
+    lore = document.getElementById('lores');
+
     // Assign variable to button
     submitBtn = document.getElementById('submitBtn');
 }
@@ -103,6 +113,10 @@ const setDefault = () => {
     claimedCheck.value = false;
     patron.value = "";
     note.value = "";
+    power.value = "";
+    skill.value = "";
+    merit.value = "";
+    lore.value = "";
 }
 
 // Function that handles going to viewSheet page
@@ -138,7 +152,11 @@ const createSheet = (e) => {
                     claimed: claimedCheck.value,
                     claimedType: claimedSelection.value,
                     patron: patron.value,
-                    note: note.value,   
+                    note: note.value,  
+                    power: power.value,
+                    skill: skill.value,
+                    merit: merit.value,
+                    lore: lore.value 
                 }
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
@@ -147,7 +165,11 @@ const createSheet = (e) => {
                 localStorage.setItem("claimed", newSheet.claimed);
                 localStorage.setItem("claimedType", newSheet.claimedType);
                 localStorage.setItem("patron", newSheet.patron);
-                localStorage.setItem("note", newSheet.note);            
+                localStorage.setItem("note", newSheet.note); 
+                localStorage.setItem("powers", newSheet.power);
+                localStorage.setItem("skills", newSheet.skill);
+                localStorage.setItem("merits", newSheet.merit);
+                localStorage.setItem("lores", newSheet.lore);           
                 break;
             case "Vampire":
                 newSheet = {
@@ -158,7 +180,11 @@ const createSheet = (e) => {
                     generation: generation.value,
                     sire: sire.value,
                     patron: patron.value,
-                    note: note.value,   
+                    note: note.value, 
+                    power: power.value,
+                    skill: skill.value,
+                    merit: merit.value,
+                    lore: lore.value   
                 }        
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
@@ -167,7 +193,11 @@ const createSheet = (e) => {
                 localStorage.setItem("generation", newSheet.generation);
                 localStorage.setItem("sire", newSheet.sire);
                 localStorage.setItem("patron", newSheet.patron);
-                localStorage.setItem("note", newSheet.note);            
+                localStorage.setItem("note", newSheet.note); 
+                localStorage.setItem("powers", newSheet.power);
+                localStorage.setItem("skills", newSheet.skill);
+                localStorage.setItem("merits", newSheet.merit);
+                localStorage.setItem("lores", newSheet.lore);           
                 break;
             case "Shifter":
                 newSheet = {
@@ -180,7 +210,11 @@ const createSheet = (e) => {
                     rank: rank.value,
                     deedName: deedName.value,
                     patron: patron.value,
-                    note: note.value,   
+                    note: note.value, 
+                    power: power.value,
+                    skill: skill.value,
+                    merit: merit.value,
+                    lore: lore.value   
                 }        
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
@@ -191,7 +225,11 @@ const createSheet = (e) => {
                 localStorage.setItem("rank", newSheet.rank);
                 localStorage.setItem("deedName", newSheet.deedName);
                 localStorage.setItem("patron", newSheet.patron);
-                localStorage.setItem("note", newSheet.note);            
+                localStorage.setItem("note", newSheet.note);
+                localStorage.setItem("powers", newSheet.power);
+                localStorage.setItem("skills", newSheet.skill);
+                localStorage.setItem("merits", newSheet.merit);
+                localStorage.setItem("lores", newSheet.lore);           
                 break;
             case "Wraith":
                 newSheet = {
@@ -203,7 +241,11 @@ const createSheet = (e) => {
                     shadow: shadow.value,
                     passion: passion.value,
                     patron: patron.value,
-                    note: note.value,   
+                    note: note.value, 
+                    power: power.value,
+                    skill: skill.value,
+                    merit: merit.value,
+                    lore: lore.value   
                 }        
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
@@ -213,7 +255,11 @@ const createSheet = (e) => {
                 localStorage.setItem("shadow", newSheet.shadow);
                 localStorage.setItem("passion", newSheet.passion);
                 localStorage.setItem("patron", newSheet.patron);
-                localStorage.setItem("note", newSheet.note);            
+                localStorage.setItem("note", newSheet.note);
+                localStorage.setItem("powers", newSheet.power);
+                localStorage.setItem("skills", newSheet.skill);
+                localStorage.setItem("merits", newSheet.merit);
+                localStorage.setItem("lores", newSheet.lore);           
                 break;
         }
 
