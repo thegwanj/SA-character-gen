@@ -13,7 +13,7 @@ A character generator for the Shadow Accord LARP community
 This is a web application made with the Shadow Accord LARP community in mind. This app will allow users to create a character sheet without having to do the tedious math it usually takes when doing it on paper. Future development will also take out the stress of needing to spend mass amounts of time searching for most of the wikis and guides they might need while making the character. For more information on what we plan to develop in this app, please go to our [development](./Development.md) file (has since been archived), or to our [roadmap](./Roadmap.md) document.
 
 ## Usage
-### *- Usage instructions based off of version Beta 1.0.0b -*
+### *- Usage instructions based off of version Beta 1.1.0b -*
 
 When loading into the page, you are presented with two options. You can hit "start" to start making a new sheet. If you want to see the previous sheet you made, you can hit the "view saved sheet" option to go see your saved sheet, if there is one. In the sheet maker, you *need* to enter your name, your character's name, faction, and subfaction. You can also write in any powers, skills, merits, lores, patron(s) and notes as you see fit. Once you're done filling out everything, hit "create character" to see your new sheet. From there, you can go back to make a new sheet, or go back to the home page.
 
