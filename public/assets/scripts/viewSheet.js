@@ -16,6 +16,10 @@ let generation;
 let sire;
 let legion;
 let guild;
+let powers;
+let skills;
+let merits;
+let lores;
 
 // Variable for buttons
 let homeBtn;
@@ -57,6 +61,11 @@ if(window.location.pathname === '/viewSheet'){
     claimedType = document.getElementById('claimedType');
     claimedTypePair = document.getElementById('claimedTypePair');
 
+    powers = document.getElementById('powers');
+    skills = document.getElementById('skills');
+    merits = document.getElementById('merits');
+    lores = document.getElementById('lores');
+
     homeBtn = document.getElementById('homeBtn');
 }
 
@@ -77,7 +86,11 @@ const getSheet = () => {
                 claimed: localStorage.getItem("claimed"),
                 claimedType: localStorage.getItem("claimedType"),
                 patron: localStorage.getItem("patron"),
-                note: localStorage.getItem("note")
+                note: localStorage.getItem("note"),
+                powers: localStorage.getItem("powers"),
+                skills: localStorage.getItem("skills"),
+                merits: localStorage.getItem("merits"),
+                lores: localStorage.getItem("lores")
             }    
             break;
         case "Vampire":
@@ -89,7 +102,11 @@ const getSheet = () => {
                 generation: localStorage.getItem("generation"),
                 sire: localStorage.getItem("sire"),
                 patron: localStorage.getItem("patron"),
-                note: localStorage.getItem("note")
+                note: localStorage.getItem("note"),
+                powers: localStorage.getItem("powers"),
+                skills: localStorage.getItem("skills"),
+                merits: localStorage.getItem("merits"),
+                lores: localStorage.getItem("lores")
             }    
             break;
         case "Shifter":
@@ -103,7 +120,11 @@ const getSheet = () => {
                 rank: localStorage.getItem("rank"),
                 deedName: localStorage.getItem("deedName"),
                 patron: localStorage.getItem("patron"),
-                note: localStorage.getItem("note")
+                note: localStorage.getItem("note"),
+                powers: localStorage.getItem("powers"),
+                skills: localStorage.getItem("skills"),
+                merits: localStorage.getItem("merits"),
+                lores: localStorage.getItem("lores")
             }    
             break;
         case "Wraith":
@@ -116,7 +137,11 @@ const getSheet = () => {
                 legion: localStorage.getItem("legion"),
                 guild: localStorage.getItem("guild"),
                 patron: localStorage.getItem("patron"),
-                note: localStorage.getItem("note")
+                note: localStorage.getItem("note"),
+                powers: localStorage.getItem("powers"),
+                skills: localStorage.getItem("skills"),
+                merits: localStorage.getItem("merits"),
+                lores: localStorage.getItem("lores")
             }    
             break;
     }
@@ -139,6 +164,10 @@ const renderSheet = (sheet) => {
 
     patron.innerHTML = sheet.patron;
     note.innerHTML = sheet.note;    
+    powers.innerHTML = sheet.powers;
+    skills.innerHTML = sheet.skills;
+    merits.innerHTML = sheet.merits;
+    lores.innerHTML = sheet.lores;
 
     switch (sheet.faction){
         case "Human":
