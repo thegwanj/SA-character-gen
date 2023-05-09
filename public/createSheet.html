@@ -185,14 +185,22 @@
                 </div>
 
                 <div class="question">
-                    <label for="health">Health:</label>
-                    <p id='health'>10 (default)</p>
-                    <label for="willpower">Willpower:</label>
-                    <p id='willpower'>1 (default)</p>
-                    <label for="energy">Energy:</label>
-                    <p id='energy'>10 (WIP)</p>
-                    <label for="virtue">Virtue:</label>
-                    <p id='virtue'>6 (WIP)</p>
+                    <div>
+                        <label for="health">Health:</label>
+                        <p id="health">10 (default)</p>    
+                    </div>
+                    <div>
+                        <label for="willpower">Willpower:</label>
+                        <input id="willpower" name="willpower" type="number" step="1" min="1" max="10">    
+                    </div>
+                    <div>
+                        <label for="energy">Energy:</label>
+                        <input id="energy" name="energy" type="number" step="1" min="10" max="15">    
+                    </div>
+                    <div>
+                        <label for="virtue">Virtue:</label>
+                        <input id="virtue" name="virtue" type="number" step="1" min="1" max="10" value="7">    
+                    </div>
                 </div>
 
                 <div class="question">
@@ -215,6 +223,13 @@
                     <textarea id='notes' name='notes' value={notes}></textarea>
                 </div>
 
+                <div class="question">
+                    <label for="freebies">Freebies:</label>
+                    <input id="freebies" name="freebies" type="number" step="1" min="0" max="30">
+                    <label for="xp">XP:</label>
+                    <input id="xp" name="xp" type="number" step="1" min="0">
+                </div>
+
                 <button id='submitBtn' type="submit">Create Character</button>
             </form>
         </div>
@@ -224,6 +239,6 @@
 
     <footer>
         <p>SA Character Sheet Maker created by <a href="https://github.com/thegwanj">thegwanj on github</a></p>
-        <p class="version">Version Beta 1.1.0b</p>
+        <p class="version">Version Beta 1.2.0b</p>
     </footer>
 </html>
