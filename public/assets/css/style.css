@@ -461,11 +461,11 @@ footer .version {
 .question {
   display: flex;
   justify-content: center;
-  margin: 30px 0 30px 0;
+  margin: 27px 0 27px 0;
 }
 
 .question label {
-  margin: 0 5px 0 5px;
+  margin: 10px;
 }
 
 .formItem {
