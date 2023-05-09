@@ -120,9 +120,18 @@
     
             <div>
                 <h4>Health: 10 (default)</h4>
-                <h4>Willpower: 1 (default)</h4>
-                <h4>Energy: 10 (WIP)</h4>
-                <h4>Virtue: 6 (WIP)</h4>    
+                <div class="labelPair">
+                    <h4>Willpower:</h4>
+                    <p id="willpower"></p>
+                </div>
+                <div class="labelPair">
+                    <h4>Energy:</h4>
+                    <p id="energy"></p>
+                </div>
+                <div class="labelPair">
+                    <h4>Virtue:</h4> 
+                    <p id="virtue"></p>   
+                </div>
             </div>
 
             <h4>Powers:</h4>
@@ -141,7 +150,18 @@
             <p id="patron"></p>
     
             <h4>Notes:</h4>
-            <p id="notes"></p>    
+            <p id="notes"></p> 
+            
+            <div class="labelPair">
+                <div class="labelPair">
+                    <h4>Freebies used:</h4>
+                    <p id="freebies"></p>    
+                </div>
+                <div class="labelPair">
+                    <h4>XP used:</h4>
+                    <p id="xp"></p>        
+                </div>
+            </div>
         </div>
 
         <a id='backBtn' href="/createSheet">Create a New Character</a>
@@ -152,6 +172,6 @@
 
     <footer>
         <p>SA Character Sheet Maker created by <a href="https://github.com/thegwanj">thegwanj on github</a></p>
-        <p class="version">Version Beta 1.1.0b</p>
+        <p class="version">Version Beta 1.2.0b</p>
     </footer>
 </html>
