@@ -18,6 +18,13 @@ let skill;
 let merit;
 let lore;
 
+let xpCost;
+let freebies;
+
+let willpower;
+let energy;
+let virtue;
+
 // Variable for buttons
 let submitBtn;
 
@@ -47,10 +54,6 @@ let claimedLabel;
 // Variables for faction specific viewing tables
 let shifterSubfaction;
 let subfactionBasic;
-
-// Variables for future versions
-let xpCost;
-let freebies;
 
 // Array variables for subfaction
 let humanSubfaction = ["Commoner", "Ghoul", "Gifted Kinfolk", "Kinfolk", "Sorcerer"];
@@ -99,6 +102,13 @@ if(window.location.pathname === '/createSheet'){
     merit = document.getElementById('merits');
     lore = document.getElementById('lores');
 
+    xpCost = document.getElementById('xp');
+    freebies = document.getElementById('freebies');
+
+    willpower = document.getElementById('willpower');
+    energy = document.getElementById('energy');
+    virtue = document.getElementById('virtue');
+
     // Assign variable to button
     submitBtn = document.getElementById('submitBtn');
 }
@@ -117,6 +127,11 @@ const setDefault = () => {
     skill.value = "";
     merit.value = "";
     lore.value = "";
+    xpCost.value = 0;
+    freebies.value = 0;
+    willpower.value = 1;
+    virtue.value = 7;
+    energy.value = 10;
 }
 
 // Function that handles going to viewSheet page
@@ -156,7 +171,12 @@ const createSheet = (e) => {
                     power: power.value,
                     skill: skill.value,
                     merit: merit.value,
-                    lore: lore.value 
+                    lore: lore.value,
+                    xp: xpCost.value,
+                    freebies: freebies.value,
+                    willpower: willpower.value,
+                    energy: energy.value,
+                    virtue: virtue.value
                 }
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
@@ -169,7 +189,12 @@ const createSheet = (e) => {
                 localStorage.setItem("powers", newSheet.power);
                 localStorage.setItem("skills", newSheet.skill);
                 localStorage.setItem("merits", newSheet.merit);
-                localStorage.setItem("lores", newSheet.lore);           
+                localStorage.setItem("lores", newSheet.lore); 
+                localStorage.setItem("xp", newSheet.xp);
+                localStorage.setItem("freebies", newSheet.freebies);
+                localStorage.setItem("willpower", newSheet.willpower);
+                localStorage.setItem("energy", newSheet.energy);
+                localStorage.setItem("virtue", newSheet.virtue);                                
                 break;
             case "Vampire":
                 newSheet = {
@@ -184,7 +209,12 @@ const createSheet = (e) => {
                     power: power.value,
                     skill: skill.value,
                     merit: merit.value,
-                    lore: lore.value   
+                    lore: lore.value,
+                    xp: xpCost.value,
+                    freebies: freebies.value,
+                    willpower: willpower.value,
+                    energy: energy.value,
+                    virtue: virtue.value
                 }        
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
@@ -197,7 +227,12 @@ const createSheet = (e) => {
                 localStorage.setItem("powers", newSheet.power);
                 localStorage.setItem("skills", newSheet.skill);
                 localStorage.setItem("merits", newSheet.merit);
-                localStorage.setItem("lores", newSheet.lore);           
+                localStorage.setItem("lores", newSheet.lore);  
+                localStorage.setItem("xp", newSheet.xp);
+                localStorage.setItem("freebies", newSheet.freebies);
+                localStorage.setItem("willpower", newSheet.willpower);
+                localStorage.setItem("energy", newSheet.energy);
+                localStorage.setItem("virtue", newSheet.virtue);                                                                      
                 break;
             case "Shifter":
                 newSheet = {
@@ -214,7 +249,12 @@ const createSheet = (e) => {
                     power: power.value,
                     skill: skill.value,
                     merit: merit.value,
-                    lore: lore.value   
+                    lore: lore.value,
+                    xp: xpCost.value,
+                    freebies: freebies.value,
+                    willpower: willpower.value,
+                    energy: energy.value,
+                    virtue: virtue.value  
                 }        
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
@@ -229,7 +269,12 @@ const createSheet = (e) => {
                 localStorage.setItem("powers", newSheet.power);
                 localStorage.setItem("skills", newSheet.skill);
                 localStorage.setItem("merits", newSheet.merit);
-                localStorage.setItem("lores", newSheet.lore);           
+                localStorage.setItem("lores", newSheet.lore);
+                localStorage.setItem("xp", newSheet.xp);
+                localStorage.setItem("freebies", newSheet.freebies);
+                localStorage.setItem("willpower", newSheet.willpower);
+                localStorage.setItem("energy", newSheet.energy);
+                localStorage.setItem("virtue", newSheet.virtue);                                                                           
                 break;
             case "Wraith":
                 newSheet = {
@@ -245,7 +290,12 @@ const createSheet = (e) => {
                     power: power.value,
                     skill: skill.value,
                     merit: merit.value,
-                    lore: lore.value   
+                    lore: lore.value,
+                    xp: xpCost.value,
+                    freebies: freebies.value,
+                    willpower: willpower.value,
+                    energy: energy.value,
+                    virtue: virtue.value  
                 }        
                 localStorage.setItem("player", newSheet.player);
                 localStorage.setItem("character", newSheet.character);
@@ -259,7 +309,12 @@ const createSheet = (e) => {
                 localStorage.setItem("powers", newSheet.power);
                 localStorage.setItem("skills", newSheet.skill);
                 localStorage.setItem("merits", newSheet.merit);
-                localStorage.setItem("lores", newSheet.lore);           
+                localStorage.setItem("lores", newSheet.lore);
+                localStorage.setItem("xp", newSheet.xp);
+                localStorage.setItem("freebies", newSheet.freebies);
+                localStorage.setItem("willpower", newSheet.willpower);
+                localStorage.setItem("energy", newSheet.energy);
+                localStorage.setItem("virtue", newSheet.virtue);                                                                           
                 break;
         }
 
@@ -314,6 +369,12 @@ const updateSubfactionSelection = () => {
                 subfaction.add(newOption);
             });
             claimedForm.hidden = false;
+
+            energy.value = 10;
+            energy.min = 10;
+            energy.max = 15;
+
+            virtue.value = 7;
             break;
         case "Shifter":
             // Reveal the breed, auspice, and tribe options and hide the subfaction selection
@@ -328,6 +389,12 @@ const updateSubfactionSelection = () => {
             subfactionLabel.hidden = true;
 
             shifterForm.hidden = false;
+
+            energy.value = 20;
+            energy.min = 20;
+            energy.max = 20;
+
+            virtue.value = 7;
             break;
         case "Vampire":
             vampireSubfaction.forEach((el) => {
@@ -338,6 +405,12 @@ const updateSubfactionSelection = () => {
                 subfaction.add(newOption);
             });
             vampireForm.hidden = false;
+
+            energy.value = 15;
+            energy.min = 15;
+            energy.max = 35;
+
+            virtue.value = 6;
             break;
         case "Wraith":
             legionSelection.hidden = false;
@@ -349,6 +422,12 @@ const updateSubfactionSelection = () => {
             subfactionLabel.hidden = true;
 
             wraithForm.hidden = false;
+
+            energy.value = 10;
+            energy.min = 10;
+            energy.max = 20;
+            
+            virtue.value = 4;
             break;
     }
 }
