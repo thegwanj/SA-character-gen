@@ -36,175 +36,199 @@
     <body>
         <div class="characterForm">
             <form>
-                <section class="formSection">
-                    <div class="question" name="name">
-                        <label for="playerName">Player name:</label>
-                        <input id="playerName" name='playerName' type="text" required></input>
-                        <label for="characterName">Character name:</label>
-                        <input id="characterName" name='characterName' required></input>
+                <div class="question" name="name">
+                    <label for="playerName">Player name:</label>
+                    <input id="playerName" name='playerName' type="text" required></input>
+                    <label for="characterName">Character name:</label>
+                    <input id="characterName" name='characterName' required></input>
+                </div>
+
+                <div class="question" name='factionForm'>
+                    <label for='faction'>Faction:</label>
+                    <select id="faction" name="faction" required>
+                        <option value="Human">Human</option>
+                        <option value="Shifter">Shifter</option>
+                        <option value="Vampire">Vampire</option>
+                        <option value="Wraith">Wraith</option>
+                    </select>
+
+                    <!-- Human Subfactions -->
+                    <label id="subfactionLabel" for="subfaction">Subfaction:</label>
+                    <select id="subfaction" name="subfaction" required>
+                        <option value="Commoner">Commoner</option>
+                        <option value="Ghoul">Ghoul</option>
+                        <option value="Gifted Kinfolk">Gifted Kinfolk</option>
+                        <option value="Kinfolk">Kinfolk</option>
+                        <option value="Sorcerer">Sorcerer</option>
+                    </select>
+
+                    <!-- Shifter Subfactions -->
+                    <label id="breedLabel" for="shifterBreed" hidden>Breed:</label>
+                    <select id="shifterBreed" name="shifterBreed" hidden>
+                        <option value="Homid">Homid</option>
+                        <option value="Lupis">Lupis</option>
+                        <option value="Natus">Natus</option>
+                    </select>
+                    <label id="auspiceLabel" for="shifterAuspice" hidden>Auspice:</label>
+                    <select id="shifterAuspice" name="shifterAuspice" hidden>
+                        <option value="Ahroun">Ahroun</option>
+                        <option value="Galliard">Galliard</option>
+                        <option value="Philodox">Philodox</option>
+                        <option value="Ragabash">Ragabash</option>
+                        <option value="Theurge">Theurge</option>
+                    </select>
+                    <label id="tribeLabel" for="shifterTribe" hidden>Tribe:</label>
+                    <select id="shifterTribe" name="shifterTribe" hidden>
+                        <option value="Black Furies">Black Furies</option>
+                        <option value="Black Spiral Dancer">Black Spiral Dancer</option>
+                        <option value="Bone Gnawer">Bone Gnawer</option>
+                        <option value="Child of Gaia">Child of Gaia</option>
+                        <option value="Fenrir">Fenrir</option>
+                        <option value="Red Talon">Red Talon</option>
+                        <option value="Shadow Lord">Shadow Lord</option>
+                        <option value="Silent Strider">Silent Strider</option>
+                        <option value="Silver Fang">Silver Fang</option>
+                        <option value="Warder of Man">Warder of Man</option>
+                        <option value="Bagheera">Bagheera</option>
+                        <option value="Bubasti">Bubasti</option>
+                        <option value="Ceilican">Ceilican</option>
+                        <option value="Swara">Swara</option>
+                        <option value="Ananasi">Ananasi</option>
+                        <option value="Corax">Corax</option>
+                        <option value="Ratkin">Ratkin</option>
+                    </select>
+
+                    <!-- Wraith Subfactions -->
+                    <label id="legionLabel" for="wraithLegion" hidden>Legion:</label>
+                    <select id="wraithLegion" name="wraithLegion" hidden>
+                        <option value="Enfant">Enfant</option>
+                        <option value="Emerald">Emerald</option>
+                        <option value="Grim">Grim</option>
+                        <option value="Iron">Iron</option>
+                        <option value="Pauper">Pauper</option>
+                        <option value="Pentient">Pentient</option>
+                        <option value="Silent">Silent</option>
+                        <option value="Skeletal">Skeletal</option>
+                        <option value="Spectre">Spectre</option>
+                    </select>
+                    <label id="guildLabel" for="wraithGuild" hidden>Guild:</label>
+                    <select id="wraithGuild" name="wraithGuild" hidden>
+                        <option value="None">- None -</option>
+                        <option value="Artificer">Artificer</option>
+                        <option value="Alchemist">Alchemist</option>
+                        <option value="Chanteur">Chanteur</option>
+                        <option value="Harbinger">Harbinger</option>
+                        <option value="Masquer">Masquer</option>
+                        <option value="Mnemoi">Mnemoi</option>
+                        <option value="Monitor">Monitor</option>
+                        <option value="Oracle">Oracle</option>
+                        <option value="Pardoner">Pardoner</option>
+                        <option value="Proctor">Proctor</option>
+                        <option value="Puppeteer">Puppeteer</option>
+                        <option value="Sandman">Sandman</option>
+                        <option value="Solicitor">Solicitor</option>
+                        <option value="Spook">Spook</option>
+                        <option value="Usurer">Usurer</option>
+                    </select>
+                </div>
+
+                <!-- Faction General Info -->
+                <div class="question">
+                    <!-- Human Stuff. Will be shown by default because human faction is also selected by default -->
+                    <div class="formItem" id="claimedForm">
+                        <label for="claimedCheck">Claimed</label>
+                        <input type="checkbox" name="claimedCheck" id="claimedCheck">
+                        <label for="claimedSelection" id="claimedLabel" hidden>Type:</label>
+                        <select id="claimedSelection" name="claimedSelection" hidden>
+                            <option value="Drone">Drone</option>
+                            <option value="Fomori">Fomori</option>
+                            <option value="Gorgon">Gorgon</option>
+                        </select>
                     </div>
-
-                    <div class="question" name='factionForm'>
-                        <label for='faction'>Faction:</label>
-                        <select id="faction" name="faction" required>
-                            <option value="Human">Human</option>
-                            <option value="Shifter">Shifter</option>
-                            <option value="Vampire">Vampire</option>
-                            <option value="Wraith">Wraith</option>
-                        </select>
-
-                        <!-- Human Subfactions -->
-                        <label id="subfactionLabel" for="subfaction">Subfaction:</label>
-                        <select id="subfaction" name="subfaction" required>
-                            <option value="Commoner">Commoner</option>
-                            <option value="Ghoul">Ghoul</option>
-                            <option value="Gifted Kinfolk">Gifted Kinfolk</option>
-                            <option value="Kinfolk">Kinfolk</option>
-                            <option value="Sorcerer">Sorcerer</option>
-                        </select>
-
-                        <!-- Shifter Subfactions -->
-                        <label id="breedLabel" for="shifterBreed" hidden>Breed:</label>
-                        <select id="shifterBreed" name="shifterBreed" hidden>
-                            <option value="Homid">Homid</option>
-                            <option value="Lupis">Lupis</option>
-                            <option value="Natus">Natus</option>
-                        </select>
-                        <label id="auspiceLabel" for="shifterAuspice" hidden>Auspice:</label>
-                        <select id="shifterAuspice" name="shifterAuspice" hidden>
-                            <option value="Ahroun">Ahroun</option>
-                            <option value="Galliard">Galliard</option>
-                            <option value="Philodox">Philodox</option>
-                            <option value="Ragabash">Ragabash</option>
-                            <option value="Theurge">Theurge</option>
-                        </select>
-                        <label id="tribeLabel" for="shifterTribe" hidden>Tribe:</label>
-                        <select id="shifterTribe" name="shifterTribe" hidden>
-                            <option value="Black Furies">Black Furies</option>
-                            <option value="Black Spiral Dancer">Black Spiral Dancer</option>
-                            <option value="Bone Gnawer">Bone Gnawer</option>
-                            <option value="Child of Gaia">Child of Gaia</option>
-                            <option value="Fenrir">Fenrir</option>
-                            <option value="Red Talon">Red Talon</option>
-                            <option value="Shadow Lord">Shadow Lord</option>
-                            <option value="Silent Strider">Silent Strider</option>
-                            <option value="Silver Fang">Silver Fang</option>
-                            <option value="Warder of Man">Warder of Man</option>
-                            <option value="Bagheera">Bagheera</option>
-                            <option value="Bubasti">Bubasti</option>
-                            <option value="Ceilican">Ceilican</option>
-                            <option value="Swara">Swara</option>
-                            <option value="Ananasi">Ananasi</option>
-                            <option value="Corax">Corax</option>
-                            <option value="Ratkin">Ratkin</option>
-                        </select>
-
-                        <!-- Wraith Subfactions -->
-                        <label id="legionLabel" for="wraithLegion" hidden>Legion:</label>
-                        <select id="wraithLegion" name="wraithLegion" hidden>
-                            <option value="Enfant">Enfant</option>
-                            <option value="Emerald">Emerald</option>
-                            <option value="Grim">Grim</option>
-                            <option value="Iron">Iron</option>
-                            <option value="Pauper">Pauper</option>
-                            <option value="Pentient">Pentient</option>
-                            <option value="Silent">Silent</option>
-                            <option value="Skeletal">Skeletal</option>
-                            <option value="Spectre">Spectre</option>
-                        </select>
-                        <label id="guildLabel" for="wraithGuild" hidden>Guild:</label>
-                        <select id="wraithGuild" name="wraithGuild" hidden>
-                            <option value="None">- None -</option>
-                            <option value="Artificer">Artificer</option>
-                            <option value="Alchemist">Alchemist</option>
-                            <option value="Chanteur">Chanteur</option>
-                            <option value="Harbinger">Harbinger</option>
-                            <option value="Masquer">Masquer</option>
-                            <option value="Mnemoi">Mnemoi</option>
-                            <option value="Monitor">Monitor</option>
-                            <option value="Oracle">Oracle</option>
-                            <option value="Pardoner">Pardoner</option>
-                            <option value="Proctor">Proctor</option>
-                            <option value="Puppeteer">Puppeteer</option>
-                            <option value="Sandman">Sandman</option>
-                            <option value="Solicitor">Solicitor</option>
-                            <option value="Spook">Spook</option>
-                            <option value="Usurer">Usurer</option>
-                        </select>
+                    <!-- Shifter Stuff -->
+                    <div class="formItem" id="shifterForm" hidden>
+                        <label for="shifterRank">Rank:</label>
+                        <input type="text" name="shifterRank" id="shifterRank">
+                        <label for="shifterDeed">Deed Name:</label>
+                        <input type="text" name="shifterDeed" id="shifterDeed">
                     </div>
-
-                    <!-- Faction General Info -->
-                    <div class="question">
-                        <!-- Human Stuff. Will be shown by default because human faction is also selected by default -->
-                        <div class="formItem" id="claimedForm">
-                            <label for="claimedCheck">Claimed</label>
-                            <input type="checkbox" name="claimedCheck" id="claimedCheck">
-                            <label for="claimedSelection" id="claimedLabel" hidden>Type:</label>
-                            <select id="claimedSelection" name="claimedSelection" hidden>
-                                <option value="Drone">Drone</option>
-                                <option value="Fomori">Fomori</option>
-                                <option value="Gorgon">Gorgon</option>
-                            </select>
-                        </div>
-                        <!-- Shifter Stuff -->
-                        <div class="formItem" id="shifterForm" hidden>
-                            <label for="shifterRank">Rank:</label>
-                            <input type="text" name="shifterRank" id="shifterRank">
-                            <label for="shifterDeed">Deed Name:</label>
-                            <input type="text" name="shifterDeed" id="shifterDeed">
-                        </div>
-                        <!-- Vampire Stuff -->
-                        <div class="formItem" id="vampireForm" hidden>
-                            <label for="vampireGen">Generation:</label>
-                            <input type="text" name="vampireGen" id="vampireGen">
-                            <label for="vampireSire">Sire:</label>
-                            <input type="text" name="vampireSire" id="vampireSire">
-                        </div>
-                        <!-- Wraith Stuff -->
-                        <div class="formItem" id="wraithForm" hidden>
-                            <label for="wraithShadow">Shadow:</label>
-                            <select id="wraithShadow" name="wraithShadow">
-                                <option value="Abuser">Abuser</option>
-                                <option value="Betrayer">Betrayer</option>
-                                <option value="Delusional">Delusional</option>
-                                <option value="Director">Director</option>
-                                <option value="Exhibitor">Exhibitor</option>
-                                <option value="Impulsive">Impulsive</option>
-                                <option value="Inquisitor">Inquisitor</option>
-                                <option value="Martyr">Martyr</option>
-                                <option value="Monster">Monster</option>
-                                <option value="Paranoid">Paranoid</option>
-                                <option value="Parent">Parent</option>
-                                <option value="Pessimist">Pessimist</option>
-                                <option value="Rationalist">Rationalist</option>
-                                <option value="Teacher">Teacher</option>
-                                <option value="Thinker">Thinker</option>
-                            </select>
-                            <label for="wraithPassion">Passion:</label>
-                            <input type="text" name="wraithPassion" id="wraithPassion">
-                        </div>
+                    <!-- Vampire Stuff -->
+                    <div class="formItem" id="vampireForm" hidden>
+                        <label for="vampireGen">Generation:</label>
+                        <input type="text" name="vampireGen" id="vampireGen">
+                        <label for="vampireSire">Sire:</label>
+                        <input type="text" name="vampireSire" id="vampireSire">
                     </div>
+                    <!-- Wraith Stuff -->
+                    <div class="formItem" id="wraithForm" hidden>
+                        <label for="wraithShadow">Shadow:</label>
+                        <select id="wraithShadow" name="wraithShadow">
+                            <option value="Abuser">Abuser</option>
+                            <option value="Betrayer">Betrayer</option>
+                            <option value="Delusional">Delusional</option>
+                            <option value="Director">Director</option>
+                            <option value="Exhibitor">Exhibitor</option>
+                            <option value="Impulsive">Impulsive</option>
+                            <option value="Inquisitor">Inquisitor</option>
+                            <option value="Martyr">Martyr</option>
+                            <option value="Monster">Monster</option>
+                            <option value="Paranoid">Paranoid</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Pessimist">Pessimist</option>
+                            <option value="Rationalist">Rationalist</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Thinker">Thinker</option>
+                        </select>
+                        <label for="wraithPassion">Passion:</label>
+                        <input type="text" name="wraithPassion" id="wraithPassion">
+                    </div>
+                </div>
 
-                    <div class="question">
+                <div class="question">
+                    <div>
                         <label for="health">Health:</label>
-                        <p id='health'>10 (default)</p>
+                        <p id="health">10 (default)</p>    
+                    </div>
+                    <div>
                         <label for="willpower">Willpower:</label>
-                        <p id='willpower'>1 (default)</p>
+                        <input id="willpower" name="willpower" type="number" step="1" min="1" max="10">    
+                    </div>
+                    <div>
                         <label for="energy">Energy:</label>
-                        <p id='energy'>10 (WIP)</p>
+                        <input id="energy" name="energy" type="number" step="1" min="10" max="15">    
+                    </div>
+                    <div>
                         <label for="virtue">Virtue:</label>
-                        <p id='virtue'>6 (WIP)</p>
+                        <input id="virtue" name="virtue" type="number" step="1" min="1" max="10" value="7">    
                     </div>
+                </div>
 
-                    <div class="question">
-                        <label for="patron">Patron (if any):</label>
-                        <input id='patron' name='patron'></input>
-                    </div>
-                    <div class="question">
-                        <label for="notes">Notes:</label>
-                        <textarea id='notes' name='notes' value={notes}></textarea>
-                    </div>
-                </section>
+                <div class="question">
+                    <label for="powers">Powers:</label>
+                    <textarea name="powers" id="powers" value={powers}></textarea>
+                    <label for="skills">Skills:</label>
+                    <textarea name="skills" id="skills" value={skills}></textarea>
+                    <label for="merits">Merits:</label>
+                    <textarea name="merits" id="merits" value={merits}></textarea>
+                    <label for="lores">Lores:</label>
+                    <textarea name="lores" id="lores" value={lores}></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="patron">Patron (if any):</label>
+                    <input id='patron' name='patron'></input>
+                </div>
+                <div class="question">
+                    <label for="notes">Notes:</label>
+                    <textarea id='notes' name='notes' value={notes}></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="freebies">Freebies:</label>
+                    <input id="freebies" name="freebies" type="number" step="1" min="0" max="30">
+                    <label for="xp">XP:</label>
+                    <input id="xp" name="xp" type="number" step="1" min="0">
+                </div>
 
                 <button id='submitBtn' type="submit">Create Character</button>
             </form>
@@ -215,6 +239,6 @@
 
     <footer>
         <p>SA Character Sheet Maker created by <a href="https://github.com/thegwanj">thegwanj on github</a></p>
-        <p class="version">Version Alpha 0.9.0a</p>
+        <p class="version">Version Beta 1.2.0b</p>
     </footer>
 </html>
