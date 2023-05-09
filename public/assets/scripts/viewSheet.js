@@ -20,6 +20,11 @@ let powers;
 let skills;
 let merits;
 let lores;
+let xpCost;
+let freebies;
+let willpower;
+let energy;
+let virtue;
 
 // Variable for buttons
 let homeBtn;
@@ -30,10 +35,6 @@ let wraithSubfaction;
 let humanSubfaction;
 let vampireSubfaction;
 let subfactionBasic;
-
-// Variables for future versions
-let xpCost;
-let freebies;
 
 // Assign variables to form elements if we are at the viewSheet page
 if(window.location.pathname === '/viewSheet'){
@@ -66,6 +67,13 @@ if(window.location.pathname === '/viewSheet'){
     merits = document.getElementById('merits');
     lores = document.getElementById('lores');
 
+    xpCost = document.getElementById('xp');
+    freebies = document.getElementById('freebies');
+    
+    willpower = document.getElementById('willpower');
+    energy = document.getElementById('energy');
+    virtue = document.getElementById('virtue');
+
     homeBtn = document.getElementById('homeBtn');
 }
 
@@ -90,7 +98,12 @@ const getSheet = () => {
                 powers: localStorage.getItem("powers"),
                 skills: localStorage.getItem("skills"),
                 merits: localStorage.getItem("merits"),
-                lores: localStorage.getItem("lores")
+                lores: localStorage.getItem("lores"),
+                xp: localStorage.getItem("xp"),
+                freebies: localStorage.getItem("freebies"),
+                willpower: localStorage.getItem("willpower"),
+                energy:localStorage.getItem("energy"),
+                virtue: localStorage.getItem("virtue")
             }    
             break;
         case "Vampire":
@@ -106,7 +119,12 @@ const getSheet = () => {
                 powers: localStorage.getItem("powers"),
                 skills: localStorage.getItem("skills"),
                 merits: localStorage.getItem("merits"),
-                lores: localStorage.getItem("lores")
+                lores: localStorage.getItem("lores"),
+                xp: localStorage.getItem("xp"),
+                freebies: localStorage.getItem("freebies"),
+                willpower: localStorage.getItem("willpower"),
+                energy:localStorage.getItem("energy"),
+                virtue: localStorage.getItem("virtue")
             }    
             break;
         case "Shifter":
@@ -124,7 +142,12 @@ const getSheet = () => {
                 powers: localStorage.getItem("powers"),
                 skills: localStorage.getItem("skills"),
                 merits: localStorage.getItem("merits"),
-                lores: localStorage.getItem("lores")
+                lores: localStorage.getItem("lores"),
+                xp: localStorage.getItem("xp"),
+                freebies: localStorage.getItem("freebies"),
+                willpower: localStorage.getItem("willpower"),
+                energy:localStorage.getItem("energy"),
+                virtue: localStorage.getItem("virtue")
             }    
             break;
         case "Wraith":
@@ -141,7 +164,12 @@ const getSheet = () => {
                 powers: localStorage.getItem("powers"),
                 skills: localStorage.getItem("skills"),
                 merits: localStorage.getItem("merits"),
-                lores: localStorage.getItem("lores")
+                lores: localStorage.getItem("lores"),
+                xp: localStorage.getItem("xp"),
+                freebies: localStorage.getItem("freebies"),
+                willpower: localStorage.getItem("willpower"),
+                energy:localStorage.getItem("energy"),
+                virtue: localStorage.getItem("virtue")
             }    
             break;
     }
@@ -168,6 +196,13 @@ const renderSheet = (sheet) => {
     skills.innerHTML = sheet.skills;
     merits.innerHTML = sheet.merits;
     lores.innerHTML = sheet.lores;
+
+    xpCost.innerHTML = sheet.xp;
+    freebies.innerHTML = sheet.freebies;
+
+    willpower.innerHTML = sheet.willpower;
+    energy.innerHTML = sheet.energy;
+    virtue.innerHTML = sheet.virtue;
 
     switch (sheet.faction){
         case "Human":
