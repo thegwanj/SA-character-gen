@@ -4,6 +4,11 @@
 - [Prototype](#Prototype)
 
 ## Beta Version
+### 5/9/23 Version 1.2.0b
+- Implemented saving and displaying willpower, energy, virtue, xp, and freebies
+- Set new default values for new and existing variables
+- Added dynamically changing values for energy and virtue based off of faction selection
+- Minor styling changes
 ### 4/18/23 Version 1.1.0b
 - Implemented saving and displaying of powers, skills, merits, and lores
 ### 4/10/23 Version 1.0.0b
