@@ -16,12 +16,12 @@
 }
 
 .sheet {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin: 0 20% 0 20%;
 }
 
 /* .tableRow {
     display: flex;
     flex-wrap: wrap;
 } */
+
+/* Create a different set of styling based off of the viewport size */
