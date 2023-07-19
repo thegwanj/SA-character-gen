@@ -44,150 +44,47 @@
                 <!-- Section with Player, Character, Faction, Subfaction(s), Patron, Gen/Rank, and Passion -->
                 <section class="table">
                     <div class="row">
-                        <div class="cell">
-                            <label for="playerName">Player:</label>
-                            <input id="playerName">
-                        </div>
-                        <div class="cell">
-                            <label for="characterName">Character:</label>
-                            <input id="characterName">
-                        </div>
-                        <div class="cell">
-                            <label for='faction'>Faction:</label>
-                            <select id="faction" name="faction">
-                                <option value="Human">Human</option>
-                                <option value="Shifter">Shifter</option>
-                                <option value="Vampire">Vampire</option>
-                                <option value="Wraith">Wraith</option>
-                            </select>        
-                        </div>
+                        <div class="cell">Player:</div>
+                        <div class="cell">Character:</div>
+                        <div class="cell">Faction:</div>
                     </div>
                     <div class="row">
-                        <div class="cell">
-                            <!-- Human Subfactions -->
-                            <label id="subfactionLabel" for="subfaction">Subfaction:</label>
-                            <select id="subfaction" name="subfaction" required>
-                                <option value="Commoner">Commoner</option>
-                                <option value="Ghoul">Ghoul</option>
-                                <option value="Gifted Kinfolk">Gifted Kinfolk</option>
-                                <option value="Kinfolk">Kinfolk</option>
-                                <option value="Sorcerer">Sorcerer</option>
-                            </select>
-
-                            <!-- Shifter Subfactions -->
-                            <div id="shifterForm">
-                                <label id="breedLabel" for="shifterBreed" hidden>Breed:</label>
-                                <select id="shifterBreed" name="shifterBreed" hidden>
-                                    <option value="Homid">Homid</option>
-                                    <option value="Lupis">Lupis</option>
-                                    <option value="Natus">Natus</option>
-                                </select>
-                                <label id="auspiceLabel" for="shifterAuspice" hidden>Auspice:</label>
-                                <select id="shifterAuspice" name="shifterAuspice" hidden>
-                                    <option value="Ahroun">Ahroun</option>
-                                    <option value="Galliard">Galliard</option>
-                                    <option value="Philodox">Philodox</option>
-                                    <option value="Ragabash">Ragabash</option>
-                                    <option value="Theurge">Theurge</option>
-                                </select>
-                                <label id="tribeLabel" for="shifterTribe" hidden>Tribe:</label>
-                                <select id="shifterTribe" name="shifterTribe" hidden>
-                                    <option value="Black Furies">Black Furies</option>
-                                    <option value="Black Spiral Dancer">Black Spiral Dancer</option>
-                                    <option value="Bone Gnawer">Bone Gnawer</option>
-                                    <option value="Child of Gaia">Child of Gaia</option>
-                                    <option value="Fenrir">Fenrir</option>
-                                    <option value="Red Talon">Red Talon</option>
-                                    <option value="Shadow Lord">Shadow Lord</option>
-                                    <option value="Silent Strider">Silent Strider</option>
-                                    <option value="Silver Fang">Silver Fang</option>
-                                    <option value="Warder of Man">Warder of Man</option>
-                                    <option value="Bagheera">Bagheera</option>
-                                    <option value="Bubasti">Bubasti</option>
-                                    <option value="Ceilican">Ceilican</option>
-                                    <option value="Swara">Swara</option>
-                                    <option value="Ananasi">Ananasi</option>
-                                    <option value="Corax">Corax</option>
-                                    <option value="Ratkin">Ratkin</option>
-                                </select>
-                            </div>
-
-                            <!-- Wraith Subfactions -->
-                            <div id="wraithForm">
-                                <label id="legionLabel" for="wraithLegion" hidden>Legion:</label>
-                                <select id="wraithLegion" name="wraithLegion" hidden>
-                                    <option value="Enfant">Enfant (None)</option>
-                                    <option value="Emerald">Emerald</option>
-                                    <option value="Grim">Grim</option>
-                                    <option value="Iron">Iron</option>
-                                    <option value="Pauper">Pauper</option>
-                                    <option value="Pentient">Pentient</option>
-                                    <option value="Silent">Silent</option>
-                                    <option value="Skeletal">Skeletal</option>
-                                    <option value="Spectre">Spectre</option>
-                                </select>
-                                <label id="guildLabel" for="wraithGuild" hidden>Guild:</label>
-                                <select id="wraithGuild" name="wraithGuild" hidden>
-                                    <option value="None">- None -</option>
-                                    <option value="Artificer">Artificer</option>
-                                    <option value="Alchemist">Alchemist</option>
-                                    <option value="Chanteur">Chanteur</option>
-                                    <option value="Harbinger">Harbinger</option>
-                                    <option value="Masquer">Masquer</option>
-                                    <option value="Mnemoi">Mnemoi</option>
-                                    <option value="Monitor">Monitor</option>
-                                    <option value="Oracle">Oracle</option>
-                                    <option value="Pardoner">Pardoner</option>
-                                    <option value="Proctor">Proctor</option>
-                                    <option value="Puppeteer">Puppeteer</option>
-                                    <option value="Sandman">Sandman</option>
-                                    <option value="Solicitor">Solicitor</option>
-                                    <option value="Spook">Spook</option>
-                                    <option value="Usurer">Usurer</option>
-                                </select>    
-                            </div>
-
-                        </div>
-                        <div class="cell" id="claimedForm">
-                            <label for="claimedCheck">Claimed</label>
-                            <input type="checkbox" name="claimedCheck" id="claimedCheck">
-                            <label for="claimedSelection" id="claimedLabel" hidden>Type:</label>
-                            <select id="claimedSelection" name="claimedSelection" hidden>
-                                <option value="Drone">Drone</option>
-                                <option value="Fomori">Fomori</option>
-                                <option value="Gorgon">Gorgon</option>
-                            </select>
-                        </div>
-
+                        <div class="cell">Data 1</div>
+                        <div class="cell">Data 2</div>
+                        <div class="cell">Data 3</div>
                     </div>
                     <div class="row">
-                        <div class="cell">
-                            <label for="patron">Patron:</label>
-                            <input id='patron' name='patron'></input>        
-                        </div>
-                        <div class="cell">
-                            <label for="genRank">Gen/Rank:</label>
-                            <input id="genRank" name="genRank">
-                        </div>
-                        <div class="cell">
-                            <label for="wraithPassion">Passion:</label>
-                            <input type="text" name="wraithPassion" id="wraithPassion">    
-                        </div>
+                        <div class="cell">Subfaction:</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Data 4</div>
+                        <div class="cell">Data 5</div>
+                        <div class="cell">Data 6</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Patron:</div>
+                        <div class="cell">Gen/Rank:</div>
+                        <div class="cell">Passion:</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Data 7</div>
+                        <div class="cell">Data 8</div>
+                        <div class="cell">Data 9</div>
                     </div>
                 </section>
                 
                 <!-- Section for Health, WP, Energy, Virtue, Devoured, Shadow-Deed Name - Sire -->
                 <section class="table">
                     <div class="row">
-                        <div class="cell">Health:</div>
-                        <div class="cell">WP:</div>
+                        <div class="cell">Health</div>
+                        <div class="cell">WP</div>
                         <div class="cell">Energy:</div>
                         <div class="cell">Virtue:</div>
                         <div class="cell">Devoured</div>
                         <div class="cell">Shadow - Deed Name - Sire</div>
                     </div>
                     <div class="row">
-                        <div class="cell">10</div>
+                        <div class="cell">Data 1</div>
                         <div class="cell">
                             <input type="checkbox" value="1">
                             <input type="checkbox" value="2">
@@ -200,24 +97,33 @@
                             <input type="checkbox" value="9">
                             <input type="checkbox" value="10">
                         </div>
-                        <div class="cell" id="energy"></div>
                         <div class="cell">
-                            <input type="checkbox" value="1">
-                            <input type="checkbox" value="2">
-                            <input type="checkbox" value="3">
-                            <input type="checkbox" value="4">
-                            <input type="checkbox" value="5">
-                            <input type="checkbox" value="6">
-                            <input type="checkbox" value="7">
-                            <input type="checkbox" value="8">
-                            <input type="checkbox" value="9">
-                            <input type="checkbox" value="10">    
+                            <div class="cell">Data 3</div>
+                            <div class="cell">Data</div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell">Data 4</div>
+                            <div class="cell">
+                                <input type="checkbox" value="1">
+                                <input type="checkbox" value="2">
+                                <input type="checkbox" value="3">
+                                <input type="checkbox" value="4">
+                                <input type="checkbox" value="5">
+                                <input type="checkbox" value="6">
+                                <input type="checkbox" value="7">
+                                <input type="checkbox" value="8">
+                                <input type="checkbox" value="9">
+                                <input type="checkbox" value="10">    
+                            </div>
                         </div>
                         <div class="cell">Data 5</div>
-                        <div class="cell">Data 6</div>
+                        <div class="cell">
+                            <div class="cell">Data 6</div>
+                            <div class="cell">Data</div>
+                        </div>
                     </div>
                 </section>
-            </div>    
+                
             <!-- Table row for Innate and Learned Trees, Skills, Lores, and Merits -->
             <div class="tableRow">
                 
@@ -368,7 +274,7 @@
 
         </div>
 
-        <script src="./assets/scripts/testSheet.js"></script>
+        <script src="./assets/scripts/index.js"></script>
     </body>
 
     <footer>

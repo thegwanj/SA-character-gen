@@ -1,1 +1,27 @@
 /* CSS for making a character sheet on the page */
+.table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+  
+.row {
+    display: flex;
+}
+  
+.cell {
+    flex: 1;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.sheet {
+    margin: 0 12% 0 12%;
+}
+
+/* .tableRow {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* Create a different set of styling based off of the viewport size */

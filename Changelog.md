@@ -4,6 +4,11 @@
 - [Prototype](#Prototype)
 
 ## Beta Version
+### 7/18/23 Version 2.0.0b
+- Major styling overhaul - Sheet looks much closer to how it is laid out IRL
+- Some redundant code removed or tweaked to no longer be redundant
+- Changing the app flow so creating and viewing the sheet are no longer on two separate pages, but rather just one for easier use
+- Started to rework some of the dynamic sheet interactions to make the process easier in future updates
 ### 5/9/23 Version 1.2.0b
 - Implemented saving and displaying willpower, energy, virtue, xp, and freebies
 - Set new default values for new and existing variables
