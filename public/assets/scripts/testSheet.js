@@ -26,6 +26,12 @@ claimedCheck = document.getElementById('claimedCheck');
 claimedSelection = document.getElementById('claimedSelection');
 claimedLabel = document.getElementById('claimedLabel');
 
+genRank = document.getElementById('genRank');
+
+generationForm = document.getElementById('generationForm');
+
+rankForm = document.getElementById('rankForm');
+
 energy = document.getElementById('energy');
 
 const setDefault = () => {
@@ -33,6 +39,7 @@ const setDefault = () => {
     claimedSelection.value = "Drone";
     claimedCheck.checked = false;
     energy.innerHTML = "10";
+    updateSubfactionSelection();
 }
 
 const updateSubfactionSelection = () => {
@@ -44,23 +51,10 @@ const updateSubfactionSelection = () => {
     subfactionLabel.hidden = false;
 
     // Make all faction specfic subfaction dropdowns and their labels hidden again if not already
-    // breedSelection.hidden = true;
-    // auspiceSelection.hidden = true;
-    // tribeSelection.hidden = true;
-    // breedLabel.hidden = true;
-    // auspiceLabel.hidden = true;
-    // tribeLabel.hidden = true;
-
     shifterForm.hidden = true;
-
-    // legionSelection.hidden = true;
-    // guildSelection.hidden = true;
-    // legionLabel.hidden = true;
-    // guildLabel.hidden = true;
-
     wraithForm.hidden = true;
-
     claimedForm.hidden = true;
+    genRank.hidden = true;
 
     let newOption;
 
@@ -83,15 +77,11 @@ const updateSubfactionSelection = () => {
             virtue.value = 7;
             break;
         case "Shifter":
-            // Reveal the breed, auspice, and tribe options and hide the subfaction selection
-            breedSelection.hidden = false;
-            auspiceSelection.hidden = false;
-            tribeSelection.hidden = false;
-            breedLabel.hidden = false;
-            auspiceLabel.hidden = false;
-            tribeLabel.hidden = false;
-
+            // Reveal the shifter specific options and hide the subfaction selection
             shifterForm.hidden = false;
+            genRank.hidden = false;
+            rankForm.hidden = false;
+            generationForm.hidden = true;
         
             subfaction.hidden = true;
             subfactionLabel.hidden = true;
@@ -108,6 +98,10 @@ const updateSubfactionSelection = () => {
 
                 subfaction.add(newOption);
             });
+
+            genRank.hidden = false;
+            rankForm.hidden = true;
+            generationForm.hidden = false;
 
             energy.innerHTML = 15;
 
