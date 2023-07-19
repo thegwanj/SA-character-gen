@@ -12,18 +12,27 @@ auspiceLabel = document.getElementById('auspiceLabel');
 tribeLabel = document.getElementById('tribeLabel');
 subfactionLabel = document.getElementById('subfactionLabel');
 
+shifterForm = document.getElementById('shifterForm');
+
 legionSelection = document.getElementById('wraithLegion');
 guildSelection = document.getElementById('wraithGuild');
 legionLabel = document.getElementById('legionLabel');
 guildLabel = document.getElementById('guildLabel');
+
+wraithForm = document.getElementById('wraithForm');
 
 claimedForm = document.getElementById('claimedForm');
 claimedCheck = document.getElementById('claimedCheck');
 claimedSelection = document.getElementById('claimedSelection');
 claimedLabel = document.getElementById('claimedLabel');
 
-const setDefault = () => {
+energy = document.getElementById('energy');
 
+const setDefault = () => {
+    faction.value = "Human";
+    claimedSelection.value = "Drone";
+    claimedCheck.checked = false;
+    energy.innerHTML = "10";
 }
 
 const updateSubfactionSelection = () => {
@@ -35,17 +44,21 @@ const updateSubfactionSelection = () => {
     subfactionLabel.hidden = false;
 
     // Make all faction specfic subfaction dropdowns and their labels hidden again if not already
-    breedSelection.hidden = true;
-    auspiceSelection.hidden = true;
-    tribeSelection.hidden = true;
-    breedLabel.hidden = true;
-    auspiceLabel.hidden = true;
-    tribeLabel.hidden = true;
+    // breedSelection.hidden = true;
+    // auspiceSelection.hidden = true;
+    // tribeSelection.hidden = true;
+    // breedLabel.hidden = true;
+    // auspiceLabel.hidden = true;
+    // tribeLabel.hidden = true;
 
-    legionSelection.hidden = true;
-    guildSelection.hidden = true;
-    legionLabel.hidden = true;
-    guildLabel.hidden = true;
+    shifterForm.hidden = true;
+
+    // legionSelection.hidden = true;
+    // guildSelection.hidden = true;
+    // legionLabel.hidden = true;
+    // guildLabel.hidden = true;
+
+    wraithForm.hidden = true;
 
     claimedForm.hidden = true;
 
@@ -61,10 +74,11 @@ const updateSubfactionSelection = () => {
                 subfaction.add(newOption);
             });
             claimedForm.hidden = false;
+            claimedSelection.value = "Drone";
+            claimedCheck.checked = false;
+            updateClaimedForm();       
 
-            energy.value = 10;
-            energy.min = 10;
-            energy.max = 15;
+            energy.innerHTML = 10;
 
             virtue.value = 7;
             break;
@@ -76,13 +90,13 @@ const updateSubfactionSelection = () => {
             breedLabel.hidden = false;
             auspiceLabel.hidden = false;
             tribeLabel.hidden = false;
+
+            shifterForm.hidden = false;
         
             subfaction.hidden = true;
             subfactionLabel.hidden = true;
 
-            energy.value = 20;
-            energy.min = 20;
-            energy.max = 20;
+            energy.innerHTML = 20;
 
             virtue.value = 7;
             break;
@@ -95,9 +109,7 @@ const updateSubfactionSelection = () => {
                 subfaction.add(newOption);
             });
 
-            energy.value = 15;
-            energy.min = 15;
-            energy.max = 35;
+            energy.innerHTML = 15;
 
             virtue.value = 6;
             break;
@@ -107,12 +119,12 @@ const updateSubfactionSelection = () => {
             legionLabel.hidden = false;
             guildLabel.hidden = false;
 
+            wraithForm.hidden = false;
+
             subfaction.hidden = true;
             subfactionLabel.hidden = true;
 
-            energy.value = 10;
-            energy.min = 10;
-            energy.max = 20;
+            energy.innerHTML = 10;
             
             virtue.value = 4;
             break;
@@ -134,3 +146,5 @@ const updateClaimedForm = () => {
 
 faction.addEventListener('change', updateSubfactionSelection);
 claimedCheck.addEventListener('change', updateClaimedForm);
+
+setDefault();
