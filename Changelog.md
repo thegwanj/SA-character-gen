@@ -4,6 +4,11 @@
 - [Prototype](#Prototype)
 
 ## Beta Version
+### 7/19/23 Version 2.1.0b
+- Removed redundant/unnecessary rows, cells, and fields
+- Sheet will now reset itself to default upon a page refresh
+- Energy will now dynamically set itself upon changing faction (only works for factions. No dynamic changes for subfactions)
+- Further optimization of dynamic processes on the back end
 ### 7/18/23 Version 2.0.0b
 - Major styling overhaul - Sheet looks much closer to how it is laid out IRL
 - Some redundant code removed or tweaked to no longer be redundant
