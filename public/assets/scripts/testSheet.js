@@ -4,14 +4,6 @@ let vampireSubfaction = ["Assamite", "Baali", "Brujah", "Caitiff", "Cappadocian"
 faction = document.getElementById('faction');
 subfaction = document.getElementById('subfaction');
 
-breedSelection = document.getElementById('shifterBreed');
-auspiceSelection = document.getElementById('shifterAuspice');
-tribeSelection = document.getElementById('shifterTribe');
-breedLabel = document.getElementById('breedLabel');
-auspiceLabel = document.getElementById('auspiceLabel');
-tribeLabel = document.getElementById('tribeLabel');
-subfactionLabel = document.getElementById('subfactionLabel');
-
 shifterForm = document.getElementById('shifterForm');
 
 legionSelection = document.getElementById('wraithLegion');
@@ -29,10 +21,12 @@ claimedLabel = document.getElementById('claimedLabel');
 genRank = document.getElementById('genRank');
 
 generationForm = document.getElementById('generationForm');
-
 rankForm = document.getElementById('rankForm');
+passionForm = document.getElementById('passionForm');
 
 energy = document.getElementById('energy');
+energyType = document.getElementById('energyType');
+virtueType = document.getElementById('virtueType');
 
 const setDefault = () => {
     faction.value = "Human";
@@ -55,6 +49,7 @@ const updateSubfactionSelection = () => {
     wraithForm.hidden = true;
     claimedForm.hidden = true;
     genRank.hidden = true;
+    passionForm.hidden = true;
 
     let newOption;
 
@@ -73,8 +68,9 @@ const updateSubfactionSelection = () => {
             updateClaimedForm();       
 
             energy.innerHTML = 10;
-
-            virtue.value = 7;
+            energyType.innerHTML = "Vitality";
+            // virtue.value = 7;
+            virtueType.innerHTML = "Humanity";
             break;
         case "Shifter":
             // Reveal the shifter specific options and hide the subfaction selection
@@ -87,8 +83,9 @@ const updateSubfactionSelection = () => {
             subfactionLabel.hidden = true;
 
             energy.innerHTML = 20;
-
-            virtue.value = 7;
+            energyType.innerHTML = "Gnosis";
+            // virtue.value = 7;
+            virtueType.innerHTML = "Rage";
             break;
         case "Vampire":
             vampireSubfaction.forEach((el) => {
@@ -104,8 +101,9 @@ const updateSubfactionSelection = () => {
             generationForm.hidden = false;
 
             energy.innerHTML = 15;
-
-            virtue.value = 6;
+            energyType.innerHTML = "Vitae";
+            // virtue.value = 6;
+            virtueType.innerHTML = "Road";
             break;
         case "Wraith":
             legionSelection.hidden = false;
@@ -114,13 +112,15 @@ const updateSubfactionSelection = () => {
             guildLabel.hidden = false;
 
             wraithForm.hidden = false;
+            passionForm.hidden = false;
 
             subfaction.hidden = true;
             subfactionLabel.hidden = true;
 
             energy.innerHTML = 10;
-            
-            virtue.value = 4;
+            energyType.innerHTML = "Pathos";
+            // virtue.value = 4;
+            virtueType.innerHTML = "Angst";
             break;
     }
 }
