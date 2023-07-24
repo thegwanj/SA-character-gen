@@ -4,10 +4,20 @@
 - [Prototype](#Prototype)
 
 ## Beta Version
+### 7/24/23 Version 2.3.0b
+- Shadow, Deed name, and Sire fields now only show up when their respective faction is selected
+- Changed WP and Virtue from checkboxes to number tickers for easier tracking
+- Further optimization of the back end
+### 7/20/23 Version 2.2.0b
+- Passion field will only appear if the Wraith faction is selected
+- Energy and Virtue will also display the type for that faction (only works for factions. No dynamic changes for subfactions yet)
+- Generation field will only appear if the Shifter faction is selected
+- Rank field will only appear if the Vampire faction is selected
+- Further optimization of the back end
 ### 7/19/23 Version 2.1.0b
 - Removed redundant/unnecessary rows, cells, and fields
 - Sheet will now reset itself to default upon a page refresh
-- Energy will now dynamically set itself upon changing faction (only works for factions. No dynamic changes for subfactions)
+- Energy will now dynamically set itself upon changing faction (only works for factions. No dynamic changes for subfactions yet)
 - Further optimization of dynamic processes on the back end
 ### 7/18/23 Version 2.0.0b
 - Major styling overhaul - Sheet looks much closer to how it is laid out IRL

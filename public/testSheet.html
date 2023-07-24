@@ -65,14 +65,16 @@
                     <div class="row">
                         <div class="cell">
                             <!-- Human Subfactions -->
-                            <label id="subfactionLabel" for="subfaction">Subfaction:</label>
-                            <select id="subfaction" name="subfaction" required>
-                                <option value="Commoner">Commoner</option>
-                                <option value="Ghoul">Ghoul</option>
-                                <option value="Gifted Kinfolk">Gifted Kinfolk</option>
-                                <option value="Kinfolk">Kinfolk</option>
-                                <option value="Sorcerer">Sorcerer</option>
-                            </select>
+                            <div id="subfactionForm">
+                                <label id="subfactionLabel" for="subfaction">Subfaction:</label>
+                                <select id="subfaction" name="subfaction" required>
+                                    <option value="Commoner">Commoner</option>
+                                    <option value="Ghoul">Ghoul</option>
+                                    <option value="Gifted Kinfolk">Gifted Kinfolk</option>
+                                    <option value="Kinfolk">Kinfolk</option>
+                                    <option value="Sorcerer">Sorcerer</option>
+                                </select>    
+                            </div>
 
                             <!-- Shifter Subfactions -->
                             <div id="shifterForm">
@@ -190,52 +192,40 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="cell">
+                        <div class="cell" id="passionForm">
                             <label for="wraithPassion">Passion:</label>
                             <input type="text" name="wraithPassion" id="wraithPassion">    
                         </div>
                     </div>
                 </section>
                 
-                <!-- Section for Health, WP, Energy, Virtue, Devoured, Shadow-Deed Name - Sire -->
+                <!-- Section for Health, WP, Energy, Virtue, Devoured, Shadow- Deed Name - Sire -->
                 <section class="table">
                     <div class="row">
                         <div class="cell">Health:</div>
                         <div class="cell">WP:</div>
-                        <div class="cell">Energy:</div>
-                        <div class="cell">Virtue:</div>
-                        <div class="cell">Devoured</div>
-                        <div class="cell">Shadow - Deed Name - Sire</div>
+                        <div class="cell">Energy (<span id="energyType">Vitality</span>):</div>
+                        <div class="cell">Virtue (<span id="virtueType">Humanity</span>):</div>
+                        <div class="cell" id="sdsLabels">
+                            <label for="sire" id="sireLabel">- Sire -</label>
+                            <label for="deedName" id="deedNameLabel">- Deed Name -</label>
+                            <label for="shadow" id="shadowLabel">- Shadow -</label>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="cell">10</div>
                         <div class="cell">
-                            <input type="checkbox" value="1">
-                            <input type="checkbox" value="2">
-                            <input type="checkbox" value="3">
-                            <input type="checkbox" value="4">
-                            <input type="checkbox" value="5">
-                            <input type="checkbox" value="6">
-                            <input type="checkbox" value="7">
-                            <input type="checkbox" value="8">
-                            <input type="checkbox" value="9">
-                            <input type="checkbox" value="10">
+                            <input id="willpower" name="willpower" type="number" step="1" min="1" max="10" value="1">    
                         </div>
                         <div class="cell" id="energy"></div>
                         <div class="cell">
-                            <input type="checkbox" value="1">
-                            <input type="checkbox" value="2">
-                            <input type="checkbox" value="3">
-                            <input type="checkbox" value="4">
-                            <input type="checkbox" value="5">
-                            <input type="checkbox" value="6">
-                            <input type="checkbox" value="7">
-                            <input type="checkbox" value="8">
-                            <input type="checkbox" value="9">
-                            <input type="checkbox" value="10">    
+                            <input id="virtue" name="virtue" type="number" step="1" min="1" max="10" value="7">    
                         </div>
-                        <div class="cell">Data 5</div>
-                        <div class="cell">Data 6</div>
+                        <div class="cell" id="sdsInputs">
+                            <input id="sire" name="sire">
+                            <input id="deedName" name="deedName">
+                            <input id="shadow" name="shadow">
+                        </div>
                     </div>
                 </section>
             </div>    
@@ -394,6 +384,6 @@
 
     <footer>
         <p>SA Character Sheet Maker created by <a href="https://github.com/thegwanj">thegwanj on github</a></p>
-        <p class="version">Version Beta 2.1.0b</p>
+        <p class="version">Version Beta 2.3.0b</p>
     </footer>
 </html>
