@@ -4,6 +4,10 @@
 - [Prototype](#Prototype)
 
 ## Beta Version
+### 7/24/23 Version 2.3.0b
+- Shadow, Deed name, and Sire fields now only show up when their respective faction is selected
+- Changed WP and Virtue from checkboxes to number tickers for easier tracking
+- Further optimization of the back end
 ### 7/20/23 Version 2.2.0b
 - Passion field will only appear if the Wraith faction is selected
 - Energy and Virtue will also display the type for that faction (only works for factions. No dynamic changes for subfactions yet)
