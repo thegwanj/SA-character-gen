@@ -4,6 +4,8 @@
 - [Prototype](#Prototype)
 
 ## Beta Version
+### 7/25/23 Version 2.3.1b
+- Added a Title row for power trees and skills
 ### 7/24/23 Version 2.3.0b
 - Shadow, Deed name, and Sire fields now only show up when their respective faction is selected
 - Changed WP and Virtue from checkboxes to number tickers for easier tracking
