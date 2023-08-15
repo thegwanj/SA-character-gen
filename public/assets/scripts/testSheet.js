@@ -1,35 +1,36 @@
+// Arrays containing the subfactions for humans and vampires to use for switching selection options
 let humanSubfaction = ["Commoner", "Ghoul", "Gifted Kinfolk", "Kinfolk", "Sorcerer"];
 let vampireSubfaction = ["Assamite", "Baali", "Brujah", "Caitiff", "Cappadocian", "Gangrel", "Giovanni", "Lamia", "Lasombra", "Malkavian", "Nosferatu", "Ravnos", "Salubri", "Toreador", "Tremere", "Tzimisce", "Ventrue"];
 
-faction = document.getElementById('faction');
-//subfaction = document.getElementById('subfaction');
+// Arrays for the selection of skills
+const allSkills = ["Academics", "Alchemy", "Archery", "Armory", "Brawl", "Guidance", "Herbalism", "Holy Water", "Locksmithing", "Medicine", "Melee", "Rituals", "Shields"];
+let selectedSkills = [];
+let remainingSkills = [];
 
+faction = document.getElementById('faction');
+
+// All the various forms
 subfactionForm = document.getElementById('subfactionForm');
 shifterForm = document.getElementById('shifterForm');
-
-// legionSelection = document.getElementById('wraithLegion');
-// guildSelection = document.getElementById('wraithGuild');
-// legionLabel = document.getElementById('legionLabel');
-// guildLabel = document.getElementById('guildLabel');
-
 wraithForm = document.getElementById('wraithForm');
-
 claimedForm = document.getElementById('claimedForm');
-claimedCheck = document.getElementById('claimedCheck');
-claimedSelection = document.getElementById('claimedSelection');
-claimedLabel = document.getElementById('claimedLabel');
-
 genRank = document.getElementById('genRank');
-
 generationForm = document.getElementById('generationForm');
 rankForm = document.getElementById('rankForm');
 passionForm = document.getElementById('passionForm');
 
+// Varaibles for Claimed
+claimedCheck = document.getElementById('claimedCheck');
+claimedSelection = document.getElementById('claimedSelection');
+claimedLabel = document.getElementById('claimedLabel');
+
+// Variables for Energy and Virtue
 energy = document.getElementById('energy');
 energyType = document.getElementById('energyType');
 virtue = document.getElementById('virtue');
 virtueType = document.getElementById('virtueType');
 
+// All variables for Sire - Deed Name - Shadow form
 sdsLabels = document.getElementById('sdsLabels');
 shadowLabel = document.getElementById('shadowLabel');
 deedNameLabel = document.getElementById('deedNameLabel');
@@ -39,6 +40,7 @@ shadow = document.getElementById('shadow');
 deedName = document.getElementById('deedName');
 sire = document.getElementById('sire');
 
+// Sets everything to default values upon refresh
 const setDefault = () => {
     faction.value = "Human";
     claimedSelection.value = "Drone";
@@ -47,6 +49,7 @@ const setDefault = () => {
     updateSubfactionSelection();
 }
 
+// Updates the subfaction selection form(s) depending on the selected faction
 const updateSubfactionSelection = () => {
     // Remove all options
     subfaction.innerHTML="";
@@ -76,6 +79,7 @@ const updateSubfactionSelection = () => {
 
     let newOption;
 
+    // Depending on selected faction, change the subfaction selections
     switch(faction.value){
         case "Human":
             humanSubfaction.forEach((el) => {
@@ -102,8 +106,6 @@ const updateSubfactionSelection = () => {
             rankForm.hidden = false;
             generationForm.hidden = true;
         
-            // subfaction.hidden = true;
-            // subfactionLabel.hidden = true;
             subfactionForm.hidden = true;
 
             // Display the sds labels and inputs, then display only Deed Name fields
@@ -148,16 +150,9 @@ const updateSubfactionSelection = () => {
             virtueType.innerHTML = "Road";
             break;
         case "Wraith":
-            // legionSelection.hidden = false;
-            // guildSelection.hidden = false;
-            // legionLabel.hidden = false;
-            // guildLabel.hidden = false;
-
             wraithForm.hidden = false;
             passionForm.hidden = false;
 
-            // subfaction.hidden = true;
-            // subfactionLabel.hidden = true;
             subfactionForm.hidden = true;
 
             // Display the sds labels and inputs, then display only the Shadow fields

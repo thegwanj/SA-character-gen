@@ -324,8 +324,19 @@
                         <div class="cell">Skill</div>
                         <div class="cell">Level</div>
                     </div>
-                    <div class="row">
-                        <div class="cell">Skill 1</div>
+                    <div class="row" id="skillForm">
+                        <div class="cell">
+                            <label for="skill">Select a Skill:</label>
+                            <select id="skill" name="skill">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
                         <div class="cell">
                             <input type="checkbox" value="1">
                             <input type="checkbox" value="2">
@@ -333,20 +344,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="cell">Skill 2</div>
-                        <div class="cell">
-                            <input type="checkbox" value="1">
-                            <input type="checkbox" value="2">
-                            <input type="checkbox" value="3">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="cell">Skill 3</div>
-                        <div class="cell">
-                            <input type="checkbox" value="1">
-                            <input type="checkbox" value="2">
-                            <input type="checkbox" value="3">
-                        </div>
+                        <div class="cell" id="addSkill">- Add Skill -</div>
                     </div>
                 </section>
 
