@@ -40,6 +40,12 @@ shadow = document.getElementById('shadow');
 deedName = document.getElementById('deedName');
 sire = document.getElementById('sire');
 
+// Variables for skill selection, addition, and subtraction
+addSkillBtn = document.getElementById('addSkill');
+skillTable = document.getElementById('skillTable');
+// Variable for tracking how many skills are currently added
+skillCount = 1;
+
 // Sets everything to default values upon refresh
 const setDefault = () => {
     faction.value = "Human";
@@ -195,7 +201,59 @@ const clearSkills = () => {
     remainingSkills = [];
 }
 
+// Function for adding a skill onto the skill section of the sheet
+const addSkill = () => {
+    skillCount++;
+
+    let newSkill;
+
+    if(skillCount > 13) {
+        skillCount = 13;
+        console.log("Skill limit reached. Exiting function");
+    } else {
+        // Create a new element
+        newSkill = document.createElement("div");
+
+        // Use template literal for create the new row
+        newSkill.innerHTML = 
+        `<div class="row">
+            <div class="cell">
+                <select id="skill" name="skill">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="cell">
+                <input type="checkbox" value="1">
+                <input type="checkbox" value="2">
+                <input type="checkbox" value="3">
+            </div>
+        </div>
+        `;
+
+        // Add it to our list of skills and make sure Add Skill is still at the bottom
+        skillTable.insertBefore(newSkill, skillTable.lastElementChild);
+    }
+}
+
+// Function for removing a skill on the skill section of the sheet
+const removeSkill = () => {
+    skillCount--;
+    if(skillCount < 0) {
+        skillCount = 0;
+        console.log("Skill limit reached. Exiting function");
+    } else {
+
+    }
+}
+
 faction.addEventListener('change', updateSubfactionSelection);
 claimedCheck.addEventListener('change', updateClaimedForm);
+addSkillBtn.addEventListener('click', addSkill);
 
 setDefault();
