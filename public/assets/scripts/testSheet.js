@@ -47,7 +47,10 @@ const setDefault = () => {
     claimedCheck.checked = false;
     energy.innerHTML = "10";
     updateSubfactionSelection();
+    clearSkills();
 }
+
+/*----- Factions -----*/
 
 // Updates the subfaction selection form(s) depending on the selected faction
 const updateSubfactionSelection = () => {
@@ -183,6 +186,13 @@ const updateClaimedForm = () => {
     }
 
     // Otherwise, hide it
+}
+
+/*----- Skills -----*/
+
+const clearSkills = () => {
+    selectedSkills = [];
+    remainingSkills = [];
 }
 
 faction.addEventListener('change', updateSubfactionSelection);
