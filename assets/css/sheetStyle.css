@@ -1,0 +1,39 @@
+/* Styles for the viewSheet.html page */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 100%;
+}
+
+.characterSheet {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    display: flex;
+}
+
+#title h2 {
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.factionBoard p {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.labelPair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

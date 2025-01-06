@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+          name="description"
+          content="Web app for making SA character sheets"
+        />
+        <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+        <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest">
+        <title>Character Sheet Maker</title>
+        <link rel="stylesheet" href="./assets/css/normalize.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/testSheet.css">
+    </head>
+
+    <header>
+        <nav>
+            <div class="navContainer">
+                    <a href="/">
+                        <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
+                    </a>
+                    <a href="/">
+                        <h2>SA Character Sheet Maker</h2>
+                    </a>
+                    <a href="/">
+                        <img src="../img/logos/shadow-accord-logo-bw.png" alt="SA logo" height="40"/>
+                    </a>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <div class="sheet" name="sheet">
+
+            <!-- Making a row of tables to flow better and for mobile formatting -->
+            <div class="tableRow">
+
+                <!-- Section with Player, Character, Faction, Subfaction(s), Patron, Gen/Rank, and Passion -->
+                <section class="table">
+                    <div class="row">
+                        <div class="cell">
+                            <label for="playerName">Player:</label>
+                            <input id="playerName">
+                        </div>
+                        <div class="cell">
+                            <label for="characterName">Character:</label>
+                            <input id="characterName">
+                        </div>
+                        <div class="cell">
+                            <label for='faction'>Faction:</label>
+                            <select id="faction" name="faction">
+                                <option value="Human">Human</option>
+                                <option value="Shifter">Shifter</option>
+                                <option value="Vampire">Vampire</option>
+                                <option value="Wraith">Wraith</option>
+                            </select>        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <!-- Human Subfactions -->
+                            <div id="subfactionForm">
+                                <label id="subfactionLabel" for="subfaction">Subfaction:</label>
+                                <select id="subfaction" name="subfaction" required>
+                                    <option value="Commoner">Commoner</option>
+                                    <option value="Ghoul">Ghoul</option>
+                                    <option value="Gifted Kinfolk">Gifted Kinfolk</option>
+                                    <option value="Kinfolk">Kinfolk</option>
+                                    <option value="Sorcerer">Sorcerer</option>
+                                </select>    
+                            </div>
+
+                            <!-- Shifter Subfactions -->
+                            <div id="shifterForm">
+                                <label id="breedLabel" for="shifterBreed">Breed:</label>
+                                <select id="shifterBreed" name="shifterBreed">
+                                    <option value="Homid">Homid</option>
+                                    <option value="Lupis">Lupis</option>
+                                    <option value="Natus">Natus</option>
+                                </select>
+                                <label id="auspiceLabel" for="shifterAuspice">Auspice:</label>
+                                <select id="shifterAuspice" name="shifterAuspice">
+                                    <option value="Ahroun">Ahroun</option>
+                                    <option value="Galliard">Galliard</option>
+                                    <option value="Philodox">Philodox</option>
+                                    <option value="Ragabash">Ragabash</option>
+                                    <option value="Theurge">Theurge</option>
+                                </select>
+                                <label id="tribeLabel" for="shifterTribe">Tribe:</label>
+                                <select id="shifterTribe" name="shifterTribe">
+                                    <option value="Black Furies">Black Furies</option>
+                                    <option value="Black Spiral Dancer">Black Spiral Dancer</option>
+                                    <option value="Bone Gnawer">Bone Gnawer</option>
+                                    <option value="Child of Gaia">Child of Gaia</option>
+                                    <option value="Fenrir">Fenrir</option>
+                                    <option value="Red Talon">Red Talon</option>
+                                    <option value="Shadow Lord">Shadow Lord</option>
+                                    <option value="Silent Strider">Silent Strider</option>
+                                    <option value="Silver Fang">Silver Fang</option>
+                                    <option value="Warder of Man">Warder of Man</option>
+                                    <option value="Bagheera">Bagheera</option>
+                                    <option value="Bubasti">Bubasti</option>
+                                    <option value="Ceilican">Ceilican</option>
+                                    <option value="Swara">Swara</option>
+                                    <option value="Ananasi">Ananasi</option>
+                                    <option value="Corax">Corax</option>
+                                    <option value="Ratkin">Ratkin</option>
+                                </select>
+                            </div>
+
+                            <!-- Wraith Subfactions -->
+                            <div id="wraithForm">
+                                <label id="legionLabel" for="wraithLegion">Legion:</label>
+                                <select id="wraithLegion" name="wraithLegion">
+                                    <option value="Enfant">Enfant (None)</option>
+                                    <option value="Emerald">Emerald</option>
+                                    <option value="Grim">Grim</option>
+                                    <option value="Iron">Iron</option>
+                                    <option value="Pauper">Pauper</option>
+                                    <option value="Pentient">Pentient</option>
+                                    <option value="Silent">Silent</option>
+                                    <option value="Skeletal">Skeletal</option>
+                                    <option value="Spectre">Spectre</option>
+                                </select>
+                                <label id="guildLabel" for="wraithGuild">Guild:</label>
+                                <select id="wraithGuild" name="wraithGuild">
+                                    <option value="None">- None -</option>
+                                    <option value="Artificer">Artificer</option>
+                                    <option value="Alchemist">Alchemist</option>
+                                    <option value="Chanteur">Chanteur</option>
+                                    <option value="Harbinger">Harbinger</option>
+                                    <option value="Masquer">Masquer</option>
+                                    <option value="Mnemoi">Mnemoi</option>
+                                    <option value="Monitor">Monitor</option>
+                                    <option value="Oracle">Oracle</option>
+                                    <option value="Pardoner">Pardoner</option>
+                                    <option value="Proctor">Proctor</option>
+                                    <option value="Puppeteer">Puppeteer</option>
+                                    <option value="Sandman">Sandman</option>
+                                    <option value="Solicitor">Solicitor</option>
+                                    <option value="Spook">Spook</option>
+                                    <option value="Usurer">Usurer</option>
+                                </select>    
+                            </div>
+
+                        </div>
+                        <div class="cell" id="claimedForm">
+                            <label for="claimedCheck">Claimed</label>
+                            <input type="checkbox" name="claimedCheck" id="claimedCheck">
+                            <label for="claimedSelection" id="claimedLabel">Type:</label>
+                            <select id="claimedSelection" name="claimedSelection">
+                                <option value="Drone">Drone</option>
+                                <option value="Fomori">Fomori</option>
+                                <option value="Gorgon">Gorgon</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <label for="patron">Patron:</label>
+                            <input id='patron' name='patron'></input>        
+                        </div>
+
+                        <!-- Cell that will display/hide depending on faction -->
+                        <div class="cell" id="genRank" hidden>
+                            <div id="generationForm">
+                                <label for="generation">Generation:</label>
+                                <select id="generation" name="generation">
+                                    <option value="10">10+</option>
+                                    <option value="9">9</option>
+                                    <option value="8">8</option>
+                                    <option value="7">7</option>
+                                </select>
+                            </div>
+                            <div id="rankForm">
+                                <label for="rank">Rank:</label>
+                                <select id="rank" name="rank">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cell" id="passionForm">
+                            <label for="wraithPassion">Passion:</label>
+                            <input type="text" name="wraithPassion" id="wraithPassion">    
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Section for Health, WP, Energy, Virtue, Devoured, Shadow- Deed Name - Sire -->
+                <section class="table">
+                    <div class="row">
+                        <div class="cell">Health:</div>
+                        <div class="cell">WP:</div>
+                        <div class="cell">Energy (<span id="energyType">Vitality</span>):</div>
+                        <div class="cell">Virtue (<span id="virtueType">Humanity</span>):</div>
+                        <div class="cell" id="sdsLabels">
+                            <label for="sire" id="sireLabel">- Sire -</label>
+                            <label for="deedName" id="deedNameLabel">- Deed Name -</label>
+                            <label for="shadow" id="shadowLabel">- Shadow -</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">10</div>
+                        <div class="cell">
+                            <input id="willpower" name="willpower" type="number" step="1" min="1" max="10" value="1">    
+                        </div>
+                        <div class="cell" id="energy"></div>
+                        <div class="cell">
+                            <input id="virtue" name="virtue" type="number" step="1" min="1" max="10" value="7">    
+                        </div>
+                        <div class="cell" id="sdsInputs">
+                            <input id="sire" name="sire">
+                            <input id="deedName" name="deedName">
+                            <input id="shadow" name="shadow">
+                        </div>
+                    </div>
+                </section>
+            </div>    
+            <!-- Table row for Innate and Learned Trees, Skills, Lores, and Merits -->
+            <div class="tableRow">
+                
+                <!-- Section for Innate and Learned Trees -->
+                <section class="table">
+                    <div class="row">
+                        <div class="cell">~ Power Trees ~</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Source/Tree</div>
+                        <div class="cell">Level</div>
+                        <div class="cell">Innate?</div>
+                        <div class="cell">Corrupt?</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Tree 1</div>
+                        <div class="cell">
+                            <input type="checkbox" value="1">
+                            <input type="checkbox" value="2">
+                            <input type="checkbox" value="3">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Tree 2</div>
+                        <div class="cell">
+                            <input type="checkbox" value="1">
+                            <input type="checkbox" value="2">
+                            <input type="checkbox" value="3">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Tree 3</div>
+                        <div class="cell">
+                            <input type="checkbox" value="1">
+                            <input type="checkbox" value="2">
+                            <input type="checkbox" value="3">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Tree 4</div>
+                        <div class="cell">
+                            <input type="checkbox" value="1">
+                            <input type="checkbox" value="2">
+                            <input type="checkbox" value="3">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Tree 5</div>
+                        <div class="cell">
+                            <input type="checkbox" value="1">
+                            <input type="checkbox" value="2">
+                            <input type="checkbox" value="3">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                        <div class="cell">
+                            <input type="checkbox" value="true">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section for Skills -->
+                <section class="table" id="skillTable">
+                    <div class="row">
+                        <div class="cell">~ Skills ~</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Skill</div>
+                        <div class="cell">Level</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell" id="addSkill">- Add Skill -</div>
+                    </div>
+                </section>
+
+                <!-- Section for Lore -->
+                <section class="table">
+                    <div class="row">
+                        <div class="cell">~ Lore ~</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Data 1</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Data 2</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Data 3</div>
+                    </div>
+                </section>
+
+                <!-- Section for Merits -->
+                <section class="table">
+                    <div class="row">
+                        <div class="cell">~ Merits ~</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Data 1</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Data 2</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">Data 3</div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <script src="./assets/scripts/testSheet.js"></script>
+    </body>
+
+    <footer>
+        <p>SA Character Sheet Maker created by <a href="https://github.com/thegwanj">thegwanj on github</a></p>
+        <p class="version">Version Beta 2.3.0b</p>
+    </footer>
+</html>
