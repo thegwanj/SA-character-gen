@@ -1,35 +1,36 @@
+// Arrays containing the subfactions for humans and vampires to use for switching selection options
 let humanSubfaction = ["Commoner", "Ghoul", "Gifted Kinfolk", "Kinfolk", "Sorcerer"];
 let vampireSubfaction = ["Assamite", "Baali", "Brujah", "Caitiff", "Cappadocian", "Gangrel", "Giovanni", "Lamia", "Lasombra", "Malkavian", "Nosferatu", "Ravnos", "Salubri", "Toreador", "Tremere", "Tzimisce", "Ventrue"];
 
-faction = document.getElementById('faction');
-//subfaction = document.getElementById('subfaction');
+// Arrays for the selection of skills
+const allSkills = ["Academics", "Alchemy", "Archery", "Armory", "Brawl", "Guidance", "Herbalism", "Holy Water", "Locksmithing", "Medicine", "Melee", "Rituals", "Shields"];
+let selectedSkills = [];
+let remainingSkills = [];
 
+faction = document.getElementById('faction');
+
+// All the various forms
 subfactionForm = document.getElementById('subfactionForm');
 shifterForm = document.getElementById('shifterForm');
-
-// legionSelection = document.getElementById('wraithLegion');
-// guildSelection = document.getElementById('wraithGuild');
-// legionLabel = document.getElementById('legionLabel');
-// guildLabel = document.getElementById('guildLabel');
-
 wraithForm = document.getElementById('wraithForm');
-
 claimedForm = document.getElementById('claimedForm');
-claimedCheck = document.getElementById('claimedCheck');
-claimedSelection = document.getElementById('claimedSelection');
-claimedLabel = document.getElementById('claimedLabel');
-
 genRank = document.getElementById('genRank');
-
 generationForm = document.getElementById('generationForm');
 rankForm = document.getElementById('rankForm');
 passionForm = document.getElementById('passionForm');
 
+// Varaibles for Claimed
+claimedCheck = document.getElementById('claimedCheck');
+claimedSelection = document.getElementById('claimedSelection');
+claimedLabel = document.getElementById('claimedLabel');
+
+// Variables for Energy and Virtue
 energy = document.getElementById('energy');
 energyType = document.getElementById('energyType');
 virtue = document.getElementById('virtue');
 virtueType = document.getElementById('virtueType');
 
+// All variables for Sire - Deed Name - Shadow form
 sdsLabels = document.getElementById('sdsLabels');
 shadowLabel = document.getElementById('shadowLabel');
 deedNameLabel = document.getElementById('deedNameLabel');
@@ -39,14 +40,25 @@ shadow = document.getElementById('shadow');
 deedName = document.getElementById('deedName');
 sire = document.getElementById('sire');
 
+// Variables for skill selection, addition, and subtraction
+addSkillBtn = document.getElementById('addSkill');
+skillTable = document.getElementById('skillTable');
+// Variable for tracking how many skills are currently added
+skillCount = 1;
+
+// Sets everything to default values upon refresh
 const setDefault = () => {
     faction.value = "Human";
     claimedSelection.value = "Drone";
     claimedCheck.checked = false;
     energy.innerHTML = "10";
     updateSubfactionSelection();
+    clearSkills();
 }
 
+/*----- Factions -----*/
+
+// Updates the subfaction selection form(s) depending on the selected faction
 const updateSubfactionSelection = () => {
     // Remove all options
     subfaction.innerHTML="";
@@ -76,6 +88,7 @@ const updateSubfactionSelection = () => {
 
     let newOption;
 
+    // Depending on selected faction, change the subfaction selections
     switch(faction.value){
         case "Human":
             humanSubfaction.forEach((el) => {
@@ -102,8 +115,6 @@ const updateSubfactionSelection = () => {
             rankForm.hidden = false;
             generationForm.hidden = true;
         
-            // subfaction.hidden = true;
-            // subfactionLabel.hidden = true;
             subfactionForm.hidden = true;
 
             // Display the sds labels and inputs, then display only Deed Name fields
@@ -148,16 +159,9 @@ const updateSubfactionSelection = () => {
             virtueType.innerHTML = "Road";
             break;
         case "Wraith":
-            // legionSelection.hidden = false;
-            // guildSelection.hidden = false;
-            // legionLabel.hidden = false;
-            // guildLabel.hidden = false;
-
             wraithForm.hidden = false;
             passionForm.hidden = false;
 
-            // subfaction.hidden = true;
-            // subfactionLabel.hidden = true;
             subfactionForm.hidden = true;
 
             // Display the sds labels and inputs, then display only the Shadow fields
@@ -190,7 +194,66 @@ const updateClaimedForm = () => {
     // Otherwise, hide it
 }
 
+/*----- Skills -----*/
+
+const clearSkills = () => {
+    selectedSkills = [];
+    remainingSkills = [];
+}
+
+// Function for adding a skill onto the skill section of the sheet
+const addSkill = () => {
+    skillCount++;
+
+    let newSkill;
+
+    if(skillCount > 13) {
+        skillCount = 13;
+        console.log("Skill limit reached. Exiting function");
+    } else {
+        // Create a new element
+        newSkill = document.createElement("div");
+
+        // Use template literal for create the new row
+        newSkill.innerHTML = 
+        `<div class="row">
+            <div class="cell">
+                <select id="skill" name="skill">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="cell">
+                <input type="checkbox" value="1">
+                <input type="checkbox" value="2">
+                <input type="checkbox" value="3">
+            </div>
+        </div>
+        `;
+
+        // Add it to our list of skills and make sure Add Skill is still at the bottom
+        skillTable.insertBefore(newSkill, skillTable.lastElementChild);
+    }
+}
+
+// Function for removing a skill on the skill section of the sheet
+const removeSkill = () => {
+    skillCount--;
+    if(skillCount < 0) {
+        skillCount = 0;
+        console.log("Skill limit reached. Exiting function");
+    } else {
+
+    }
+}
+
 faction.addEventListener('change', updateSubfactionSelection);
 claimedCheck.addEventListener('change', updateClaimedForm);
+addSkillBtn.addEventListener('click', addSkill);
 
 setDefault();

@@ -4,6 +4,9 @@
 - [Prototype](#Prototype)
 
 ## Beta Version
+### 8/21/23 Version 2.4.0b
+- Pressing the Add Skill button will now add skills onto the sheet
+- Cleaned up some more of the back end
 ### 7/25/23 Version 2.3.1b
 - Added a Title row for power trees and skills
 ### 7/24/23 Version 2.3.0b
